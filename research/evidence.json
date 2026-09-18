@@ -1,0 +1,188 @@
+{
+  "sources": [
+    {
+      "id": "aleph",
+      "title": "The Book of Indian Ghosts — publisher page",
+      "url": "https://www.alephbookcompany.com/book/the-book-of-indian-ghosts/",
+      "kind": "publisher",
+      "accessed": "2026-09-17",
+      "limitations": "Publisher synopsis only; does not establish all chapter details."
+    },
+    {
+      "id": "banerjee-excerpt",
+      "title": "Authorised excerpt of The Book of Indian Ghosts",
+      "url": "https://scroll.in/article/995384/haunting-guide-aacheri-or-besho-bhoot-kollivai-pisaasu-or-ulkamukhi-can-you-identify-all-ghosts",
+      "kind": "authorised_excerpt",
+      "accessed": "2026-09-17",
+      "limitations": "Introduction excerpt, published 21 May 2021; not the individual chapters."
+    },
+    {
+      "id": "acher",
+      "title": "Acheri",
+      "url": "https://en.wikipedia.org/wiki/Acheri",
+      "kind": "encyclopedia",
+      "accessed": "2026-09-17",
+      "limitations": "Tertiary overview consulted; underlying references not independently checked."
+    },
+    {
+      "id": "bengal",
+      "title": "Ghosts in Bengali culture",
+      "url": "https://en.wikipedia.org/wiki/Ghosts_in_Bengali_culture",
+      "kind": "encyclopedia",
+      "accessed": "2026-09-17",
+      "limitations": "Tertiary overview consulted; underlying references not independently checked."
+    },
+    {
+      "id": "brahmar",
+      "title": "Brahmarakshasa",
+      "url": "https://en.wikipedia.org/wiki/Brahmarakshasa",
+      "kind": "encyclopedia",
+      "accessed": "2026-09-17",
+      "limitations": "Tertiary overview consulted; underlying references not independently checked."
+    },
+    {
+      "id": "chedipe",
+      "title": "Chedipe",
+      "url": "https://en.wikipedia.org/wiki/Chedipe",
+      "kind": "encyclopedia",
+      "accessed": "2026-09-17",
+      "limitations": "Tertiary overview consulted; underlying references not independently checked."
+    },
+    {
+      "id": "chir",
+      "title": "Chir batti",
+      "url": "https://en.wikipedia.org/wiki/Chir_batti",
+      "kind": "encyclopedia",
+      "accessed": "2026-09-17",
+      "limitations": "Tertiary overview consulted; underlying references not independently checked."
+    },
+    {
+      "id": "churel",
+      "title": "Churel",
+      "url": "https://en.wikipedia.org/wiki/Churel",
+      "kind": "encyclopedia",
+      "accessed": "2026-09-17",
+      "limitations": "Tertiary overview consulted; underlying references not independently checked."
+    },
+    {
+      "id": "gandharva",
+      "title": "Gandharva",
+      "url": "https://en.wikipedia.org/wiki/Gandharva",
+      "kind": "encyclopedia",
+      "accessed": "2026-09-17",
+      "limitations": "Tertiary overview consulted; underlying references not independently checked."
+    },
+    {
+      "id": "ghoul",
+      "title": "Ghoul",
+      "url": "https://en.wikipedia.org/wiki/Ghoul",
+      "kind": "encyclopedia",
+      "accessed": "2026-09-17",
+      "limitations": "Tertiary overview consulted; underlying references not independently checked."
+    },
+    {
+      "id": "ifrit",
+      "title": "Ifrit",
+      "url": "https://en.wikipedia.org/wiki/Ifrit",
+      "kind": "encyclopedia",
+      "accessed": "2026-09-17",
+      "limitations": "Tertiary overview consulted; underlying references not independently checked."
+    },
+    {
+      "id": "jinn",
+      "title": "Jinn",
+      "url": "https://en.wikipedia.org/wiki/Jinn",
+      "kind": "encyclopedia",
+      "accessed": "2026-09-17",
+      "limitations": "Tertiary overview consulted; underlying references not independently checked."
+    },
+    {
+      "id": "preta",
+      "title": "Preta",
+      "url": "https://en.wikipedia.org/wiki/Preta",
+      "kind": "encyclopedia",
+      "accessed": "2026-09-17",
+      "limitations": "Tertiary overview consulted; underlying references not independently checked."
+    },
+    {
+      "id": "putana",
+      "title": "Putana",
+      "url": "https://en.wikipedia.org/wiki/Putana",
+      "kind": "encyclopedia",
+      "accessed": "2026-09-17",
+      "limitations": "Tertiary overview consulted; underlying references not independently checked."
+    },
+    {
+      "id": "yaksha",
+      "title": "Yaksha",
+      "url": "https://en.wikipedia.org/wiki/Yaksha",
+      "kind": "encyclopedia",
+      "accessed": "2026-09-17",
+      "limitations": "Tertiary overview consulted; underlying references not independently checked."
+    },
+    {
+      "id": "vetala",
+      "title": "Vetala",
+      "url": "https://en.wikipedia.org/wiki/Vetala",
+      "kind": "encyclopedia",
+      "accessed": "2026-09-17",
+      "limitations": "Tertiary overview consulted; underlying references not independently checked."
+    },
+    {
+      "id": "marid",
+      "title": "Marid",
+      "url": "https://en.wikipedia.org/wiki/Marid",
+      "kind": "encyclopedia",
+      "accessed": "2026-09-17",
+      "limitations": "Tertiary overview consulted; underlying references not independently checked."
+    },
+    {
+      "id": "dakini",
+      "title": "Dakini",
+      "url": "https://en.wikipedia.org/wiki/Dakini",
+      "kind": "encyclopedia",
+      "accessed": "2026-09-17",
+      "limitations": "Tertiary overview consulted; underlying references not independently checked."
+    },
+    {
+      "id": "succubus",
+      "title": "Succubus",
+      "url": "https://en.wikipedia.org/wiki/Succubus",
+      "kind": "encyclopedia",
+      "accessed": "2026-09-17",
+      "limitations": "Tertiary overview consulted; underlying references not independently checked."
+    },
+    {
+      "id": "nale",
+      "title": "Naale Ba",
+      "url": "https://en.wikipedia.org/wiki/Naale_Ba",
+      "kind": "encyclopedia",
+      "accessed": "2026-09-17",
+      "limitations": "Tertiary overview consulted; underlying references not independently checked."
+    },
+    {
+      "id": "kutti",
+      "title": "Kuttichathan",
+      "url": "https://en.wikipedia.org/wiki/Kuttichathan",
+      "kind": "encyclopedia",
+      "accessed": "2026-09-17",
+      "limitations": "Tertiary overview consulted; underlying references not independently checked."
+    },
+    {
+      "id": "konkan-blog",
+      "title": "Ghosts from Konkan",
+      "url": "https://mostlymaharashtra.wixsite.com/maha-shu/post/ghosts-from-konkan",
+      "kind": "popular_retelling",
+      "accessed": "2026-09-17",
+      "limitations": "Unreviewed regional blog; use as a lead only. Some terminology reflects caste stereotypes."
+    },
+    {
+      "id": "bayangi-blog",
+      "title": "Bayangi (India)",
+      "url": "https://www.snlinn.com/post/bayangi-india",
+      "kind": "popular_retelling",
+      "accessed": "2026-09-17",
+      "limitations": "Modern author retelling dated 13 December 2024; its seven-year motif needs independent verification."
+    }
+  ]
+}

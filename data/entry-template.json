@@ -1,0 +1,104 @@
+{
+  "id": "new-spirit",
+  "name": "New spirit",
+  "aliases": [],
+  "native_names": [],
+  "seed_reference": null,
+  "research_status": "name_only",
+  "claims": {
+    "classification": {
+      "value": null,
+      "source_ids": [],
+      "status": "unknown",
+      "note": null
+    },
+    "description": {
+      "value": null,
+      "source_ids": [],
+      "status": "unknown",
+      "note": null
+    },
+    "habitat": {
+      "value": null,
+      "source_ids": [],
+      "status": "unknown",
+      "note": null
+    },
+    "location": {
+      "value": null,
+      "source_ids": [],
+      "status": "unknown",
+      "note": null
+    },
+    "nemesis": {
+      "value": null,
+      "source_ids": [],
+      "status": "unknown",
+      "note": null
+    },
+    "protections": {
+      "value": null,
+      "source_ids": [],
+      "status": "unknown",
+      "note": null
+    },
+    "prey": {
+      "value": null,
+      "source_ids": [],
+      "status": "unknown",
+      "note": null
+    },
+    "appearance": {
+      "value": null,
+      "source_ids": [],
+      "status": "unknown",
+      "note": null
+    },
+    "apparent_age": {
+      "value": null,
+      "source_ids": [],
+      "status": "unknown",
+      "note": null
+    },
+    "lifespan": {
+      "value": null,
+      "source_ids": [],
+      "status": "unknown",
+      "note": null
+    },
+    "earliest_attestation": {
+      "value": null,
+      "source_ids": [],
+      "status": "unknown",
+      "note": null
+    },
+    "cool_fact": {
+      "value": null,
+      "source_ids": [],
+      "status": "unknown",
+      "note": null
+    },
+    "behavior": {
+      "value": null,
+      "source_ids": [],
+      "status": "unknown",
+      "note": null
+    },
+    "origin_story": {
+      "value": null,
+      "source_ids": [],
+      "status": "unknown",
+      "note": null
+    }
+  },
+  "variants": [],
+  "relationships": [],
+  "game_design_notes": [],
+  "research_questions": [
+    "Compare these initial web notes against the named book chapter and a regional primary source.",
+    "Find a traceable regional or scholarly source for habitat, appearance, targets and protections.",
+    "Distinguish apparent age, lifespan and dated attestation; leave missing evidence null.",
+    "Confirm the proposed alias against the book entry before treating it as an exact equivalence."
+  ],
+  "extensions": {}
+}
