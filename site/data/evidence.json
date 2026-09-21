@@ -1,0 +1,337 @@
+{
+  "sources": [
+    {
+      "id": "asia-kollivai",
+      "title": "Will-o-the-wisp phenomenon",
+      "url": "https://asiaparanormal.blogspot.com/2010/11/will-o-wisp-phenomenon.html",
+      "kind": "paranormal blog",
+      "accessed": "2026-09-19",
+      "limitations": "Low-confidence lead with limited provenance. Its proposed cross-cultural equivalence is disputed even within the article; independent Tamil evidence is needed.",
+      "publication_year": 2010
+    },
+    {
+      "id": "banerjee-scroll",
+      "title": "Haunting guide: Aacheri or Besho Bhoot, Kollivai Pisaasu or Ulkamukhi, can you identify all ghosts?",
+      "url": "https://scroll.in/article/995384/haunting-guide-aacheri-or-besho-bhoot-kollivai-pisaasu-or-ulkamukhi-can-you-identify-all-ghosts",
+      "kind": "authorized book excerpt",
+      "accessed": "2026-09-19",
+      "limitations": "Same underlying work as banerjee-web; not independent corroboration.",
+      "author": "Riksundar Banerjee"
+    },
+    {
+      "id": "banerjee-web",
+      "title": "The Book of Indian Ghosts — publicly readable transcription",
+      "url": "https://www.scribd.com/document/654440239/The-Book-of-Indian-Ghosts-Riksundar-Banerjee",
+      "kind": "third-party book transcription",
+      "accessed": "2026-09-19",
+      "limitations": "Not a publisher-controlled edition. Claims are provisional; check transcription against the printed chapter. Chapter numbers are evidence locators, not webpage line numbers.",
+      "author": "Riksundar Banerjee",
+      "publication_year": 2021
+    },
+    {
+      "id": "crooke-1896-v1",
+      "title": "William Crooke, The Popular Religion and Folk-Lore of Northern India, volume 1 (1896)",
+      "url": "https://www.gutenberg.org/cache/epub/43681/pg43681-images.html",
+      "kind": "historical folklore compilation / public-domain transcription",
+      "accessed": "2026-09-21",
+      "limitations": "Colonial-era collection: records beliefs through historical biases, caste hierarchies and outsider terminology. Directly consulted sections Airi and The Bhut; cited earlier authorities were not independently inspected."
+    },
+    {
+      "id": "dey-brahmadaitya",
+      "title": "Lal Behari Dey, Folk-tales of Bengal: The Story of a Brahmadaitya",
+      "url": "https://en.wikisource.org/wiki/Folk-tales_of_Bengal/The_Story_of_a_Brahmadaitya",
+      "kind": "primary literary folktale / public-domain transcription",
+      "accessed": "2026-09-21",
+      "limitations": "A particular collected tale and its footnote; not a universal description of all regional Brahmadaitya traditions. Historical caste hierarchy is part of the narrative, not endorsed here."
+    },
+    {
+      "id": "enroute-nishi",
+      "title": "If you hear calls at night don’t look back: Exploring stories of Nishir Daak",
+      "url": "https://enrouteindianhistory.com/if-you-hear-calls-at-night-dont-look-back-exploring-stories-of-nishi-daak/",
+      "kind": "popular cultural-history article",
+      "accessed": "2026-09-19",
+      "limitations": "Mixes anecdote, literary stories and paranormal assertions; records reported beliefs, not demonstrated events. References are not independently verified."
+    },
+    {
+      "id": "mythica-jilaiya",
+      "title": "Jilaiya",
+      "url": "https://pantheon.org/articles/j/jilaiya.html",
+      "kind": "tertiary mythology reference",
+      "accessed": "2026-09-19",
+      "limitations": "Very short entry. Cites Bonnerjea, A Dictionary of Superstitions and Mythology (1920); that underlying work was not inspected."
+    },
+    {
+      "id": "mythica-masan",
+      "title": "Masan",
+      "url": "https://pantheon.org/articles/m/masan.html",
+      "kind": "tertiary mythology reference",
+      "accessed": "2026-09-19",
+      "limitations": "Brief historical description using caste categories. Cited Bonnerjea (1920) was not inspected; not a comprehensive account of regional Masan traditions."
+    },
+    {
+      "id": "quran-27-39",
+      "title": "Quran 27:39, in context 27:38–40",
+      "url": "https://quran.com/en/an-naml/39",
+      "kind": "primary religious text in translation",
+      "accessed": "2026-09-21",
+      "limitations": "The verse establishes an ifrit among the jinn and a particular offer to Solomon; it does not supply a universal anatomy, Indian locality or species taxonomy."
+    },
+    {
+      "id": "quran-37-7",
+      "title": "Quran 37:7",
+      "url": "https://quran.com/en/as-saffat/7",
+      "kind": "primary religious text in translation",
+      "accessed": "2026-09-19",
+      "limitations": "The adjective translated rebellious does not by itself establish a separate species of jinn."
+    },
+    {
+      "id": "quran-55-15",
+      "title": "Quran 55:15",
+      "url": "https://quran.com/en/ar-rahman/15",
+      "kind": "primary religious text in translation",
+      "accessed": "2026-09-19",
+      "limitations": "Evidence for the religious account, not empirical evidence of beings."
+    },
+    {
+      "id": "quran-72-11",
+      "title": "Quran 72:11",
+      "url": "https://quran.com/en/al-jinn/11",
+      "kind": "primary religious text in translation",
+      "accessed": "2026-09-19",
+      "limitations": "Evidence for the religious account, not empirical evidence of beings."
+    },
+    {
+      "id": "wiki-acheri",
+      "title": "Acheri",
+      "url": "https://en.wikipedia.org/wiki/Acheri",
+      "kind": "tertiary encyclopedia",
+      "accessed": "2026-09-21",
+      "limitations": "Editable secondary synthesis. Underlying references have not all been inspected; regional and textual distinctions remain provisional."
+    },
+    {
+      "id": "wiki-bengal",
+      "title": "Ghosts in Bengali culture",
+      "url": "https://en.wikipedia.org/wiki/Ghosts_in_Bengali_culture",
+      "kind": "tertiary encyclopedia",
+      "accessed": "2026-09-19",
+      "limitations": "Editable secondary synthesis; provisional. Underlying references require direct checking. Regional variants must not be universalized. Article has uneven sourcing and displayed a deletion discussion notice when reviewed."
+    },
+    {
+      "id": "wiki-brahmarakshasa",
+      "title": "Brahmarakshasa",
+      "url": "https://en.wikipedia.org/wiki/Brahmarakshasa",
+      "kind": "tertiary encyclopedia",
+      "accessed": "2026-09-21",
+      "limitations": "Editable secondary synthesis. Underlying references have not all been inspected; regional and textual distinctions remain provisional."
+    },
+    {
+      "id": "wiki-chedipe",
+      "title": "Chedipe",
+      "url": "https://en.wikipedia.org/wiki/Chedipe",
+      "kind": "tertiary encyclopedia",
+      "accessed": "2026-09-21",
+      "limitations": "Editable secondary synthesis. Underlying references have not all been inspected; regional and textual distinctions remain provisional."
+    },
+    {
+      "id": "wiki-chir-batti",
+      "title": "Chir Batti",
+      "url": "https://en.wikipedia.org/wiki/Chir_Batti",
+      "kind": "tertiary encyclopedia",
+      "accessed": "2026-09-21",
+      "limitations": "Editable secondary synthesis. Underlying references have not all been inspected; regional and textual distinctions remain provisional."
+    },
+    {
+      "id": "wiki-churel",
+      "title": "Churel",
+      "url": "https://en.wikipedia.org/wiki/Churel",
+      "kind": "tertiary encyclopedia",
+      "accessed": "2026-09-21",
+      "limitations": "Editable secondary synthesis. Underlying references have not all been inspected; regional and textual distinctions remain provisional."
+    },
+    {
+      "id": "wiki-dakini",
+      "title": "Dakini",
+      "url": "https://en.wikipedia.org/wiki/Dakini",
+      "kind": "tertiary encyclopedia",
+      "accessed": "2026-09-21",
+      "limitations": "Editable secondary synthesis. Underlying references have not all been inspected; regional and textual distinctions remain provisional."
+    },
+    {
+      "id": "wiki-gandharva",
+      "title": "Gandharva",
+      "url": "https://en.wikipedia.org/wiki/Gandharva",
+      "kind": "tertiary encyclopedia",
+      "accessed": "2026-09-21",
+      "limitations": "Editable secondary synthesis. Underlying references have not all been inspected; regional and textual distinctions remain provisional."
+    },
+    {
+      "id": "wiki-ghoul",
+      "title": "Ghoul",
+      "url": "https://en.wikipedia.org/wiki/Ghoul",
+      "kind": "tertiary encyclopedia",
+      "accessed": "2026-09-21",
+      "limitations": "Editable secondary synthesis. Underlying references have not all been inspected; regional and textual distinctions remain provisional."
+    },
+    {
+      "id": "wiki-ifrit",
+      "title": "Ifrit",
+      "url": "https://en.wikipedia.org/wiki/Ifrit",
+      "kind": "tertiary encyclopedia",
+      "accessed": "2026-09-21",
+      "limitations": "Editable secondary synthesis. Underlying references have not all been inspected; regional and textual distinctions remain provisional."
+    },
+    {
+      "id": "wiki-jinn",
+      "title": "Jinn",
+      "url": "https://en.wikipedia.org/wiki/Jinn",
+      "kind": "tertiary encyclopedia",
+      "accessed": "2026-09-19",
+      "limitations": "Editable secondary synthesis; provisional. Underlying references require direct checking. Regional variants must not be universalized."
+    },
+    {
+      "id": "wiki-kutti",
+      "title": "Kuttichathan",
+      "url": "https://en.wikipedia.org/wiki/Kuttichathan",
+      "kind": "tertiary encyclopedia",
+      "accessed": "2026-09-19",
+      "limitations": "Editable secondary synthesis; provisional. Underlying references require direct checking. Regional variants must not be universalized."
+    },
+    {
+      "id": "wiki-madurai-veeran",
+      "title": "Madurai Veeran",
+      "url": "https://en.wikipedia.org/wiki/Madurai_Veeran",
+      "kind": "tertiary encyclopedia",
+      "accessed": "2026-09-20",
+      "limitations": "Editable synthesis; provisional. Underlying primary references and regional variations require direct checking."
+    },
+    {
+      "id": "wiki-marid",
+      "title": "Marid",
+      "url": "https://en.wikipedia.org/wiki/Marid",
+      "kind": "tertiary encyclopedia",
+      "accessed": "2026-09-19",
+      "limitations": "Editable secondary synthesis; provisional. Underlying references require direct checking. Regional variants must not be universalized."
+    },
+    {
+      "id": "wiki-munjya",
+      "title": "Munjya",
+      "url": "https://en.wikipedia.org/wiki/Munjya",
+      "kind": "tertiary encyclopedia",
+      "accessed": "2026-09-19",
+      "limitations": "Editable secondary synthesis; provisional. Underlying references require direct checking. Regional variants must not be universalized. The article conflates ritual terminology; its ceremony label, numerical age and proposed carbon-dioxide explanation were not adopted."
+    },
+    {
+      "id": "wiki-naliba",
+      "title": "Naale Ba",
+      "url": "https://en.wikipedia.org/wiki/Naale_Ba",
+      "kind": "tertiary encyclopedia",
+      "accessed": "2026-09-19",
+      "limitations": "Editable secondary synthesis; provisional. Underlying references require direct checking. Regional variants must not be universalized."
+    },
+    {
+      "id": "wiki-pari",
+      "title": "Parī",
+      "url": "https://en.wikipedia.org/wiki/Peri",
+      "kind": "tertiary encyclopedia",
+      "accessed": "2026-09-19",
+      "limitations": "Editable secondary synthesis; provisional. Underlying references require direct checking. Regional variants must not be universalized."
+    },
+    {
+      "id": "wiki-pishacha",
+      "title": "Pishacha",
+      "url": "https://en.wikipedia.org/wiki/Pishacha",
+      "kind": "tertiary encyclopedia",
+      "accessed": "2026-09-19",
+      "limitations": "Editable secondary synthesis; provisional. Underlying references require direct checking. Regional variants must not be universalized."
+    },
+    {
+      "id": "wiki-preta",
+      "title": "Preta",
+      "url": "https://en.wikipedia.org/wiki/Preta",
+      "kind": "tertiary encyclopedia",
+      "accessed": "2026-09-20",
+      "limitations": "Editable synthesis; provisional. Underlying primary references and regional variations require direct checking."
+    },
+    {
+      "id": "wiki-putana",
+      "title": "Putana",
+      "url": "https://en.wikipedia.org/wiki/Putana",
+      "kind": "tertiary encyclopedia",
+      "accessed": "2026-09-20",
+      "limitations": "Editable synthesis; provisional. Underlying primary references and regional variations require direct checking."
+    },
+    {
+      "id": "wiki-rakshasa",
+      "title": "Rakshasa",
+      "url": "https://en.wikipedia.org/wiki/Rakshasa",
+      "kind": "tertiary encyclopedia",
+      "accessed": "2026-09-20",
+      "limitations": "Editable synthesis; provisional. Underlying primary references and regional variations require direct checking."
+    },
+    {
+      "id": "wiki-shakchunni",
+      "title": "Shakchunni",
+      "url": "https://en.wikipedia.org/wiki/Shakchunni",
+      "kind": "tertiary encyclopedia",
+      "accessed": "2026-09-20",
+      "limitations": "Editable synthesis; provisional. Underlying primary references and regional variations require direct checking."
+    },
+    {
+      "id": "wiki-sila",
+      "title": "Sila (mythology)",
+      "url": "https://en.wikipedia.org/wiki/Si%27lat",
+      "kind": "tertiary encyclopedia",
+      "accessed": "2026-09-20",
+      "limitations": "Describes Arabian traditions; inclusion in the supplied Indian anthology does not establish a specific Indian regional lineage."
+    },
+    {
+      "id": "wiki-succubus",
+      "title": "Succubus",
+      "url": "https://en.wikipedia.org/wiki/Succubus",
+      "kind": "tertiary encyclopedia",
+      "accessed": "2026-09-20",
+      "limitations": "Editable synthesis; provisional. Underlying primary references and regional variations require direct checking."
+    },
+    {
+      "id": "wiki-vetala",
+      "title": "Vetala",
+      "url": "https://en.wikipedia.org/wiki/Vetala",
+      "kind": "tertiary encyclopedia",
+      "accessed": "2026-09-20",
+      "limitations": "Editable synthesis; provisional. Underlying primary references and regional variations require direct checking."
+    },
+    {
+      "id": "wiki-yaksha",
+      "title": "Yaksha",
+      "url": "https://en.wikipedia.org/wiki/Yaksha",
+      "kind": "tertiary encyclopedia",
+      "accessed": "2026-09-20",
+      "limitations": "Editable synthesis; provisional. Underlying primary references and regional variations require direct checking."
+    },
+    {
+      "id": "wired-mohini",
+      "title": "A Directory of Indian Supernatural Entities",
+      "url": "https://www.wired.com/2013/04/a-directory-of-indian-supernatural-entities/",
+      "kind": "magazine blog quoting another publication",
+      "accessed": "2026-09-19",
+      "limitations": "Quotes Motherland material; original linked article was unavailable. Cinematic conventions are explicitly separated from traditional appearance.",
+      "publication_year": 2013
+    },
+    {
+      "id": "wisdom-sakini",
+      "title": "Sakini / Shakini: definitions",
+      "url": "https://www.wisdomlib.org/definition/sakini",
+      "kind": "dictionary and textual-reference aggregator",
+      "accessed": "2026-09-20",
+      "limitations": "Several distinct textual senses are collected. The cat- and lion-headed depictions belong to named tantric accounts, not every folk use of the name."
+    },
+    {
+      "id": "wisdom-samandha",
+      "title": "Samandha: Marathi dictionary entry",
+      "url": "https://www.wisdomlib.org/definition/samandha",
+      "kind": "reproduced historical dictionary entry",
+      "accessed": "2026-09-20",
+      "limitations": "Reproduces Molesworth via DDSA. A brief lexical definition, not a full ethnographic account; historical caste terminology is contextualized."
+    }
+  ]
+}

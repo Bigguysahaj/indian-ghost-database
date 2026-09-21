@@ -1,0 +1,44 @@
+# Chordewa
+
+ID: `chordewa` · Research status: **initial_notes**
+
+Listed in Riksundar Banerjee’s *The Book of Indian Ghosts*, entry 16, chapter starts on page 53 in the photographed edition. Only the contents entry was supplied; this is not evidence for the lore below.
+
+| Field | Research note | Evidence status |
+| --- | --- | --- |
+| Classification | Unknown — research needed.  | unknown |
+| Description | Unknown — research needed.  | unknown |
+| Habitat | Unknown — research needed.  | unknown |
+| Location | Maharashtra. [banerjee-web](https://www.scribd.com/document/654440239/The-Book-of-Indian-Ghosts-Riksundar-Banerjee) | provisional |
+| Nemesis | Unknown — research needed.  | unknown |
+| Protections | Unknown — research needed.  | unknown |
+| Prey | Mothers and newborns. [banerjee-web](https://www.scribd.com/document/654440239/The-Book-of-Indian-Ghosts-Riksundar-Banerjee) | provisional |
+| Appearance | Woman. [banerjee-web](https://www.scribd.com/document/654440239/The-Book-of-Indian-Ghosts-Riksundar-Banerjee) | provisional |
+| Apparent age | Unknown — research needed.  | unknown |
+| Lifespan | Unknown — research needed.  | unknown |
+| Earliest attestation | Unknown — research needed.  | unknown |
+| Cool fact | Unknown — research needed.  | unknown |
+| Behavior | Unknown — research needed.  | unknown |
+| Origin story | Unknown — research needed.  | unknown |
+
+## Research questions
+
+- Compare the printed chapter with an independent regional or scholarly source.
+- Establish missing attributes from evidence; do not infer them from the concept image.
+- Check original-language spelling and distinguish regional variants before merging names.
+- Locate independent evidence for the cat motif in the retained illustration and reconcile it with the selected book account.
+- Separate supernatural motifs from historical accusations against living women; no diagnosis or accusation is supported by these records.
+
+## Source limitations
+
+- [The Book of Indian Ghosts — publicly readable transcription](https://www.scribd.com/document/654440239/The-Book-of-Indian-Ghosts-Riksundar-Banerjee): Not a publisher-controlled edition. Claims are provisional; check transcription against the printed chapter. Chapter numbers are evidence locators, not webpage line numbers.
+
+## Regional variants
+
+No regional variant records added yet.
+
+## Game adaptations
+
+- **Creative interpretation:** Retained the existing numbered concept cell. Its visual details must not be imported into sourced claims without independent support.
+
+[Back to catalogue](../GHOSTS.md)

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Indian Ghost Database</title>
+<meta name="description" content="An open, community-expandable catalogue of Indian ghosts and folklore, sourced and cited for game developers.">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="page-header">
+  <div class="header-inner">
+    <h1>Indian Ghost Database</h1>
+    <p class="tagline">An open, growing research catalogue of Indian ghosts and folklore — sourced, cited and honest about what isn't known yet.</p>
+    <dl class="stats" id="stats" aria-label="Database statistics">
+      <div><dt id="stat-total">—</dt><dd>entries</dd></div>
+      <div><dt id="stat-sources">—</dt><dd>web evidence sources</dd></div>
+      <div><dt id="stat-claims">—</dt><dd>sourced claims</dd></div>
+      <div><dt id="stat-reviewed">0</dt><dd>fully reviewed</dd></div>
+    </dl>
+  </div>
+</header>
+
+<main>
+  <div class="toolbar">
+    <input type="search" id="search" placeholder="Search by name, alias or region…" aria-label="Search ghosts">
+    <div class="filter-group" id="status-filters" role="group" aria-label="Filter by research status"></div>
+  </div>
+
+  <p class="disclaimer">Every card is a claim under review, not a finished description. <span class="status-dot status-provisional"></span> provisional means a web source was read but not yet checked against the book or a regional source. Portraits are AI-generated concept art, not folklore evidence — see each entry's notes.</p>
+
+  <div class="grid" id="grid" aria-live="polite"></div>
+  <p class="empty" id="empty" hidden>No ghosts match that search.</p>
+</main>
+
+<div class="modal-backdrop" id="modal-backdrop" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <button class="modal-close" id="modal-close" aria-label="Close">&times;</button>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+<footer class="page-footer">
+  <p>Data licensed <strong>CC BY-SA 4.0</strong>; utility code and schema <strong>MIT</strong>. Source: Riksundar Banerjee, <em>The Book of Indian Ghosts</em> (Aleph Book Company, 2021) — contents photographs and an authorised excerpt only, plus independently cited web sources.</p>
+  <p><a href="https://github.com/Bigguysahaj/indian-ghost-database">View the repository</a> · <a href="https://github.com/Bigguysahaj/indian-ghost-database/blob/main/CONTRIBUTING.md">Contribute an entry</a></p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,268 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Indian Ghost Database",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "updated",
+    "scope",
+    "ghosts"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "0.2.0"
+    },
+    "updated": {
+      "type": "string"
+    },
+    "scope": {
+      "type": "string"
+    },
+    "ghosts": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/ghost"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "claim": {
+      "type": "object",
+      "required": [
+        "value",
+        "source_ids",
+        "status",
+        "note"
+      ],
+      "properties": {
+        "value": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "status": {
+          "enum": [
+            "unknown",
+            "provisional",
+            "documented",
+            "disputed"
+          ]
+        },
+        "note": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "ghost": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "aliases",
+        "native_names",
+        "seed_reference",
+        "research_status",
+        "claims",
+        "variants",
+        "relationships",
+        "game_design_notes",
+        "research_questions",
+        "extensions"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "aliases": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "native_names": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "seed_reference": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "research_status": {
+          "enum": [
+            "name_only",
+            "initial_notes",
+            "reviewed"
+          ]
+        },
+        "claims": {
+          "type": "object",
+          "required": [
+            "classification",
+            "description",
+            "habitat",
+            "location",
+            "nemesis",
+            "protections",
+            "prey",
+            "appearance",
+            "apparent_age",
+            "lifespan",
+            "earliest_attestation",
+            "cool_fact",
+            "behavior",
+            "origin_story"
+          ],
+          "properties": {
+            "classification": {
+              "$ref": "#/$defs/claim"
+            },
+            "description": {
+              "$ref": "#/$defs/claim"
+            },
+            "habitat": {
+              "$ref": "#/$defs/claim"
+            },
+            "location": {
+              "$ref": "#/$defs/claim"
+            },
+            "nemesis": {
+              "$ref": "#/$defs/claim"
+            },
+            "protections": {
+              "$ref": "#/$defs/claim"
+            },
+            "prey": {
+              "$ref": "#/$defs/claim"
+            },
+            "appearance": {
+              "$ref": "#/$defs/claim"
+            },
+            "apparent_age": {
+              "$ref": "#/$defs/claim"
+            },
+            "lifespan": {
+              "$ref": "#/$defs/claim"
+            },
+            "earliest_attestation": {
+              "$ref": "#/$defs/claim"
+            },
+            "cool_fact": {
+              "$ref": "#/$defs/claim"
+            },
+            "behavior": {
+              "$ref": "#/$defs/claim"
+            },
+            "origin_story": {
+              "$ref": "#/$defs/claim"
+            }
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/claim"
+          }
+        },
+        "variants": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "region",
+              "difference",
+              "source_ids"
+            ],
+            "properties": {
+              "region": {
+                "type": "string"
+              },
+              "difference": {
+                "type": "string"
+              },
+              "source_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "uniqueItems": true
+              }
+            }
+          }
+        },
+        "relationships": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "target_id",
+              "relation",
+              "source_ids"
+            ],
+            "properties": {
+              "target_id": {
+                "type": "string"
+              },
+              "relation": {
+                "type": "string"
+              },
+              "source_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "game_design_notes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "text",
+              "basis"
+            ],
+            "properties": {
+              "text": {
+                "type": "string"
+              },
+              "basis": {
+                "const": "creative_interpretation"
+              }
+            }
+          }
+        },
+        "research_questions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "extensions": {
+          "type": "object"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}
