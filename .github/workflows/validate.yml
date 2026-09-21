@@ -11,3 +11,7 @@ jobs:
         with:
           python-version: '3.12'
       - run: python scripts/catalogue.py --check
+      - name: Check site/ is in sync with data/ and images/
+        run: |
+          python scripts/sync_site.py
+          git diff --exit-code -- site/ || (echo "site/ is out of date; run scripts/sync_site.py and commit the result" && exit 1)

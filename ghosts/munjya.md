@@ -4,14 +4,12 @@ ID: `munjya` · Research status: **initial_notes**
 
 Listed in Riksundar Banerjee’s *The Book of Indian Ghosts*, entry 54, chapter starts on page 161 in the photographed edition. Only the contents entry was supplied; this is not evidence for the lore below.
 
-Proposed search aliases (equivalence needs review): Munja
-
 | Field | Research note | Evidence status |
 | --- | --- | --- |
-| Classification | Unknown — research needed.  | unknown |
-| Description | A spirit of someone dying after the sacred-thread ceremony but before marriage, in this regional account. [konkan-blog](https://mostlymaharashtra.wixsite.com/maha-shu/post/ghosts-from-konkan) | provisional |
-| Habitat | Wells and peepal trees. [konkan-blog](https://mostlymaharashtra.wixsite.com/maha-shu/post/ghosts-from-konkan) | provisional |
-| Location | Konkan. [konkan-blog](https://mostlymaharashtra.wixsite.com/maha-shu/post/ghosts-from-konkan) | provisional |
+| Classification | Restless bachelor ghost. [wiki-munjya](https://en.wikipedia.org/wiki/Munjya) | provisional |
+| Description | Unknown — research needed.  | unknown |
+| Habitat | Peepal trees. [wiki-munjya](https://en.wikipedia.org/wiki/Munjya) | provisional |
+| Location | Maharashtra and the Konkan coast. [wiki-munjya](https://en.wikipedia.org/wiki/Munjya) | provisional |
 | Nemesis | Unknown — research needed.  | unknown |
 | Protections | Unknown — research needed.  | unknown |
 | Prey | Unknown — research needed.  | unknown |
@@ -19,24 +17,25 @@ Proposed search aliases (equivalence needs review): Munja
 | Apparent age | Unknown — research needed.  | unknown |
 | Lifespan | Unknown — research needed.  | unknown |
 | Earliest attestation | Unknown — research needed.  | unknown |
-| Cool fact | Film-specific traits need a separate adaptation record. [konkan-blog](https://mostlymaharashtra.wixsite.com/maha-shu/post/ghosts-from-konkan) | provisional |
-| Behavior | Frightens people; the blog describes this variant as non-dangerous. [konkan-blog](https://mostlymaharashtra.wixsite.com/maha-shu/post/ghosts-from-konkan) | provisional |
-| Origin story | Unknown — research needed.  | unknown |
+| Cool fact | Accounts differ in how dangerous it is. [wiki-munjya](https://en.wikipedia.org/wiki/Munjya) | provisional |
+| Behavior | May retaliate against disturbance of its tree; stories include stone-throwing. [wiki-munjya](https://en.wikipedia.org/wiki/Munjya) | provisional |
+| Origin story | A boy dies after initiation but before marriage. [wiki-munjya](https://en.wikipedia.org/wiki/Munjya) | provisional |
 
 ## Research questions
 
-- Compare these initial web notes against the named book chapter and a regional primary source.
-- Find a traceable regional or scholarly source for habitat, appearance, targets and protections.
-- Distinguish apparent age, lifespan and dated attestation; leave missing evidence null.
-- Confirm the proposed alias against the book entry before treating it as an exact equivalence.
+- Compare these notes against the printed book chapter and an independent regional or scholarly source.
+- Establish a dated primary attestation; a modern retelling does not establish the earliest occurrence.
 
 ## Source limitations
 
-- [Ghosts from Konkan](https://mostlymaharashtra.wixsite.com/maha-shu/post/ghosts-from-konkan): Unreviewed regional blog; use as a lead only. Some terminology reflects caste stereotypes.
+- [Munjya](https://en.wikipedia.org/wiki/Munjya): Editable secondary synthesis; provisional. Underlying references require direct checking. Regional variants must not be universalized. The article conflates ritual terminology; its ceremony label, numerical age and proposed carbon-dioxide explanation were not adopted.
 
 ## Regional variants
 
-No regional variant records added yet.
+
+### Maharashtra and Konkan
+
+Some stories make it relatively harmless; others describe dangerous possession or accidents. [wiki-munjya](https://en.wikipedia.org/wiki/Munjya)
 
 ## Game adaptations
 

@@ -6,8 +6,8 @@ Listed in Riksundar Banerjee’s *The Book of Indian Ghosts*, entry 42, chapter 
 
 | Field | Research note | Evidence status |
 | --- | --- | --- |
-| Classification | Unknown — research needed.  | unknown |
-| Description | Discussed by Banerjee among unmarried female spirits with sexual motifs. [banerjee-excerpt](https://scroll.in/article/995384/haunting-guide-aacheri-or-besho-bhoot-kollivai-pisaasu-or-ulkamukhi-can-you-identify-all-ghosts) | provisional |
+| Classification | Female ghost. [banerjee-scroll](https://scroll.in/article/995384/haunting-guide-aacheri-or-besho-bhoot-kollivai-pisaasu-or-ulkamukhi-can-you-identify-all-ghosts) | provisional |
+| Description | Unknown — research needed.  | unknown |
 | Habitat | Unknown — research needed.  | unknown |
 | Location | Unknown — research needed.  | unknown |
 | Nemesis | Unknown — research needed.  | unknown |
@@ -18,18 +18,18 @@ Listed in Riksundar Banerjee’s *The Book of Indian Ghosts*, entry 42, chapter 
 | Lifespan | Unknown — research needed.  | unknown |
 | Earliest attestation | Unknown — research needed.  | unknown |
 | Cool fact | Unknown — research needed.  | unknown |
-| Behavior | Unknown — research needed.  | unknown |
-| Origin story | Unknown — research needed.  | unknown |
+| Behavior | Seeks sexual contact with the living. [banerjee-scroll](https://scroll.in/article/995384/haunting-guide-aacheri-or-besho-bhoot-kollivai-pisaasu-or-ulkamukhi-can-you-identify-all-ghosts) | provisional |
+| Origin story | An unmarried woman’s death. [banerjee-scroll](https://scroll.in/article/995384/haunting-guide-aacheri-or-besho-bhoot-kollivai-pisaasu-or-ulkamukhi-can-you-identify-all-ghosts) | provisional |
 
 ## Research questions
 
-- Compare these initial web notes against the named book chapter and a regional primary source.
-- Find a traceable regional or scholarly source for habitat, appearance, targets and protections.
-- Distinguish apparent age, lifespan and dated attestation; leave missing evidence null.
+- Compare these notes against the printed book chapter and an independent regional or scholarly source.
+- Establish a dated primary attestation; a modern retelling does not establish the earliest occurrence.
+- Find independent support for the distinctive motif before treating this brief account as representative.
 
 ## Source limitations
 
-- [Authorised excerpt of The Book of Indian Ghosts](https://scroll.in/article/995384/haunting-guide-aacheri-or-besho-bhoot-kollivai-pisaasu-or-ulkamukhi-can-you-identify-all-ghosts): Introduction excerpt, published 21 May 2021; not the individual chapters.
+- [Haunting guide: Aacheri or Besho Bhoot, Kollivai Pisaasu or Ulkamukhi, can you identify all ghosts?](https://scroll.in/article/995384/haunting-guide-aacheri-or-besho-bhoot-kollivai-pisaasu-or-ulkamukhi-can-you-identify-all-ghosts): Same underlying work as banerjee-web; not independent corroboration.
 
 ## Regional variants
 

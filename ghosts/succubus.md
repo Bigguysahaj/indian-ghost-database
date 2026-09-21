@@ -6,30 +6,31 @@ Listed in Riksundar Banerjee’s *The Book of Indian Ghosts*, entry 76, chapter 
 
 | Field | Research note | Evidence status |
 | --- | --- | --- |
-| Classification | Comparative, transregional folklore term [succubus](https://en.wikipedia.org/wiki/Succubus) | provisional |
-| Description | A female dream visitor associated with seduction in European traditions. [succubus](https://en.wikipedia.org/wiki/Succubus) | provisional |
+| Classification | Female dream-visiting demon in European folklore. [wiki-succubus](https://en.wikipedia.org/wiki/Succubus) | provisional |
+| Description | Unknown — research needed.  | unknown |
 | Habitat | Unknown — research needed.  | unknown |
-| Location | Unknown — research needed.  | unknown |
+| Location | European source tradition; Indian regional attestation not established here. [wiki-succubus](https://en.wikipedia.org/wiki/Succubus) | provisional |
 | Nemesis | Unknown — research needed.  | unknown |
 | Protections | Unknown — research needed.  | unknown |
-| Prey | Sleeping men in the traditional accounts. [succubus](https://en.wikipedia.org/wiki/Succubus) | provisional |
-| Appearance | A woman, sometimes with nonhuman features. [succubus](https://en.wikipedia.org/wiki/Succubus) | provisional |
+| Prey | Sleeping men in the cited traditions. [wiki-succubus](https://en.wikipedia.org/wiki/Succubus) | provisional |
+| Appearance | Frequently represented as a beautiful adult woman in modern depictions. [wiki-succubus](https://en.wikipedia.org/wiki/Succubus) | provisional |
 | Apparent age | Unknown — research needed.  | unknown |
 | Lifespan | Unknown — research needed.  | unknown |
 | Earliest attestation | Unknown — research needed.  | unknown |
-| Cool fact | Included because the photographed contents list it; an Indian-specific equivalent is not established here. [succubus](https://en.wikipedia.org/wiki/Succubus) | provisional |
-| Behavior | Unknown — research needed.  | unknown |
+| Cool fact | Unknown — research needed.  | unknown |
+| Behavior | Seduces sleeping men; some narratives associate repeated visits with wasting illness. [wiki-succubus](https://en.wikipedia.org/wiki/Succubus) | provisional |
 | Origin story | Unknown — research needed.  | unknown |
 
 ## Research questions
 
-- Compare these initial web notes against the named book chapter and a regional primary source.
-- Find a traceable regional or scholarly source for habitat, appearance, targets and protections.
-- Distinguish apparent age, lifespan and dated attestation; leave missing evidence null.
+- Check the printed chapter and an independent regional or scholarly account.
+- Establish a dated primary attestation; do not treat a modern summary as the earliest record.
+- Verify any unknown appearance, habitat, targets or protections before adding them as claims.
+- Find a documented Indian adaptation; anthology inclusion alone is not proof of Indian origin.
 
 ## Source limitations
 
-- [Succubus](https://en.wikipedia.org/wiki/Succubus): Tertiary overview consulted; underlying references not independently checked.
+- [Succubus](https://en.wikipedia.org/wiki/Succubus): Editable synthesis; provisional. Underlying primary references and regional variations require direct checking.
 
 ## Regional variants
 
@@ -37,6 +38,6 @@ No regional variant records added yet.
 
 ## Game adaptations
 
-No game mechanics added. Label invented mechanics as `creative_interpretation`.
+- **Creative interpretation:** Fully clothed adult woman in a dark plum flowing dress, subtle crescent-shaped dream mist; no erotic pose. Unspecified colours, costume, pose and props are artistic choices, not new folklore claims.
 
 [Back to catalogue](../GHOSTS.md)

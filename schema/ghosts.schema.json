@@ -10,7 +10,7 @@
   ],
   "properties": {
     "schema_version": {
-      "const": "0.1.0"
+      "const": "0.2.0"
     },
     "updated": {
       "type": "string"
@@ -188,22 +188,23 @@
           "items": {
             "type": "object",
             "required": [
-              "id",
-              "context",
-              "claims"
+              "region",
+              "difference",
+              "source_ids"
             ],
             "properties": {
-              "id": {
+              "region": {
                 "type": "string"
               },
-              "context": {
+              "difference": {
                 "type": "string"
               },
-              "claims": {
-                "type": "object",
-                "additionalProperties": {
-                  "$ref": "#/$defs/claim"
-                }
+              "source_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "uniqueItems": true
               }
             }
           }

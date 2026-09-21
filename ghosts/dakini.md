@@ -6,37 +6,40 @@ Listed in Riksundar Banerjee’s *The Book of Indian Ghosts*, entry 20, chapter 
 
 | Field | Research note | Evidence status |
 | --- | --- | --- |
-| Classification | Religious figure with tradition-dependent meanings [dakini](https://en.wikipedia.org/wiki/Dakini) | provisional |
-| Description | Some Hindu texts describe flesh-eating attendants of Kali; the term also has distinct Buddhist religious uses. [dakini](https://en.wikipedia.org/wiki/Dakini) | provisional |
+| Classification | Female supernatural or religious figure; meaning depends on tradition. [wiki-dakini](https://en.wikipedia.org/wiki/Dakini) | provisional |
+| Description | Hindu demoness traditions and Buddhist wisdom-dakini traditions require separate treatment. [wiki-dakini](https://en.wikipedia.org/wiki/Dakini) | provisional |
 | Habitat | Unknown — research needed.  | unknown |
-| Location | Unknown — research needed.  | unknown |
+| Location | Indian religious traditions and their wider Buddhist adaptations. [wiki-dakini](https://en.wikipedia.org/wiki/Dakini) | provisional |
 | Nemesis | Unknown — research needed.  | unknown |
 | Protections | Unknown — research needed.  | unknown |
 | Prey | Unknown — research needed.  | unknown |
-| Appearance | Unknown — research needed.  | unknown |
+| Appearance | Female, sometimes fierce; no single universal iconography. [wiki-dakini](https://en.wikipedia.org/wiki/Dakini) | provisional |
 | Apparent age | Unknown — research needed.  | unknown |
 | Lifespan | Unknown — research needed.  | unknown |
 | Earliest attestation | Unknown — research needed.  | unknown |
-| Cool fact | Keep religious context attached to every variant; a single monster definition is inadequate. [dakini](https://en.wikipedia.org/wiki/Dakini) | provisional |
-| Behavior | Unknown — research needed.  | unknown |
+| Cool fact | Unknown — research needed.  | unknown |
+| Behavior | Some Hindu accounts describe flesh-eating attendants; Vajrayana accounts also describe spiritual guidance. [wiki-dakini](https://en.wikipedia.org/wiki/Dakini) | provisional |
 | Origin story | Unknown — research needed.  | unknown |
 
 ## Research questions
 
-- Compare these initial web notes against the named book chapter and a regional primary source.
-- Find a traceable regional or scholarly source for habitat, appearance, targets and protections.
-- Distinguish apparent age, lifespan and dated attestation; leave missing evidence null.
+- Compare the printed chapter with an independent regional or scholarly source.
+- Establish missing attributes from evidence; do not infer them from the concept image.
+- Check original-language spelling and distinguish regional variants before merging names.
 
 ## Source limitations
 
-- [Dakini](https://en.wikipedia.org/wiki/Dakini): Tertiary overview consulted; underlying references not independently checked.
+- [Dakini](https://en.wikipedia.org/wiki/Dakini): Editable secondary synthesis. Underlying references have not all been inspected; regional and textual distinctions remain provisional.
 
 ## Regional variants
 
-No regional variant records added yet.
+
+### Vajrayana Buddhism
+
+Wisdom dakinis can embody enlightenment or denote accomplished women; this is not equivalent to a malicious ghost. [wiki-dakini](https://en.wikipedia.org/wiki/Dakini)
 
 ## Game adaptations
 
-No game mechanics added. Label invented mechanics as `creative_interpretation`.
+- **Creative interpretation:** Retained the existing numbered concept cell. Its visual details must not be imported into sourced claims without independent support.
 
 [Back to catalogue](../GHOSTS.md)

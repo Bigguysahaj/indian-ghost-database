@@ -8,7 +8,7 @@ Help build a useful, traceable resource for Indian game developers. Regional kno
 2. Edit `data/ghosts.json`; use `data/entry-template.json` for a new record and assign a unique stable slug. Set `seed_reference` to `null` for additions outside the photographed list.
 3. Add sources to `research/evidence.json`. Include a stable ID, title, URL or archival locator, source type, access date and limitations. Books accepted into the bibliography belong in `data/references.json`.
 4. Cite evidence on every populated claim. Keep unsupported values `null`, with `status: "unknown"` and an empty source list. An empty prey field does not mean harmless; an empty nemesis field does not mean invulnerable.
-5. Put competing regional accounts in `variants`, each with a context and separately sourced claims. Avoid merging contradictory accounts into one creature.
+5. Put competing regional accounts in `variants`, each with a `region`, a `difference` description and its own `source_ids`. Avoid merging contradictory accounts into one creature.
 6. Run `python scripts/catalogue.py`, then `python scripts/catalogue.py --check`. Include the generated Markdown in the pull request.
 
 ## Evidence status

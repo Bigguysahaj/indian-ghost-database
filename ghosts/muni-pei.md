@@ -6,10 +6,10 @@ Listed in Riksundar Banerjee’s *The Book of Indian Ghosts*, entry 52, chapter 
 
 | Field | Research note | Evidence status |
 | --- | --- | --- |
-| Classification | Unknown — research needed.  | unknown |
-| Description | The publisher identifies this as a fearsome Tamil ghost tradition. [aleph](https://www.alephbookcompany.com/book/the-book-of-indian-ghosts/) | provisional |
-| Habitat | Unknown — research needed.  | unknown |
-| Location | Tamil Nadu. [aleph](https://www.alephbookcompany.com/book/the-book-of-indian-ghosts/) | provisional |
+| Classification | Tamil guardian spirit. [banerjee-web](https://www.scribd.com/document/654440239/The-Book-of-Indian-Ghosts-Riksundar-Banerjee) | provisional |
+| Description | Unknown — research needed.  | unknown |
+| Habitat | Trees. [banerjee-web](https://www.scribd.com/document/654440239/The-Book-of-Indian-Ghosts-Riksundar-Banerjee) | provisional |
+| Location | Unknown — research needed.  | unknown |
 | Nemesis | Unknown — research needed.  | unknown |
 | Protections | Unknown — research needed.  | unknown |
 | Prey | Unknown — research needed.  | unknown |
@@ -23,13 +23,14 @@ Listed in Riksundar Banerjee’s *The Book of Indian Ghosts*, entry 52, chapter 
 
 ## Research questions
 
-- Compare these initial web notes against the named book chapter and a regional primary source.
-- Find a traceable regional or scholarly source for habitat, appearance, targets and protections.
-- Distinguish apparent age, lifespan and dated attestation; leave missing evidence null.
+- Compare these notes against the printed book chapter and an independent regional or scholarly source.
+- Establish a dated primary attestation; a modern retelling does not establish the earliest occurrence.
+- Check local Tamil evidence for its relationship to Muniandi or Muneeswarar; do not treat those names as verified synonyms.
+- Find independent support for the distinctive motif before treating this brief account as representative.
 
 ## Source limitations
 
-- [The Book of Indian Ghosts — publisher page](https://www.alephbookcompany.com/book/the-book-of-indian-ghosts/): Publisher synopsis only; does not establish all chapter details.
+- [The Book of Indian Ghosts — publicly readable transcription](https://www.scribd.com/document/654440239/The-Book-of-Indian-Ghosts-Riksundar-Banerjee): Not a publisher-controlled edition. Claims are provisional; check transcription against the printed chapter. Chapter numbers are evidence locators, not webpage line numbers.
 
 ## Regional variants
 

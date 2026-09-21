@@ -1,34 +1,36 @@
 # Initial research pass
 
-Date: 17 September 2026.
+Date: 21 September 2026.
 
 ## Coverage
 
 - All 84 photographed names transcribed with chapter start pages.
-- 39 entries have at least one provisional sourced note; 45 are name-only stubs.
-- No entry has completed regional or scholarly review.
-- 23 web evidence records accompany the single initial book reference.
+- All 84 entries now carry at least one provisional sourced claim; no entry is name-only anymore.
+- No entry has completed regional or scholarly review — `initial_notes` is not `reviewed`.
+- 320 claim fields are populated across the 84 entries, out of 14 fields × 84 entries = 1,176 possible; the remainder stay `null`/`unknown` rather than guessed.
+- 41 web evidence records accompany the single initial book reference (`banerjee-2021`). This replaces and supersedes the smaller evidence set from the first publishing pass — see `research/evidence.json` for the current list.
+- 6 entries carry regional `variants`; 7 carry `relationships` to other entries (for example Brahmarakshasa and Putana as rakshasa, Marid and Ifrit as jinn classifications).
 - No full chapter text, scans, illustrations, inferred numerical lifespans or invented combat statistics are included.
 
-Names follow the photographed spelling, including `Nali Ba`, `Nishidaak`, `Potachunni` and `Skondhokata`. Proposed aliases are search aids requiring identity checks. Publication year 2021 is the date of this reference, not the age or origin date of a tradition.
+Names follow the photographed spelling, including `Nali Ba`, `Nishidaak`, `Potachunni` and `Skondhokata`. Proposed aliases are search aids requiring identity checks. Publication year 2021 is the date of the Banerjee reference, not the age or origin date of a tradition.
 
 ## Research method and limitations
 
-The publisher’s page and an authorised introductory excerpt were consulted first. Individual encyclopaedia pages supplied provisional descriptions for several widely documented beings. A Bengali overview supplied short notes for some regional entries, and two popular retellings supplied leads on Konkan figures. Those popular sources have lower evidentiary weight. The Bengali overview itself carries sourcing warnings.
+The publisher's page, an authorised introductory excerpt (a Scroll.in article covering several named entries) and a third-party public transcription of the book were consulted, alongside independently published reference articles (general encyclopaedic sources, mythology reference sites, and Quranic citations for the jinn-derived entries: Jinn, Marid, Ifrit). William Crooke's 1896 folklore survey and Mustafa Khan Dey's literary material supplied historical detail for a small number of entries; both carry the biases of their period and are cited as reported tradition, not as verified fact.
 
-Broad discovery searches covered the less familiar names in groups, including Aayeri, Adam Bhediya, Ateswar, Barul, Chanda, Chiroguni, Daag, Dakan Sakan, Dayani, Drakshi, Dund, Ekanore, Ekthengo, Galasi, Gayal, Gutiya Deo, Guyasi, Hara, Jhapri, Jilaiya, Kalpurush, Kanavulo, Kanipishachi, Khabish, Kichin, Kollivai Pisaasu, Malandu, Munchowa, Munish, Pandabba, Potachunni, Prapti, Puwali, Pyachapechi, Reech, Runia, Sakini, Samandha, Shayeed, Sheekol Buri, Sila, Skondhokata, Supurus, Tola, Ulkamukhi, Viran, Yugini and Zoting. Many results were irrelevant, social posts, entertainment pages or unverified book mirrors. They were not promoted into facts. This was not a separate exhaustive search for every name; Chordewa, for example, remains a chapter-reading task.
+The third-party book transcription is not a publisher-controlled edition; its claims are marked provisional throughout and chapter numbers are recorded as evidence locators, not webpage line numbers. Religious and cosmological figures — Dakini, Gandharva, Pishachas, Yaksha — are not reduced to generic hostile ghosts; their variant records note this explicitly. Health, protection and death motifs describe beliefs, not medical facts or instructions.
 
-The full book was not accessed. A contents page proves that the book includes a name, not that an unrelated online definition matches that entry. Web source IDs therefore accompany claims separately from the seed book pointer. Source access dates are recorded; exact archived revisions have not yet been captured.
+The full book was not accessed. A contents page proves that the book includes a name, not that an unrelated online definition matches that entry. Web source IDs therefore accompany claims separately from the seed book pointer. Two spelling/identity questions are flagged for future print verification: the Guyasi/Gayasi spelling discrepancy, and whether the book's Aayeri and Crooke's "Airi" denote the same local tradition (treated here as a provisional association only, on the strength of a shared hunting motif).
 
 ## Next work, in order
 
-1. Read and annotate the 45 name-only chapters, starting with identity and regional spelling. Add page-specific notes in original language, then a concise English summary.
-2. Trace each populated claim back to regional collections, scholarly work or documented oral accounts. Replace weak popular-retelling evidence where possible.
-3. Record native scripts and pronunciation with regional speakers. Confirm aliases before merging.
-4. Split contradictory variants and classify spirits, deities, celestial figures, named characters and comparative terms explicitly.
-5. Investigate protective motifs and adversaries independently. Most entries do not yet have support for those fields.
-6. Add dated attestations only from consulted sources. A story’s setting is not its date of composition, and first surviving mention is not proof of origin.
-7. Archive source revisions and document reuse permissions for any future media assets.
+1. Move every entry from `initial_notes` toward `reviewed`: trace each populated claim back to regional collections, scholarly work or documented oral accounts, and replace weaker popular-retelling evidence where possible.
+2. Record native scripts and pronunciation with regional speakers. Confirm aliases before merging — in particular, verify whether Aayeri/Airi is one tradition or two.
+3. Expand regional `variants` beyond the current six entries; most of the 84 likely have more than one local telling.
+4. Investigate protective motifs and adversaries independently — `nemesis` remains unknown for most entries, and `protections` for many.
+5. Add dated attestations only from consulted sources. A story's setting is not its date of composition, and first surviving mention is not proof of origin.
+6. Archive source revisions and document reuse permissions for any future media assets.
+7. Review the four concept-art atlases (`images/atlases/`) cell by cell against the sourced claims; several invented colours, anatomies and props (for example Chordewa's cat, Hara's leafy silhouette) are explicitly unsupported by the cited accounts and are flagged as such in each entry's `extensions.visual_reference.review_note`.
 
 ## Bodies of research to explore later
 
@@ -36,4 +38,4 @@ The bibliography remains limited to Banerjee for this release. Future source acq
 
 ## Design data policy
 
-Mechanics should be a separate interpretive layer. A source’s “night caller” motif can inspire an audio encounter, but hearing range, cooldown, damage, hostility and player counters are game-design decisions. Leave that layer empty while this project is in research mode.
+Mechanics should be a separate interpretive layer. A source's "night caller" motif can inspire an audio encounter, but hearing range, cooldown, damage, hostility and player counters are game-design decisions. `game_design_notes` (`basis: "creative_interpretation"`) is the only place that layer belongs. The concept-art atlases are the same kind of layer: `extensions.visual_reference` on each entry states plainly that palette, costume, anatomy and props are design choices, not evidence, and lists what a given cell adds beyond what the sources support.

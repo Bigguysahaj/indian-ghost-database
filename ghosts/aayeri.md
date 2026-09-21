@@ -1,31 +1,36 @@
 # Aayeri
 
-ID: `aayeri` · Research status: **name_only**
+ID: `aayeri` · Research status: **initial_notes**
 
 Listed in Riksundar Banerjee’s *The Book of Indian Ghosts*, entry 2, chapter starts on page 7 in the photographed edition. Only the contents entry was supplied; this is not evidence for the lore below.
 
 | Field | Research note | Evidence status |
 | --- | --- | --- |
-| Classification | Unknown — research needed.  | unknown |
+| Classification | Hunting-death spirit, compared provisionally with Airi. [crooke-1896-v1](https://www.gutenberg.org/cache/epub/43681/pg43681-images.html) | provisional |
 | Description | Unknown — research needed.  | unknown |
-| Habitat | Unknown — research needed.  | unknown |
+| Habitat | Hills and secluded shrines. [crooke-1896-v1](https://www.gutenberg.org/cache/epub/43681/pg43681-images.html) | provisional |
 | Location | Unknown — research needed.  | unknown |
 | Nemesis | Unknown — research needed.  | unknown |
 | Protections | Unknown — research needed.  | unknown |
 | Prey | Unknown — research needed.  | unknown |
-| Appearance | Unknown — research needed.  | unknown |
+| Appearance | Accompanied by hounds with bells. [crooke-1896-v1](https://www.gutenberg.org/cache/epub/43681/pg43681-images.html) | provisional |
 | Apparent age | Unknown — research needed.  | unknown |
 | Lifespan | Unknown — research needed.  | unknown |
 | Earliest attestation | Unknown — research needed.  | unknown |
-| Cool fact | Unknown — research needed.  | unknown |
-| Behavior | Unknown — research needed.  | unknown |
-| Origin story | Unknown — research needed.  | unknown |
+| Cool fact | Survivors may be shown treasure. [crooke-1896-v1](https://www.gutenberg.org/cache/epub/43681/pg43681-images.html) | provisional |
+| Behavior | Terrifies travellers; encounters and its saliva are dangerous in the account. [crooke-1896-v1](https://www.gutenberg.org/cache/epub/43681/pg43681-images.html) | provisional |
+| Origin story | A person killed while hunting. [crooke-1896-v1](https://www.gutenberg.org/cache/epub/43681/pg43681-images.html) | provisional |
 
 ## Research questions
 
-- Read the chapter and verify the identity, regional spelling and traditions.
-- Find a traceable regional or scholarly source for habitat, appearance, targets and protections.
-- Distinguish apparent age, lifespan and dated attestation; leave missing evidence null.
+- Compare the printed chapter with an independent regional or scholarly source.
+- Establish missing attributes from evidence; do not infer them from the concept image.
+- Check original-language spelling and distinguish regional variants before merging names.
+- Confirm that the book’s Aayeri and Crooke’s Airi denote the same local tradition; their matching hunting motif supports a provisional association only.
+
+## Source limitations
+
+- [William Crooke, The Popular Religion and Folk-Lore of Northern India, volume 1 (1896)](https://www.gutenberg.org/cache/epub/43681/pg43681-images.html): Colonial-era collection: records beliefs through historical biases, caste hierarchies and outsider terminology. Directly consulted sections Airi and The Bhut; cited earlier authorities were not independently inspected.
 
 ## Regional variants
 
@@ -33,6 +38,6 @@ No regional variant records added yet.
 
 ## Game adaptations
 
-No game mechanics added. Label invented mechanics as `creative_interpretation`.
+- **Creative interpretation:** Retained the existing numbered concept cell. Its visual details must not be imported into sourced claims without independent support.
 
 [Back to catalogue](../GHOSTS.md)

@@ -8,31 +8,30 @@ Proposed search aliases (equivalence needs review): Acheri
 
 | Field | Research note | Evidence status |
 | --- | --- | --- |
-| Classification | Hill spirit [acher](https://en.wikipedia.org/wiki/Acheri) | provisional |
-| Description | A girl-like mountain spirit whose shadow is said to cause sickness. [acher](https://en.wikipedia.org/wiki/Acheri) | provisional |
-| Habitat | Hilltops by day; descends at dusk. [acher](https://en.wikipedia.org/wiki/Acheri) | provisional |
-| Location | Kumaon, southern Himalayas. [acher](https://en.wikipedia.org/wiki/Acheri) | provisional |
+| Classification | Female hill spirit. [wiki-acheri](https://en.wikipedia.org/wiki/Acheri) | provisional |
+| Description | Unknown — research needed.  | unknown |
+| Habitat | Mountain summits by day. [wiki-acheri](https://en.wikipedia.org/wiki/Acheri) | provisional |
+| Location | Kumaon and the southern Himalayas. [wiki-acheri](https://en.wikipedia.org/wiki/Acheri) | provisional |
 | Nemesis | Unknown — research needed.  | unknown |
-| Protections | Scarlet throat-thread in cited accounts; red clothing is not a consistently safe substitute. [acher](https://en.wikipedia.org/wiki/Acheri) | provisional |
-| Prey | Children in shadow-contact stories. [acher](https://en.wikipedia.org/wiki/Acheri) | provisional |
-| Appearance | Young girl; some accounts describe women. [acher](https://en.wikipedia.org/wiki/Acheri) | provisional |
-| Apparent age | Child or young woman; no numerical age established. [acher](https://en.wikipedia.org/wiki/Acheri) | provisional |
+| Protections | Scarlet thread is reported as a protective custom. [wiki-acheri](https://en.wikipedia.org/wiki/Acheri) | provisional |
+| Prey | Children are especially vulnerable in the stories. [wiki-acheri](https://en.wikipedia.org/wiki/Acheri) | provisional |
+| Appearance | A girl or woman in the accounts summarized. [wiki-acheri](https://en.wikipedia.org/wiki/Acheri) | provisional |
+| Apparent age | Young girl in some accounts; others describe women. [wiki-acheri](https://en.wikipedia.org/wiki/Acheri) | provisional |
 | Lifespan | Unknown — research needed.  | unknown |
 | Earliest attestation | Unknown — research needed.  | unknown |
-| Cool fact | Online retellings sometimes misattribute this Himalayan figure to Native American traditions. [acher](https://en.wikipedia.org/wiki/Acheri) | provisional |
-| Behavior | Unknown — research needed.  | unknown |
-| Origin story | Unknown — research needed.  | unknown |
+| Cool fact | Unknown — research needed.  | unknown |
+| Behavior | Descends at dusk; her shadow is said to bring illness. [wiki-acheri](https://en.wikipedia.org/wiki/Acheri) | provisional |
+| Origin story | Some accounts connect her with a violent death. [wiki-acheri](https://en.wikipedia.org/wiki/Acheri) | provisional |
 
 ## Research questions
 
-- Compare these initial web notes against the named book chapter and a regional primary source.
-- Find a traceable regional or scholarly source for habitat, appearance, targets and protections.
-- Distinguish apparent age, lifespan and dated attestation; leave missing evidence null.
-- Confirm the proposed alias against the book entry before treating it as an exact equivalence.
+- Compare the printed chapter with an independent regional or scholarly source.
+- Establish missing attributes from evidence; do not infer them from the concept image.
+- Check original-language spelling and distinguish regional variants before merging names.
 
 ## Source limitations
 
-- [Acheri](https://en.wikipedia.org/wiki/Acheri): Tertiary overview consulted; underlying references not independently checked.
+- [Acheri](https://en.wikipedia.org/wiki/Acheri): Editable secondary synthesis. Underlying references have not all been inspected; regional and textual distinctions remain provisional.
 
 ## Regional variants
 
@@ -40,6 +39,6 @@ No regional variant records added yet.
 
 ## Game adaptations
 
-No game mechanics added. Label invented mechanics as `creative_interpretation`.
+- **Creative interpretation:** Retained the existing numbered concept cell. Its visual details must not be imported into sourced claims without independent support.
 
 [Back to catalogue](../GHOSTS.md)

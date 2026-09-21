@@ -66,7 +66,7 @@ def validate(data, evidence, references):
             if seed['source_id'] not in known or not isinstance(seed['chapter_start_page'], int):
                 raise ValueError(f'{ghost["id"]}: invalid seed reference')
             seed_numbers.append(seed['entry_number'])
-        for field, c in list(ghost['claims'].items()) + [(f'variant:{v["id"]}:{k}', c) for v in ghost['variants'] for k,c in v['claims'].items()]:
+        for field, c in ghost['claims'].items():
             if c['value'] is None:
                 if c['status'] != 'unknown' or c['source_ids']:
                     raise ValueError(f'{ghost["id"]}.{field}: null must be unknown without sources')
@@ -74,6 +74,9 @@ def validate(data, evidence, references):
                 raise ValueError(f'{ghost["id"]}.{field}: populated claims require evidence')
             if not set(c['source_ids']) <= known:
                 raise ValueError(f'{ghost["id"]}.{field}: unresolved evidence link')
+        for variant in ghost['variants']:
+            if not set(variant['source_ids']) <= known:
+                raise ValueError(f'{ghost["id"]}: unresolved variant evidence link')
         if ghost['research_status'] == 'name_only' and any(c['value'] is not None for c in ghost['claims'].values()):
             raise ValueError(f'{ghost["id"]}: name-only status conflicts with populated claims')
         for relationship in ghost['relationships']:
@@ -115,10 +118,8 @@ def render(data, sources):
         if not g['variants']:
             md.append('No regional variant records added yet.')
         for variant in g['variants']:
-            md += ['', f'### {variant["id"]}', '', variant['context'], '']
-            for field, c in variant['claims'].items():
-                refs = ' '.join(f'[{sid}]({sources[sid]["url"]})' for sid in c['source_ids'])
-                md.append(f'- **{field}**: {c["value"] or "Unknown"} ({c["status"]}) {refs}')
+            refs = ' '.join(f'[{sid}]({sources[sid]["url"]})' for sid in variant['source_ids'])
+            md += ['', f'### {variant["region"]}', '', f'{variant["difference"]} {refs}']
         if g['relationships']:
             md += ['', '## Related beings', '']
             for relation in g['relationships']:

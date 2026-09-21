@@ -8,31 +8,30 @@ Proposed search aliases (equivalence needs review): Chir batti, Chhir batti, Che
 
 | Field | Research note | Evidence status |
 | --- | --- | --- |
-| Classification | Ghost-light tradition [chir](https://en.wikipedia.org/wiki/Chir_batti) | provisional |
-| Description | Reports of moving lights interpreted locally as ghost lights. [chir](https://en.wikipedia.org/wiki/Chir_batti) | provisional |
-| Habitat | Seasonal wetlands and salt-flat margins. [chir](https://en.wikipedia.org/wiki/Chir_batti) | provisional |
-| Location | Banni grasslands and adjoining Rann of Kutch, Gujarat. [chir](https://en.wikipedia.org/wiki/Chir_batti) | provisional |
+| Classification | Ghost-light phenomenon in local folklore. [wiki-chir-batti](https://en.wikipedia.org/wiki/Chir_Batti) | provisional |
+| Description | Accounts concern anomalous lights; a person-shaped spirit is not established. [wiki-chir-batti](https://en.wikipedia.org/wiki/Chir_Batti) | provisional |
+| Habitat | Seasonal wetlands and adjoining salt flats. [wiki-chir-batti](https://en.wikipedia.org/wiki/Chir_Batti) | provisional |
+| Location | Banni grasslands and Rann of Kutch, Gujarat. [wiki-chir-batti](https://en.wikipedia.org/wiki/Chir_Batti) | provisional |
 | Nemesis | Unknown — research needed.  | unknown |
 | Protections | Unknown — research needed.  | unknown |
 | Prey | Unknown — research needed.  | unknown |
-| Appearance | Moving coloured lights, sometimes rounded or pear-shaped. [chir](https://en.wikipedia.org/wiki/Chir_batti) | provisional |
+| Appearance | Moving lights described as balls or pear shapes, changing colour. [wiki-chir-batti](https://en.wikipedia.org/wiki/Chir_Batti) | provisional |
 | Apparent age | Unknown — research needed.  | unknown |
 | Lifespan | Unknown — research needed.  | unknown |
 | Earliest attestation | Unknown — research needed.  | unknown |
-| Cool fact | A light phenomenon, rather than a consistently humanoid ghost. [chir](https://en.wikipedia.org/wiki/Chir_batti) | provisional |
-| Behavior | Said to follow observers or draw them away from roads at night. [chir](https://en.wikipedia.org/wiki/Chir_batti) | provisional |
+| Cool fact | Unknown — research needed.  | unknown |
+| Behavior | Reported to move, pause or follow observers at night. [wiki-chir-batti](https://en.wikipedia.org/wiki/Chir_Batti) | provisional |
 | Origin story | Unknown — research needed.  | unknown |
 
 ## Research questions
 
-- Compare these initial web notes against the named book chapter and a regional primary source.
-- Find a traceable regional or scholarly source for habitat, appearance, targets and protections.
-- Distinguish apparent age, lifespan and dated attestation; leave missing evidence null.
-- Confirm the proposed alias against the book entry before treating it as an exact equivalence.
+- Compare the printed chapter with an independent regional or scholarly source.
+- Establish missing attributes from evidence; do not infer them from the concept image.
+- Check original-language spelling and distinguish regional variants before merging names.
 
 ## Source limitations
 
-- [Chir batti](https://en.wikipedia.org/wiki/Chir_batti): Tertiary overview consulted; underlying references not independently checked.
+- [Chir Batti](https://en.wikipedia.org/wiki/Chir_Batti): Editable secondary synthesis. Underlying references have not all been inspected; regional and textual distinctions remain provisional.
 
 ## Regional variants
 
@@ -40,6 +39,6 @@ No regional variant records added yet.
 
 ## Game adaptations
 
-No game mechanics added. Label invented mechanics as `creative_interpretation`.
+- **Creative interpretation:** Retained the existing numbered concept cell. Its visual details must not be imported into sourced claims without independent support.
 
 [Back to catalogue](../GHOSTS.md)

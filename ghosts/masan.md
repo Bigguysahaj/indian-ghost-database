@@ -6,10 +6,10 @@ Listed in Riksundar Banerjee’s *The Book of Indian Ghosts*, entry 48, chapter 
 
 | Field | Research note | Evidence status |
 | --- | --- | --- |
-| Classification | Unknown — research needed.  | unknown |
-| Description | Banerjee links Masan narratives to redress for social oppression. [banerjee-excerpt](https://scroll.in/article/995384/haunting-guide-aacheri-or-besho-bhoot-kollivai-pisaasu-or-ulkamukhi-can-you-identify-all-ghosts) | provisional |
-| Habitat | Unknown — research needed.  | unknown |
-| Location | Unknown — research needed.  | unknown |
+| Classification | Cemetery-associated ghost in the cited account. [mythica-masan](https://pantheon.org/articles/m/masan.html) | provisional |
+| Description | Unknown — research needed.  | unknown |
+| Habitat | Cemeteries. [mythica-masan](https://pantheon.org/articles/m/masan.html) | provisional |
+| Location | Himalayan region. [mythica-masan](https://pantheon.org/articles/m/masan.html) | provisional |
 | Nemesis | Unknown — research needed.  | unknown |
 | Protections | Unknown — research needed.  | unknown |
 | Prey | Unknown — research needed.  | unknown |
@@ -19,17 +19,16 @@ Listed in Riksundar Banerjee’s *The Book of Indian Ghosts*, entry 48, chapter 
 | Earliest attestation | Unknown — research needed.  | unknown |
 | Cool fact | Unknown — research needed.  | unknown |
 | Behavior | Unknown — research needed.  | unknown |
-| Origin story | Unknown — research needed.  | unknown |
+| Origin story | The source describes a deceased child or a man assigned a marginalized caste identity. [mythica-masan](https://pantheon.org/articles/m/masan.html) | provisional |
 
 ## Research questions
 
-- Compare these initial web notes against the named book chapter and a regional primary source.
-- Find a traceable regional or scholarly source for habitat, appearance, targets and protections.
-- Distinguish apparent age, lifespan and dated attestation; leave missing evidence null.
+- Compare these notes against the printed book chapter and an independent regional or scholarly source.
+- Establish a dated primary attestation; a modern retelling does not establish the earliest occurrence.
 
 ## Source limitations
 
-- [Authorised excerpt of The Book of Indian Ghosts](https://scroll.in/article/995384/haunting-guide-aacheri-or-besho-bhoot-kollivai-pisaasu-or-ulkamukhi-can-you-identify-all-ghosts): Introduction excerpt, published 21 May 2021; not the individual chapters.
+- [Masan](https://pantheon.org/articles/m/masan.html): Brief historical description using caste categories. Cited Bonnerjea (1920) was not inspected; not a comprehensive account of regional Masan traditions.
 
 ## Regional variants
 

@@ -6,8 +6,8 @@ Listed in Riksundar Banerjee’s *The Book of Indian Ghosts*, entry 77, chapter 
 
 | Field | Research note | Evidence status |
 | --- | --- | --- |
-| Classification | Unknown — research needed.  | unknown |
-| Description | A male ghost Banerjee mentions in connection with sexual desire. [banerjee-excerpt](https://scroll.in/article/995384/haunting-guide-aacheri-or-besho-bhoot-kollivai-pisaasu-or-ulkamukhi-can-you-identify-all-ghosts) | provisional |
+| Classification | Teenage male ghost. [banerjee-web](https://www.scribd.com/document/654440239/The-Book-of-Indian-Ghosts-Riksundar-Banerjee) | provisional |
+| Description | Unknown — research needed.  | unknown |
 | Habitat | Unknown — research needed.  | unknown |
 | Location | Unknown — research needed.  | unknown |
 | Nemesis | Unknown — research needed.  | unknown |
@@ -23,13 +23,13 @@ Listed in Riksundar Banerjee’s *The Book of Indian Ghosts*, entry 77, chapter 
 
 ## Research questions
 
-- Compare these initial web notes against the named book chapter and a regional primary source.
-- Find a traceable regional or scholarly source for habitat, appearance, targets and protections.
-- Distinguish apparent age, lifespan and dated attestation; leave missing evidence null.
+- Check the printed chapter and an independent regional or scholarly account.
+- Establish a dated primary attestation; do not treat a modern summary as the earliest record.
+- Verify any unknown appearance, habitat, targets or protections before adding them as claims.
 
 ## Source limitations
 
-- [Authorised excerpt of The Book of Indian Ghosts](https://scroll.in/article/995384/haunting-guide-aacheri-or-besho-bhoot-kollivai-pisaasu-or-ulkamukhi-can-you-identify-all-ghosts): Introduction excerpt, published 21 May 2021; not the individual chapters.
+- [The Book of Indian Ghosts — publicly readable transcription](https://www.scribd.com/document/654440239/The-Book-of-Indian-Ghosts-Riksundar-Banerjee): Not a publisher-controlled edition. Claims are provisional; check transcription against the printed chapter. Chapter numbers are evidence locators, not webpage line numbers.
 
 ## Regional variants
 
@@ -37,6 +37,6 @@ No regional variant records added yet.
 
 ## Game adaptations
 
-No game mechanics added. Label invented mechanics as `creative_interpretation`.
+- **Creative interpretation:** Fully clothed pale adolescent boy in a simple cream tunic and dhoti, eerie reserved stance, violet shadow; no victim. Unspecified colours, costume, pose and props are artistic choices, not new folklore claims.
 
 [Back to catalogue](../GHOSTS.md)

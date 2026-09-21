@@ -8,35 +8,36 @@ Proposed search aliases (equivalence needs review): Kuttichathan
 
 | Field | Research note | Evidence status |
 | --- | --- | --- |
-| Classification | Guardian deity / spirit; context dependent [kutti](https://en.wikipedia.org/wiki/Kuttichathan) | provisional |
-| Description | Kuttichathan is venerated in Malabari Hindu traditions. [kutti](https://en.wikipedia.org/wiki/Kuttichathan) | provisional |
+| Classification | Guardian deity and mischievous supernatural figure in different traditions. [wiki-kutti](https://en.wikipedia.org/wiki/Kuttichathan) | provisional |
+| Description | A childlike figure whose worship and troublesome folktales should be distinguished. [wiki-kutti](https://en.wikipedia.org/wiki/Kuttichathan) | provisional |
 | Habitat | Unknown — research needed.  | unknown |
-| Location | Malabar, Kerala. [kutti](https://en.wikipedia.org/wiki/Kuttichathan) | provisional |
+| Location | Malabar, Kerala. [wiki-kutti](https://en.wikipedia.org/wiki/Kuttichathan) | provisional |
 | Nemesis | Unknown — research needed.  | unknown |
-| Protections | Unknown — research needed.  | unknown |
+| Protections | Some narratives describe appeasement through offerings. [wiki-kutti](https://en.wikipedia.org/wiki/Kuttichathan) | provisional |
 | Prey | Unknown — research needed.  | unknown |
-| Appearance | Often depicted as an adolescent boy. [kutti](https://en.wikipedia.org/wiki/Kuttichathan) | provisional |
-| Apparent age | Adolescent in the cited depiction; no fixed numerical age. [kutti](https://en.wikipedia.org/wiki/Kuttichathan) | provisional |
+| Appearance | Often a stout boy; some depictions include a hair tuft. [wiki-kutti](https://en.wikipedia.org/wiki/Kuttichathan) | provisional |
+| Apparent age | Adolescent boy in the cited depiction. [wiki-kutti](https://en.wikipedia.org/wiki/Kuttichathan) | provisional |
 | Lifespan | Unknown — research needed.  | unknown |
 | Earliest attestation | Unknown — research needed.  | unknown |
-| Cool fact | Associated with Theyyam traditions; the label “evil ghost” would erase living devotional contexts. [kutti](https://en.wikipedia.org/wiki/Kuttichathan) | provisional |
-| Behavior | Unknown — research needed.  | unknown |
+| Cool fact | The name element kutti means child. [wiki-kutti](https://en.wikipedia.org/wiki/Kuttichathan) | provisional |
+| Behavior | Stories attribute thrown stones, disturbed beds and household fires to its mischief. [wiki-kutti](https://en.wikipedia.org/wiki/Kuttichathan) | provisional |
 | Origin story | Unknown — research needed.  | unknown |
 
 ## Research questions
 
-- Compare these initial web notes against the named book chapter and a regional primary source.
-- Find a traceable regional or scholarly source for habitat, appearance, targets and protections.
-- Distinguish apparent age, lifespan and dated attestation; leave missing evidence null.
-- Confirm the proposed alias against the book entry before treating it as an exact equivalence.
+- Compare these notes against the printed book chapter and an independent regional or scholarly source.
+- Establish a dated primary attestation; a modern retelling does not establish the earliest occurrence.
 
 ## Source limitations
 
-- [Kuttichathan](https://en.wikipedia.org/wiki/Kuttichathan): Tertiary overview consulted; underlying references not independently checked.
+- [Kuttichathan](https://en.wikipedia.org/wiki/Kuttichathan): Editable secondary synthesis; provisional. Underlying references require direct checking. Regional variants must not be universalized.
 
 ## Regional variants
 
-No regional variant records added yet.
+
+### Kerala
+
+The related Vishnumaya Chathan tradition depicts a youthful deity riding a buffalo; do not impose this iconography on every mischievous story. [wiki-kutti](https://en.wikipedia.org/wiki/Kuttichathan)
 
 ## Game adaptations
 

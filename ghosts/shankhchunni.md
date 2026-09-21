@@ -4,35 +4,34 @@ ID: `shankhchunni` · Research status: **initial_notes**
 
 Listed in Riksundar Banerjee’s *The Book of Indian Ghosts*, entry 71, chapter starts on page 217 in the photographed edition. Only the contents entry was supplied; this is not evidence for the lore below.
 
-Proposed search aliases (equivalence needs review): Shakchunni
+Proposed search aliases (equivalence needs review): Shakchunni, Shankhachunni
 
 | Field | Research note | Evidence status |
 | --- | --- | --- |
-| Classification | Unknown — research needed.  | unknown |
-| Description | Married-woman spirit marked by shell bangles. [bengal](https://en.wikipedia.org/wiki/Ghosts_in_Bengali_culture) | provisional |
-| Habitat | Trees in some accounts. [bengal](https://en.wikipedia.org/wiki/Ghosts_in_Bengali_culture) | provisional |
-| Location | Unknown — research needed.  | unknown |
+| Classification | Female ghost of a married woman. [wiki-shakchunni](https://en.wikipedia.org/wiki/Shakchunni) | provisional |
+| Description | Unknown — research needed.  | unknown |
+| Habitat | Trees, including sheora and mango in the cited account. [wiki-shakchunni](https://en.wikipedia.org/wiki/Shakchunni) | provisional |
+| Location | West Bengal and Bangladesh. [wiki-shakchunni](https://en.wikipedia.org/wiki/Shakchunni) | provisional |
 | Nemesis | Unknown — research needed.  | unknown |
-| Protections | Unknown — research needed.  | unknown |
+| Protections | An ojha expels the spirit in some stories. [wiki-shakchunni](https://en.wikipedia.org/wiki/Shakchunni) | provisional |
 | Prey | Unknown — research needed.  | unknown |
-| Appearance | Unknown — research needed.  | unknown |
+| Appearance | Often thin, wearing a red-and-white sari, conch bangles and vermilion; greenish skin appears in some depictions. [wiki-shakchunni](https://en.wikipedia.org/wiki/Shakchunni) | provisional |
 | Apparent age | Unknown — research needed.  | unknown |
 | Lifespan | Unknown — research needed.  | unknown |
 | Earliest attestation | Unknown — research needed.  | unknown |
 | Cool fact | Unknown — research needed.  | unknown |
-| Behavior | Unknown — research needed.  | unknown |
-| Origin story | Unknown — research needed.  | unknown |
+| Behavior | Some tales describe possession of married women to reclaim domestic life. [wiki-shakchunni](https://en.wikipedia.org/wiki/Shakchunni) | provisional |
+| Origin story | A married woman dies with domestic attachments or desires unfulfilled. [wiki-shakchunni](https://en.wikipedia.org/wiki/Shakchunni) | provisional |
 
 ## Research questions
 
-- Compare these initial web notes against the named book chapter and a regional primary source.
-- Find a traceable regional or scholarly source for habitat, appearance, targets and protections.
-- Distinguish apparent age, lifespan and dated attestation; leave missing evidence null.
-- Confirm the proposed alias against the book entry before treating it as an exact equivalence.
+- Check the printed chapter and an independent regional or scholarly account.
+- Establish a dated primary attestation; do not treat a modern summary as the earliest record.
+- Verify any unknown appearance, habitat, targets or protections before adding them as claims.
 
 ## Source limitations
 
-- [Ghosts in Bengali culture](https://en.wikipedia.org/wiki/Ghosts_in_Bengali_culture): Tertiary overview consulted; underlying references not independently checked.
+- [Shakchunni](https://en.wikipedia.org/wiki/Shakchunni): Editable synthesis; provisional. Underlying primary references and regional variations require direct checking.
 
 ## Regional variants
 
@@ -40,6 +39,6 @@ No regional variant records added yet.
 
 ## Game adaptations
 
-No game mechanics added. Label invented mechanics as `creative_interpretation`.
+- **Creative interpretation:** Thin green-grey adult woman in a red-white sari, clearly visible white conch bangles and vermilion. Unspecified colours, costume, pose and props are artistic choices, not new folklore claims.
 
 [Back to catalogue](../GHOSTS.md)

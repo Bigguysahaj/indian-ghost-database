@@ -1,12 +1,12 @@
 # Viran
 
-ID: `viran` · Research status: **name_only**
+ID: `viran` · Research status: **initial_notes**
 
 Listed in Riksundar Banerjee’s *The Book of Indian Ghosts*, entry 81, chapter starts on page 249 in the photographed edition. Only the contents entry was supplied; this is not evidence for the lore below.
 
 | Field | Research note | Evidence status |
 | --- | --- | --- |
-| Classification | Unknown — research needed.  | unknown |
+| Classification | Warrior guardian. [banerjee-web](https://www.scribd.com/document/654440239/The-Book-of-Indian-Ghosts-Riksundar-Banerjee) | provisional |
 | Description | Unknown — research needed.  | unknown |
 | Habitat | Unknown — research needed.  | unknown |
 | Location | Unknown — research needed.  | unknown |
@@ -23,17 +23,24 @@ Listed in Riksundar Banerjee’s *The Book of Indian Ghosts*, entry 81, chapter 
 
 ## Research questions
 
-- Resolve this exact book entry before merging it with a better-known similarly named deity, term or spirit.
-- Read the chapter and verify the identity, regional spelling and traditions.
-- Find a traceable regional or scholarly source for habitat, appearance, targets and protections.
-- Distinguish apparent age, lifespan and dated attestation; leave missing evidence null.
+- Check the printed chapter and an independent regional or scholarly account.
+- Establish a dated primary attestation; do not treat a modern summary as the earliest record.
+- Verify any unknown appearance, habitat, targets or protections before adding them as claims.
+- Which local Viran tradition is intended? Do not merge all warrior guardians into Madurai Veeran.
+
+## Source limitations
+
+- [The Book of Indian Ghosts — publicly readable transcription](https://www.scribd.com/document/654440239/The-Book-of-Indian-Ghosts-Riksundar-Banerjee): Not a publisher-controlled edition. Claims are provisional; check transcription against the printed chapter. Chapter numbers are evidence locators, not webpage line numbers.
 
 ## Regional variants
 
-No regional variant records added yet.
+
+### Tamil Nadu
+
+Madurai Veeran is a particular Tamil guardian deity, depicted with a sword or aruval and associated with a white horse. This is one named example, not the definition of every Viran. [wiki-madurai-veeran](https://en.wikipedia.org/wiki/Madurai_Veeran)
 
 ## Game adaptations
 
-No game mechanics added. Label invented mechanics as `creative_interpretation`.
+- **Creative interpretation:** Dignified Tamil-inspired adult guardian with a moustache, red-gold garments and lowered curved sword; selected Madurai Veeran-inspired interpretation. Unspecified colours, costume, pose and props are artistic choices, not new folklore claims.
 
 [Back to catalogue](../GHOSTS.md)

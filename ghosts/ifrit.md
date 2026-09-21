@@ -6,37 +6,42 @@ Listed in Riksundar Banerjee’s *The Book of Indian Ghosts*, entry 34, chapter 
 
 | Field | Research note | Evidence status |
 | --- | --- | --- |
-| Classification | Powerful supernatural being in Islamic traditions [ifrit](https://en.wikipedia.org/wiki/Ifrit) | provisional |
-| Description | A powerful being associated with jinn; stories differ across regions. [ifrit](https://en.wikipedia.org/wiki/Ifrit) | provisional |
+| Classification | Powerful being among the jinn in Quran 27:39. [quran-27-39](https://quran.com/en/an-naml/39) | provisional |
+| Description | A particular scriptural figure; later folklore develops varied kinds of ifrit. [quran-27-39](https://quran.com/en/an-naml/39) [wiki-ifrit](https://en.wikipedia.org/wiki/Ifrit) | provisional |
 | Habitat | Unknown — research needed.  | unknown |
 | Location | Unknown — research needed.  | unknown |
 | Nemesis | Unknown — research needed.  | unknown |
 | Protections | Unknown — research needed.  | unknown |
 | Prey | Unknown — research needed.  | unknown |
-| Appearance | The illustrated Hamzanama figure Arghan is orange and spotted; this is one depiction, not a universal design. [ifrit](https://en.wikipedia.org/wiki/Ifrit) | provisional |
+| Appearance | Later accounts associate ifrits with smoke and fire; other forms also occur. [wiki-ifrit](https://en.wikipedia.org/wiki/Ifrit) | provisional |
 | Apparent age | Unknown — research needed.  | unknown |
 | Lifespan | Unknown — research needed.  | unknown |
 | Earliest attestation | Unknown — research needed.  | unknown |
-| Cool fact | An ifrit appears in the Hamzanama tradition as well as in wider Islamic narratives. [ifrit](https://en.wikipedia.org/wiki/Ifrit) | provisional |
-| Behavior | Unknown — research needed.  | unknown |
+| Cool fact | Unknown — research needed.  | unknown |
+| Behavior | Offers to bring the queen’s throne to Solomon. [quran-27-39](https://quran.com/en/an-naml/39) | provisional |
 | Origin story | Unknown — research needed.  | unknown |
 
 ## Research questions
 
-- Compare these initial web notes against the named book chapter and a regional primary source.
-- Find a traceable regional or scholarly source for habitat, appearance, targets and protections.
-- Distinguish apparent age, lifespan and dated attestation; leave missing evidence null.
+- Compare the printed chapter with an independent regional or scholarly source.
+- Establish missing attributes from evidence; do not infer them from the concept image.
+- Check original-language spelling and distinguish regional variants before merging names.
 
 ## Source limitations
 
-- [Ifrit](https://en.wikipedia.org/wiki/Ifrit): Tertiary overview consulted; underlying references not independently checked.
+- [Quran 27:39, in context 27:38–40](https://quran.com/en/an-naml/39): The verse establishes an ifrit among the jinn and a particular offer to Solomon; it does not supply a universal anatomy, Indian locality or species taxonomy.
+- [Ifrit](https://en.wikipedia.org/wiki/Ifrit): Editable secondary synthesis. Underlying references have not all been inspected; regional and textual distinctions remain provisional.
 
 ## Regional variants
 
 No regional variant records added yet.
 
+## Related beings
+
+- [jinn](jinn.md): associated_with [quran-27-39](https://quran.com/en/an-naml/39)
+
 ## Game adaptations
 
-No game mechanics added. Label invented mechanics as `creative_interpretation`.
+- **Creative interpretation:** Retained the existing numbered concept cell. Its visual details must not be imported into sourced claims without independent support.
 
 [Back to catalogue](../GHOSTS.md)

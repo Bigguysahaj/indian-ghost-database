@@ -1,31 +1,34 @@
 # Jilaiya
 
-ID: `jilaiya` · Research status: **name_only**
+ID: `jilaiya` · Research status: **initial_notes**
 
 Listed in Riksundar Banerjee’s *The Book of Indian Ghosts*, entry 36, chapter starts on page 113 in the photographed edition. Only the contents entry was supplied; this is not evidence for the lore below.
 
 | Field | Research note | Evidence status |
 | --- | --- | --- |
-| Classification | Unknown — research needed.  | unknown |
-| Description | Unknown — research needed.  | unknown |
+| Classification | Nocturnal blood-drinking spirit. [mythica-jilaiya](https://pantheon.org/articles/j/jilaiya.html) | provisional |
+| Description | A fiend represented in bird form. [mythica-jilaiya](https://pantheon.org/articles/j/jilaiya.html) | provisional |
 | Habitat | Unknown — research needed.  | unknown |
-| Location | Unknown — research needed.  | unknown |
+| Location | Bihar, northeastern India. [mythica-jilaiya](https://pantheon.org/articles/j/jilaiya.html) | provisional |
 | Nemesis | Unknown — research needed.  | unknown |
 | Protections | Unknown — research needed.  | unknown |
-| Prey | Unknown — research needed.  | unknown |
-| Appearance | Unknown — research needed.  | unknown |
+| Prey | People whose names it hears. [mythica-jilaiya](https://pantheon.org/articles/j/jilaiya.html) | provisional |
+| Appearance | Bird form; species unspecified. [mythica-jilaiya](https://pantheon.org/articles/j/jilaiya.html) | provisional |
 | Apparent age | Unknown — research needed.  | unknown |
 | Lifespan | Unknown — research needed.  | unknown |
 | Earliest attestation | Unknown — research needed.  | unknown |
 | Cool fact | Unknown — research needed.  | unknown |
-| Behavior | Unknown — research needed.  | unknown |
+| Behavior | Drinks the blood of named victims. [mythica-jilaiya](https://pantheon.org/articles/j/jilaiya.html) | provisional |
 | Origin story | Unknown — research needed.  | unknown |
 
 ## Research questions
 
-- Read the chapter and verify the identity, regional spelling and traditions.
-- Find a traceable regional or scholarly source for habitat, appearance, targets and protections.
-- Distinguish apparent age, lifespan and dated attestation; leave missing evidence null.
+- Compare these notes against the printed book chapter and an independent regional or scholarly source.
+- Establish a dated primary attestation; a modern retelling does not establish the earliest occurrence.
+
+## Source limitations
+
+- [Jilaiya](https://pantheon.org/articles/j/jilaiya.html): Very short entry. Cites Bonnerjea, A Dictionary of Superstitions and Mythology (1920); that underlying work was not inspected.
 
 ## Regional variants
 

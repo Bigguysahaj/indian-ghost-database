@@ -1,6 +1,6 @@
 # Hara
 
-ID: `hara` · Research status: **name_only**
+ID: `hara` · Research status: **initial_notes**
 
 Listed in Riksundar Banerjee’s *The Book of Indian Ghosts*, entry 33, chapter starts on page 104 in the photographed edition. Only the contents entry was supplied; this is not evidence for the lore below.
 
@@ -8,7 +8,7 @@ Listed in Riksundar Banerjee’s *The Book of Indian Ghosts*, entry 33, chapter 
 | --- | --- | --- |
 | Classification | Unknown — research needed.  | unknown |
 | Description | Unknown — research needed.  | unknown |
-| Habitat | Unknown — research needed.  | unknown |
+| Habitat | Still ponds and lakes. [banerjee-web](https://www.scribd.com/document/654440239/The-Book-of-Indian-Ghosts-Riksundar-Banerjee) | provisional |
 | Location | Unknown — research needed.  | unknown |
 | Nemesis | Unknown — research needed.  | unknown |
 | Protections | Unknown — research needed.  | unknown |
@@ -23,10 +23,13 @@ Listed in Riksundar Banerjee’s *The Book of Indian Ghosts*, entry 33, chapter 
 
 ## Research questions
 
-- Resolve this exact book entry before merging it with a better-known similarly named deity, term or spirit.
-- Read the chapter and verify the identity, regional spelling and traditions.
-- Find a traceable regional or scholarly source for habitat, appearance, targets and protections.
-- Distinguish apparent age, lifespan and dated attestation; leave missing evidence null.
+- Compare the printed chapter with an independent regional or scholarly source.
+- Establish missing attributes from evidence; do not infer them from the concept image.
+- Check original-language spelling and distinguish regional variants before merging names.
+
+## Source limitations
+
+- [The Book of Indian Ghosts — publicly readable transcription](https://www.scribd.com/document/654440239/The-Book-of-Indian-Ghosts-Riksundar-Banerjee): Not a publisher-controlled edition. Claims are provisional; check transcription against the printed chapter. Chapter numbers are evidence locators, not webpage line numbers.
 
 ## Regional variants
 
@@ -34,6 +37,6 @@ No regional variant records added yet.
 
 ## Game adaptations
 
-No game mechanics added. Label invented mechanics as `creative_interpretation`.
+- **Creative interpretation:** Retained the existing numbered concept cell. Its visual details must not be imported into sourced claims without independent support.
 
 [Back to catalogue](../GHOSTS.md)

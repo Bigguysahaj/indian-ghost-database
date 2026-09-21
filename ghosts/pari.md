@@ -4,32 +4,33 @@ ID: `pari` · Research status: **initial_notes**
 
 Listed in Riksundar Banerjee’s *The Book of Indian Ghosts*, entry 58, chapter starts on page 176 in the photographed edition. Only the contents entry was supplied; this is not evidence for the lore below.
 
+Proposed search aliases (equivalence needs review): Peri, Parī
+
 | Field | Research note | Evidence status |
 | --- | --- | --- |
-| Classification | Unknown — research needed.  | unknown |
-| Description | A fairy-like figure in Persian-influenced Bengali traditions. [bengal](https://en.wikipedia.org/wiki/Ghosts_in_Bengali_culture) | provisional |
+| Classification | Fairy-like supernatural being of Persian-derived traditions. [wiki-pari](https://en.wikipedia.org/wiki/Peri) | provisional |
+| Description | A beautiful being appearing across Persian and South Asian storytelling. [wiki-pari](https://en.wikipedia.org/wiki/Peri) | provisional |
 | Habitat | Unknown — research needed.  | unknown |
-| Location | Unknown — research needed.  | unknown |
+| Location | Iran, Afghanistan and South Asia, including India and Pakistan. [wiki-pari](https://en.wikipedia.org/wiki/Peri) | provisional |
 | Nemesis | Unknown — research needed.  | unknown |
 | Protections | Unknown — research needed.  | unknown |
 | Prey | Unknown — research needed.  | unknown |
-| Appearance | Unknown — research needed.  | unknown |
+| Appearance | Often beautiful and female, though not exclusively female. [wiki-pari](https://en.wikipedia.org/wiki/Peri) | provisional |
 | Apparent age | Unknown — research needed.  | unknown |
 | Lifespan | Unknown — research needed.  | unknown |
 | Earliest attestation | Unknown — research needed.  | unknown |
-| Cool fact | Unknown — research needed.  | unknown |
+| Cool fact | The name travels across languages and story traditions; it does not designate one Indian ghost species. [wiki-pari](https://en.wikipedia.org/wiki/Peri) | provisional |
 | Behavior | Unknown — research needed.  | unknown |
 | Origin story | Unknown — research needed.  | unknown |
 
 ## Research questions
 
-- Compare these initial web notes against the named book chapter and a regional primary source.
-- Find a traceable regional or scholarly source for habitat, appearance, targets and protections.
-- Distinguish apparent age, lifespan and dated attestation; leave missing evidence null.
+- Compare these notes against the printed book chapter and an independent regional or scholarly source.
+- Establish a dated primary attestation; a modern retelling does not establish the earliest occurrence.
 
 ## Source limitations
 
-- [Ghosts in Bengali culture](https://en.wikipedia.org/wiki/Ghosts_in_Bengali_culture): Tertiary overview consulted; underlying references not independently checked.
+- [Parī](https://en.wikipedia.org/wiki/Peri): Editable secondary synthesis; provisional. Underlying references require direct checking. Regional variants must not be universalized.
 
 ## Regional variants
 

@@ -4,12 +4,14 @@ ID: `mamdo` · Research status: **initial_notes**
 
 Listed in Riksundar Banerjee’s *The Book of Indian Ghosts*, entry 46, chapter starts on page 139 in the photographed edition. Only the contents entry was supplied; this is not evidence for the lore below.
 
+Proposed search aliases (equivalence needs review): Mamdo Bhoot
+
 | Field | Research note | Evidence status |
 | --- | --- | --- |
-| Classification | Unknown — research needed.  | unknown |
-| Description | Bengali ghost category associated with deceased Muslims. [bengal](https://en.wikipedia.org/wiki/Ghosts_in_Bengali_culture) | provisional |
+| Classification | Ghost in Bengali Muslim folklore. [wiki-bengal](https://en.wikipedia.org/wiki/Ghosts_in_Bengali_culture) | provisional |
+| Description | A culturally specific deceased-human ghost category. [wiki-bengal](https://en.wikipedia.org/wiki/Ghosts_in_Bengali_culture) | provisional |
 | Habitat | Unknown — research needed.  | unknown |
-| Location | Unknown — research needed.  | unknown |
+| Location | Bengal. [wiki-bengal](https://en.wikipedia.org/wiki/Ghosts_in_Bengali_culture) | provisional |
 | Nemesis | Unknown — research needed.  | unknown |
 | Protections | Unknown — research needed.  | unknown |
 | Prey | Unknown — research needed.  | unknown |
@@ -19,17 +21,16 @@ Listed in Riksundar Banerjee’s *The Book of Indian Ghosts*, entry 46, chapter 
 | Earliest attestation | Unknown — research needed.  | unknown |
 | Cool fact | Unknown — research needed.  | unknown |
 | Behavior | Unknown — research needed.  | unknown |
-| Origin story | Unknown — research needed.  | unknown |
+| Origin story | Some accounts identify it with a Muslim person who dies unnaturally. [wiki-bengal](https://en.wikipedia.org/wiki/Ghosts_in_Bengali_culture) | provisional |
 
 ## Research questions
 
-- Compare these initial web notes against the named book chapter and a regional primary source.
-- Find a traceable regional or scholarly source for habitat, appearance, targets and protections.
-- Distinguish apparent age, lifespan and dated attestation; leave missing evidence null.
+- Compare these notes against the printed book chapter and an independent regional or scholarly source.
+- Establish a dated primary attestation; a modern retelling does not establish the earliest occurrence.
 
 ## Source limitations
 
-- [Ghosts in Bengali culture](https://en.wikipedia.org/wiki/Ghosts_in_Bengali_culture): Tertiary overview consulted; underlying references not independently checked.
+- [Ghosts in Bengali culture](https://en.wikipedia.org/wiki/Ghosts_in_Bengali_culture): Editable secondary synthesis; provisional. Underlying references require direct checking. Regional variants must not be universalized. Article has uneven sourcing and displayed a deletion discussion notice when reviewed.
 
 ## Regional variants
 

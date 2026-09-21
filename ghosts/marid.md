@@ -6,8 +6,8 @@ Listed in Riksundar Banerjee’s *The Book of Indian Ghosts*, entry 47, chapter 
 
 | Field | Research note | Evidence status |
 | --- | --- | --- |
-| Classification | Supernatural being in Islamic traditions [marid](https://en.wikipedia.org/wiki/Marid) | provisional |
-| Description | A rebellious spirit or demon; terminology overlaps with other categories. [marid](https://en.wikipedia.org/wiki/Marid) | provisional |
+| Classification | Rebellious demon or powerful jinn in Islamic and later literary usage. [wiki-marid](https://en.wikipedia.org/wiki/Marid) | provisional |
+| Description | A variable designation rather than a consistently defined species. [wiki-marid](https://en.wikipedia.org/wiki/Marid) | provisional |
 | Habitat | Unknown — research needed.  | unknown |
 | Location | Unknown — research needed.  | unknown |
 | Nemesis | Unknown — research needed.  | unknown |
@@ -17,23 +17,42 @@ Listed in Riksundar Banerjee’s *The Book of Indian Ghosts*, entry 47, chapter 
 | Apparent age | Unknown — research needed.  | unknown |
 | Lifespan | Unknown — research needed.  | unknown |
 | Earliest attestation | Unknown — research needed.  | unknown |
-| Cool fact | Avoid treating modern fantasy “water genie” taxonomy as universal folklore. [marid](https://en.wikipedia.org/wiki/Marid) | provisional |
+| Cool fact | Its Arabic sense concerns rebellion; later classifications vary. [wiki-marid](https://en.wikipedia.org/wiki/Marid) | provisional |
 | Behavior | Unknown — research needed.  | unknown |
 | Origin story | Unknown — research needed.  | unknown |
 
 ## Research questions
 
-- Compare these initial web notes against the named book chapter and a regional primary source.
-- Find a traceable regional or scholarly source for habitat, appearance, targets and protections.
-- Distinguish apparent age, lifespan and dated attestation; leave missing evidence null.
+- Compare these notes against the printed book chapter and an independent regional or scholarly source.
+- Establish a dated primary attestation; a modern retelling does not establish the earliest occurrence.
+- Document an Indian regional occurrence and distinguish it from imported literary or game taxonomy.
 
 ## Source limitations
 
-- [Marid](https://en.wikipedia.org/wiki/Marid): Tertiary overview consulted; underlying references not independently checked.
+- [Marid](https://en.wikipedia.org/wiki/Marid): Editable secondary synthesis; provisional. Underlying references require direct checking. Regional variants must not be universalized.
 
 ## Regional variants
 
 No regional variant records added yet.
+
+## Related beings
+
+- [jinn](jinn.md): associated_with [wiki-marid](https://en.wikipedia.org/wiki/Marid)
+
+## Native-name records
+
+```json
+[
+  {
+    "text": "مَارِد",
+    "language": "Arabic",
+    "script": "Arabic",
+    "source_ids": [
+      "wiki-marid"
+    ]
+  }
+]
+```
 
 ## Game adaptations
 

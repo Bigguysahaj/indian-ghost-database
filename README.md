@@ -2,9 +2,9 @@
 
 An open, growing research resource for developers making games rooted in Indian folklore.
 
-**84 names indexed · 39 entries with initial sourced notes · 45 name-only research stubs · 0 fully reviewed entries.**
+**84 names indexed · 84 entries with initial sourced notes · 0 name-only research stubs · 0 fully reviewed entries.**
 
-Start with the [Markdown catalogue](GHOSTS.md), load the [JSON database](data/ghosts.json), or [contribute a tradition you know](CONTRIBUTING.md).
+Browse the [website](site/index.html), start with the [Markdown catalogue](GHOSTS.md), load the [JSON database](data/ghosts.json), or [contribute a tradition you know](CONTRIBUTING.md).
 
 ## What this contains
 
@@ -41,10 +41,13 @@ for ghost in database['ghosts']:
 | `data/entry-template.json` | Blank entry for expansion |
 | `data/references.json` | Book bibliography: Banerjee only in this release |
 | `research/evidence.json` | Field-level web evidence and limitations |
-| `schema/ghosts.schema.json` | JSON Schema, version 0.1.0 |
+| `schema/ghosts.schema.json` | JSON Schema, version 0.2.0 |
+| `images/atlases/*.png` | Four concept-art atlases (1–9, 10–34, 35–59, 60–84); not folklore evidence |
+| `images/ghosts/*.webp` | Per-entry crops of the atlases, mapped by `extensions.visual_reference` |
 | `GHOSTS.md`, `ghosts/*.md` | Generated index and individual Markdown entries |
 | `research/RESEARCH.md` | Method, gaps and next research work |
 | `RELATED_PROJECTS.md` | Existing GitHub projects to inspect |
+| `site/` | Static, zero-build website: a searchable card grid of all 84 entries. See `site/README.md`. |
 
 ## Contribute
 

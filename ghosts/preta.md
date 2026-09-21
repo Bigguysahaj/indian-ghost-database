@@ -6,37 +6,52 @@ Listed in Riksundar Banerjee’s *The Book of Indian Ghosts*, entry 62, chapter 
 
 | Field | Research note | Evidence status |
 | --- | --- | --- |
-| Classification | Departed / hungry spirit; tradition dependent [preta](https://en.wikipedia.org/wiki/Preta) | provisional |
-| Description | Hungry-ghost depictions emphasise suffering from unsatisfied appetite. [preta](https://en.wikipedia.org/wiki/Preta) | provisional |
-| Habitat | Waste or desert places in the consulted overview. [preta](https://en.wikipedia.org/wiki/Preta) | provisional |
-| Location | Unknown — research needed.  | unknown |
+| Classification | Departed spirit; hungry ghost in some traditions. [wiki-preta](https://en.wikipedia.org/wiki/Preta) | provisional |
+| Description | A broad religious category whose meanings vary between Hindu and Buddhist contexts. [wiki-preta](https://en.wikipedia.org/wiki/Preta) | provisional |
+| Habitat | Unknown — research needed.  | unknown |
+| Location | Indian traditions, with adaptations across Asia. [wiki-preta](https://en.wikipedia.org/wiki/Preta) | provisional |
 | Nemesis | Unknown — research needed.  | unknown |
 | Protections | Unknown — research needed.  | unknown |
 | Prey | Unknown — research needed.  | unknown |
-| Appearance | Emaciated limbs, enlarged belly and narrow throat in familiar hungry-ghost iconography. [preta](https://en.wikipedia.org/wiki/Preta) | provisional |
+| Appearance | Some hungry-ghost depictions have thin limbs, swollen bellies and narrow necks. [wiki-preta](https://en.wikipedia.org/wiki/Preta) | provisional |
 | Apparent age | Unknown — research needed.  | unknown |
 | Lifespan | Unknown — research needed.  | unknown |
 | Earliest attestation | Unknown — research needed.  | unknown |
-| Cool fact | The hungry-ghost iconography should not stand in for every Hindu use of preta. [preta](https://en.wikipedia.org/wiki/Preta) | provisional |
-| Behavior | Unknown — research needed.  | unknown |
-| Origin story | Unknown — research needed.  | unknown |
+| Cool fact | The Sanskrit term has a wider meaning than the English label hungry ghost. [wiki-preta](https://en.wikipedia.org/wiki/Preta) | provisional |
+| Behavior | Suffers hunger and thirst that cannot readily be satisfied. [wiki-preta](https://en.wikipedia.org/wiki/Preta) | provisional |
+| Origin story | Some accounts relate this condition to karma or incomplete funerary rites. [wiki-preta](https://en.wikipedia.org/wiki/Preta) | provisional |
 
 ## Research questions
 
-- Compare these initial web notes against the named book chapter and a regional primary source.
-- Find a traceable regional or scholarly source for habitat, appearance, targets and protections.
-- Distinguish apparent age, lifespan and dated attestation; leave missing evidence null.
+- Check the printed chapter and an independent regional or scholarly account.
+- Establish a dated primary attestation; do not treat a modern summary as the earliest record.
+- Verify any unknown appearance, habitat, targets or protections before adding them as claims.
 
 ## Source limitations
 
-- [Preta](https://en.wikipedia.org/wiki/Preta): Tertiary overview consulted; underlying references not independently checked.
+- [Preta](https://en.wikipedia.org/wiki/Preta): Editable synthesis; provisional. Underlying primary references and regional variations require direct checking.
 
 ## Regional variants
 
 No regional variant records added yet.
 
+## Native-name records
+
+```json
+[
+  {
+    "text": "प्रेत",
+    "language": "Sanskrit",
+    "script": "Devanagari",
+    "source_ids": [
+      "wiki-preta"
+    ]
+  }
+]
+```
+
 ## Game adaptations
 
-No game mechanics added. Label invented mechanics as `creative_interpretation`.
+- **Creative interpretation:** Gaunt ochre-grey spirit with slender neck and rounded belly, holding an empty bowl; compassionate expression. Unspecified colours, costume, pose and props are artistic choices, not new folklore claims.
 
 [Back to catalogue](../GHOSTS.md)

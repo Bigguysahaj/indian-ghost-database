@@ -6,37 +6,56 @@ Listed in Riksundar Banerjee’s *The Book of Indian Ghosts*, entry 63, chapter 
 
 | Field | Research note | Evidence status |
 | --- | --- | --- |
-| Classification | Named rakshasi / mythological figure [putana](https://en.wikipedia.org/wiki/Putana) | provisional |
-| Description | An attacker of infant Krishna who disguises herself as a beautiful woman. [putana](https://en.wikipedia.org/wiki/Putana) | provisional |
+| Classification | Rakshasi in Krishna narratives. [wiki-putana](https://en.wikipedia.org/wiki/Putana) | provisional |
+| Description | An antagonist whose attempted killing of the infant Krishna is also interpreted through maternal salvation. [wiki-putana](https://en.wikipedia.org/wiki/Putana) | provisional |
 | Habitat | Unknown — research needed.  | unknown |
 | Location | Unknown — research needed.  | unknown |
-| Nemesis | Krishna, who drains her life while nursing. [putana](https://en.wikipedia.org/wiki/Putana) | provisional |
+| Nemesis | Krishna defeats her. [wiki-putana](https://en.wikipedia.org/wiki/Putana) | provisional |
 | Protections | Unknown — research needed.  | unknown |
-| Prey | Infant Krishna in the central episode. [putana](https://en.wikipedia.org/wiki/Putana) | provisional |
-| Appearance | A beautiful woman as disguise; a rakshasi in the narrative. [putana](https://en.wikipedia.org/wiki/Putana) | provisional |
+| Prey | The infant Krishna in the central narrative. [wiki-putana](https://en.wikipedia.org/wiki/Putana) | provisional |
+| Appearance | Assumes the guise of a beautiful young woman; other depictions show a demoness. [wiki-putana](https://en.wikipedia.org/wiki/Putana) | provisional |
 | Apparent age | Unknown — research needed.  | unknown |
 | Lifespan | Unknown — research needed.  | unknown |
 | Earliest attestation | Unknown — research needed.  | unknown |
-| Cool fact | The tradition also discusses her deliverance and maternal relationship to Krishna. [putana](https://en.wikipedia.org/wiki/Putana) | provisional |
-| Behavior | Attempts to poison Krishna through breastfeeding. [putana](https://en.wikipedia.org/wiki/Putana) | provisional |
+| Cool fact | Some devotional interpretations grant her a maternal relationship with Krishna despite her hostile intention. [wiki-putana](https://en.wikipedia.org/wiki/Putana) | provisional |
+| Behavior | Attempts to poison Krishna while nursing him. [wiki-putana](https://en.wikipedia.org/wiki/Putana) | provisional |
 | Origin story | Unknown — research needed.  | unknown |
 
 ## Research questions
 
-- Compare these initial web notes against the named book chapter and a regional primary source.
-- Find a traceable regional or scholarly source for habitat, appearance, targets and protections.
-- Distinguish apparent age, lifespan and dated attestation; leave missing evidence null.
+- Check the printed chapter and an independent regional or scholarly account.
+- Establish a dated primary attestation; do not treat a modern summary as the earliest record.
+- Verify any unknown appearance, habitat, targets or protections before adding them as claims.
 
 ## Source limitations
 
-- [Putana](https://en.wikipedia.org/wiki/Putana): Tertiary overview consulted; underlying references not independently checked.
+- [Putana](https://en.wikipedia.org/wiki/Putana): Editable synthesis; provisional. Underlying primary references and regional variations require direct checking.
 
 ## Regional variants
 
 No regional variant records added yet.
 
+## Related beings
+
+- [rakshasa](rakshasa.md): member_of [wiki-putana](https://en.wikipedia.org/wiki/Putana)
+
+## Native-name records
+
+```json
+[
+  {
+    "text": "पूतना",
+    "language": "Sanskrit",
+    "script": "Devanagari",
+    "source_ids": [
+      "wiki-putana"
+    ]
+  }
+]
+```
+
 ## Game adaptations
 
-No game mechanics added. Label invented mechanics as `creative_interpretation`.
+- **Creative interpretation:** Regal adult woman in a teal sari with gold ornaments and a subtly looming supernatural shadow; no infant or nursing scene. Unspecified colours, costume, pose and props are artistic choices, not new folklore claims.
 
 [Back to catalogue](../GHOSTS.md)

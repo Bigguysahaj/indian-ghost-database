@@ -4,12 +4,14 @@ ID: `jinn` · Research status: **initial_notes**
 
 Listed in Riksundar Banerjee’s *The Book of Indian Ghosts*, entry 37, chapter starts on page 117 in the photographed edition. Only the contents entry was supplied; this is not evidence for the lore below.
 
+Proposed search aliases (equivalence needs review): Djinn
+
 | Field | Research note | Evidence status |
 | --- | --- | --- |
-| Classification | Religious supernatural beings [jinn](https://en.wikipedia.org/wiki/Jinn) | provisional |
-| Description | Beings with moral agency; not inherently evil or necessarily ghosts of dead humans. [jinn](https://en.wikipedia.org/wiki/Jinn) | provisional |
+| Classification | Supernatural beings in Arabian and Islamic traditions. [wiki-jinn](https://en.wikipedia.org/wiki/Jinn) | provisional |
+| Description | A broad class of beings, rather than a single deceased-human ghost. [wiki-jinn](https://en.wikipedia.org/wiki/Jinn) | provisional |
 | Habitat | Unknown — research needed.  | unknown |
-| Location | Unknown — research needed.  | unknown |
+| Location | Present in Bengali Muslim folklore as part of wider Islamic traditions. [wiki-bengal](https://en.wikipedia.org/wiki/Ghosts_in_Bengali_culture) | provisional |
 | Nemesis | Unknown — research needed.  | unknown |
 | Protections | Unknown — research needed.  | unknown |
 | Prey | Unknown — research needed.  | unknown |
@@ -17,23 +19,41 @@ Listed in Riksundar Banerjee’s *The Book of Indian Ghosts*, entry 37, chapter 
 | Apparent age | Unknown — research needed.  | unknown |
 | Lifespan | Unknown — research needed.  | unknown |
 | Earliest attestation | Unknown — research needed.  | unknown |
-| Cool fact | The source distinguishes extraordinary abilities from knowledge of the future. [jinn](https://en.wikipedia.org/wiki/Jinn) | provisional |
-| Behavior | Invisibility and transformation occur in traditions. [jinn](https://en.wikipedia.org/wiki/Jinn) | provisional |
-| Origin story | Created from smokeless fire in Quranic tradition. [jinn](https://en.wikipedia.org/wiki/Jinn) | provisional |
+| Cool fact | The term does not imply that every member is evil. [wiki-jinn](https://en.wikipedia.org/wiki/Jinn) | provisional |
+| Behavior | The Quran describes moral diversity among jinn, including righteous and other groups. [quran-72-11](https://quran.com/en/al-jinn/11) | provisional |
+| Origin story | Created from smokeless flame in the Quranic account. [quran-55-15](https://quran.com/en/ar-rahman/15) | provisional |
 
 ## Research questions
 
-- Compare these initial web notes against the named book chapter and a regional primary source.
-- Find a traceable regional or scholarly source for habitat, appearance, targets and protections.
-- Distinguish apparent age, lifespan and dated attestation; leave missing evidence null.
+- Compare these notes against the printed book chapter and an independent regional or scholarly source.
+- Establish a dated primary attestation; a modern retelling does not establish the earliest occurrence.
+- Find a directly documented Indian regional account instead of importing all pan-Islamic traits.
 
 ## Source limitations
 
-- [Jinn](https://en.wikipedia.org/wiki/Jinn): Tertiary overview consulted; underlying references not independently checked.
+- [Quran 55:15](https://quran.com/en/ar-rahman/15): Evidence for the religious account, not empirical evidence of beings.
+- [Quran 72:11](https://quran.com/en/al-jinn/11): Evidence for the religious account, not empirical evidence of beings.
+- [Ghosts in Bengali culture](https://en.wikipedia.org/wiki/Ghosts_in_Bengali_culture): Editable secondary synthesis; provisional. Underlying references require direct checking. Regional variants must not be universalized. Article has uneven sourcing and displayed a deletion discussion notice when reviewed.
+- [Jinn](https://en.wikipedia.org/wiki/Jinn): Editable secondary synthesis; provisional. Underlying references require direct checking. Regional variants must not be universalized.
 
 ## Regional variants
 
 No regional variant records added yet.
+
+## Native-name records
+
+```json
+[
+  {
+    "text": "جِنّ",
+    "language": "Arabic",
+    "script": "Arabic",
+    "source_ids": [
+      "wiki-jinn"
+    ]
+  }
+]
+```
 
 ## Game adaptations
 

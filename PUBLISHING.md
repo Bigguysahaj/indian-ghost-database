@@ -23,9 +23,10 @@ Edit `data/ghosts.json` (or `research/evidence.json`, `data/references.json`), t
 ```bash
 python scripts/catalogue.py          # regenerate GHOSTS.md and ghosts/*.md
 python scripts/catalogue.py --check  # validate; must exit 0
+python scripts/sync_site.py          # mirror data/images into site/, if either changed
 ```
 
-`GHOSTS.md` and `ghosts/*.md` are generated files. Edit the JSON and regenerate rather than editing the Markdown by hand — `--check` fails if the two fall out of sync.
+`GHOSTS.md` and `ghosts/*.md` are generated files. Edit the JSON and regenerate rather than editing the Markdown by hand — `--check` fails if the two fall out of sync. `site/data/` and `site/images/ghosts/` are likewise generated copies for the website (see `site/README.md`); the CI workflow fails if they drift from the source.
 
 Commit the regenerated Markdown alongside the JSON change, then open a pull request:
 

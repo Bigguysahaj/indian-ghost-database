@@ -6,37 +6,52 @@ Listed in Riksundar Banerjee’s *The Book of Indian Ghosts*, entry 66, chapter 
 
 | Field | Research note | Evidence status |
 | --- | --- | --- |
-| Classification | Unknown — research needed.  | unknown |
-| Description | Powerful shapeshifting beings in Indian epic and folk traditions. [bengal](https://en.wikipedia.org/wiki/Ghosts_in_Bengali_culture) | provisional |
+| Classification | Supernatural being in Hindu, Buddhist and other South Asian traditions. [wiki-rakshasa](https://en.wikipedia.org/wiki/Rakshasa) | provisional |
+| Description | Unknown — research needed.  | unknown |
 | Habitat | Unknown — research needed.  | unknown |
 | Location | Unknown — research needed.  | unknown |
 | Nemesis | Unknown — research needed.  | unknown |
 | Protections | Unknown — research needed.  | unknown |
-| Prey | Unknown — research needed.  | unknown |
-| Appearance | Unknown — research needed.  | unknown |
+| Prey | Humans in man-eating narratives; not a universal trait. [wiki-rakshasa](https://en.wikipedia.org/wiki/Rakshasa) | provisional |
+| Appearance | Often large and fierce, with fangs and claws; shape-changing permits other forms. [wiki-rakshasa](https://en.wikipedia.org/wiki/Rakshasa) | provisional |
 | Apparent age | Unknown — research needed.  | unknown |
 | Lifespan | Unknown — research needed.  | unknown |
 | Earliest attestation | Unknown — research needed.  | unknown |
-| Cool fact | Unknown — research needed.  | unknown |
-| Behavior | Unknown — research needed.  | unknown |
+| Cool fact | Epic accounts include both helpful and hostile individuals. [wiki-rakshasa](https://en.wikipedia.org/wiki/Rakshasa) | provisional |
+| Behavior | Stories include illusion, transformation, warfare and human-eating. [wiki-rakshasa](https://en.wikipedia.org/wiki/Rakshasa) | provisional |
 | Origin story | Unknown — research needed.  | unknown |
 
 ## Research questions
 
-- Compare these initial web notes against the named book chapter and a regional primary source.
-- Find a traceable regional or scholarly source for habitat, appearance, targets and protections.
-- Distinguish apparent age, lifespan and dated attestation; leave missing evidence null.
+- Check the printed chapter and an independent regional or scholarly account.
+- Establish a dated primary attestation; do not treat a modern summary as the earliest record.
+- Verify any unknown appearance, habitat, targets or protections before adding them as claims.
 
 ## Source limitations
 
-- [Ghosts in Bengali culture](https://en.wikipedia.org/wiki/Ghosts_in_Bengali_culture): Tertiary overview consulted; underlying references not independently checked.
+- [Rakshasa](https://en.wikipedia.org/wiki/Rakshasa): Editable synthesis; provisional. Underlying primary references and regional variations require direct checking.
 
 ## Regional variants
 
 No regional variant records added yet.
 
+## Native-name records
+
+```json
+[
+  {
+    "text": "राक्षस",
+    "language": "Sanskrit",
+    "script": "Devanagari",
+    "source_ids": [
+      "wiki-rakshasa"
+    ]
+  }
+]
+```
+
 ## Game adaptations
 
-No game mechanics added. Label invented mechanics as `creative_interpretation`.
+- **Creative interpretation:** Fanged powerful warrior with clawed hands, terracotta and bronze palette, ornate waistcloth; no blood. Unspecified colours, costume, pose and props are artistic choices, not new folklore claims.
 
 [Back to catalogue](../GHOSTS.md)
