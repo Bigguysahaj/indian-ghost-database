@@ -1,29 +1,44 @@
 # Website
 
-A static, zero-build homepage that lists all 84 entries as a searchable card grid, backed by the canonical data.
+A [Svelte 5](https://svelte.dev) + [Vite](https://vite.dev) single-page app that lists all 84 entries as a searchable card grid, backed by the canonical data.
 
-Open `index.html` directly, or serve the folder (`python -m http.server` from inside `site/`) — it's plain HTML/CSS/JS with no dependencies and no build step.
+```bash
+cd site
+npm install
+npm run dev      # local dev server with hot reload
+npm run build    # static output in site/dist/
+npm run preview  # serve the built output
+```
 
-## Files
+## Layout
 
-- `index.html`, `styles.css`, `app.js` — the page.
-- `data/` — a synced copy of `data/ghosts.json`, `data/references.json` and `research/evidence.json`.
-- `images/ghosts/*.webp` — a synced copy of the per-entry portrait crops.
+- `index.html`, `src/main.js` — entry point.
+- `src/App.svelte` — header stats, search, status filters, card grid, Konami easter egg.
+- `src/Card.svelte`, `src/Modal.svelte`, `src/SourceRefs.svelte` — components.
+- `src/lib/ghosts.js` — claim fields, search/teaser helpers and data loading.
+- `src/lib/haunts.js` — the hover "encounter" effects for the first ten entries.
+- `src/styles.css` — global styles (light/dark themes, card and haunt animations).
+- `public/data/` — a synced copy of `data/ghosts.json`, `data/references.json` and `research/evidence.json`.
+- `public/images/ghosts/*.webp` — a synced copy of the per-entry portrait crops.
 
-`data/` and `images/ghosts/` inside `site/` are **generated copies**, not sources of truth. After editing `data/ghosts.json` or the images at the repository root, regenerate them:
+`public/data/` and `public/images/ghosts/` are **generated copies**, not sources of truth. After editing `data/ghosts.json` or the images at the repository root, regenerate them from the repo root:
 
 ```bash
 python scripts/sync_site.py
 ```
 
-Commit the result. The `Validate catalogue` GitHub Action fails the build if `site/` drifts from the canonical data.
+Commit the result. The `Validate catalogue` GitHub Action fails the build if `site/public/` drifts from the canonical data, and also runs `npm run build`.
+
+The portrait crops in `images/ghosts/` are themselves cut from the atlas sheets in `images/atlases/` by `python scripts/crop_portraits.py` (needs Pillow and numpy). It finds each sheet's real divider lines rather than assuming an even grid, then writes a square crop per ghost. Re-run it if a crop looks wrong, then run `sync_site.py`.
 
 ## Deploying
 
-`site/` is self-contained, so any static host works with the "root directory" (or "publish directory") set to `site` and no build command:
+Build the `site` directory and publish `site/dist`:
 
-- **Cloudflare Pages**: set the project's root directory to `site`, framework preset "None", build command empty.
-- **Vercel**: set the project's root directory to `site`; no framework, no build command.
+- **Cloudflare Pages**: root directory `site`, build command `npm run build`, output directory `dist`.
+- **Vercel**: root directory `site`, framework preset "Vite" (build `npm run build`, output `dist`).
+
+The build uses relative asset paths (`base: './'`), so it also works from a sub-path.
 
 ## What's not here yet
 

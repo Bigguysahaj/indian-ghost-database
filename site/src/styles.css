@@ -173,6 +173,8 @@ main { max-width: 1180px; margin: 0 auto; padding: 32px 16px 64px; }
 .card:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
 .card-media {
+  position: relative;
+  width: 100%;
   aspect-ratio: 1 / 1;
   background: var(--surface-sunken);
   display: flex;
@@ -209,6 +211,316 @@ main { max-width: 1180px; margin: 0 auto; padding: 32px 16px 64px; }
 }
 
 .empty { text-align: center; color: var(--ink-faint); padding: 48px 0; }
+
+/* ---------- Haunted cards (first five entries) ----------
+   A nod to the 16-bit portraits: every animation uses steps() so it moves
+   frame by frame like a sprite, and an RPG dialog box types over the label. */
+.haunt {
+  --pixel-oval: polygon(30% 0, 70% 0, 70% 10%, 80% 10%, 80% 20%, 90% 20%, 90% 30%, 100% 30%, 100% 70%, 90% 70%, 90% 80%, 80% 80%, 80% 90%, 70% 90%, 70% 100%, 30% 100%, 30% 90%, 20% 90%, 20% 80%, 10% 80%, 10% 70%, 0 70%, 0 30%, 10% 30%, 10% 20%, 20% 20%, 20% 10%, 30% 10%);
+  --dialog-bg: #1d1a2e;
+  --dialog-ink: #F3EFE4;
+}
+.haunt-fx, .haunt-fx > *, .haunt-say { position: absolute; pointer-events: none; }
+.haunt-fx { inset: 0; visibility: hidden; }
+.haunt.is-haunting .haunt-fx { visibility: visible; }
+.haunt-fx > * { opacity: 0; }
+
+.haunt-tint { inset: 0; mix-blend-mode: multiply; }
+.haunt.is-haunting .haunt-tint { animation: haunt-appear 0.4s steps(4) forwards; }
+
+@keyframes haunt-appear { to { opacity: 1; } }
+@keyframes haunt-blink { 50% { opacity: 0; } }
+
+/* Dialog box: notched pixel border, slides up in 3 frames, then types out. */
+/* Full-width bottom panel: it has to cover the portrait's own label, which
+   fills up to the bottom ~10% of the image and can run nearly edge to edge. */
+.haunt-say {
+  left: 0; right: 0; bottom: 0;
+  min-height: 14%;
+  display: flex; align-items: center;
+  padding: 6px 20px 6px 11px;
+  background: var(--dialog-bg);
+  color: var(--dialog-ink);
+  font: 700 10px/1.3 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  overflow: hidden;
+  box-shadow: inset 0 0 0 3px var(--dialog-bg), inset 0 0 0 5px var(--dialog-ink);
+  transform: translateY(100%);
+}
+.haunt-text { display: inline-block; clip-path: inset(0 100% 0 0); }
+.haunt-say::after {
+  content: "▼";
+  position: absolute; right: 9px; bottom: 7px;
+  font-size: 8px;
+  opacity: 0;
+}
+.haunt.is-haunting .haunt-say { animation: haunt-say-in 0.18s steps(3) forwards; }
+.haunt.is-haunting .haunt-text { animation: haunt-type calc(var(--chars) * 35ms) steps(var(--chars)) 0.2s forwards; }
+.haunt.is-haunting .haunt-say::after {
+  animation: haunt-appear 0s calc(0.2s + var(--chars) * 35ms) forwards, haunt-blink 0.8s steps(1) calc(0.2s + var(--chars) * 35ms) infinite;
+}
+@keyframes haunt-say-in { to { transform: translateY(0); } }
+@keyframes haunt-type { to { clip-path: inset(0 0 0 0); } }
+
+/* 01 Aacheri: dusk falls, she steps down from the summit and her shadow spreads. */
+.haunt--aacheri .haunt-tint { background: linear-gradient(rgba(91, 58, 140, 0.55), rgba(224, 144, 90, 0.35) 70%, transparent); }
+.haunt--aacheri .haunt-shadow {
+  left: 41%; top: 80%;
+  width: 46%; height: 8%;
+  translate: -50% -50%;
+  background: rgba(88, 40, 110, 0.6);
+  mix-blend-mode: multiply;
+  clip-path: var(--pixel-oval);
+}
+.haunt--aacheri.is-haunting .card-media img { animation: haunt-descend 0.6s steps(4) both; }
+.haunt--aacheri.is-haunting .haunt-shadow { animation: haunt-appear 0s 0.3s forwards, haunt-spread 1.6s steps(1) 0.3s infinite; }
+@keyframes haunt-descend { from { transform: translateY(-14px); } }
+@keyframes haunt-spread {
+  0% { transform: scaleX(0.4); }
+  25% { transform: scaleX(0.7); }
+  50% { transform: scaleX(1); }
+  75% { transform: scaleX(0.7); }
+}
+
+/* 02 Aayeri: the staff bells ring, and the hounds the portrait left out pass by. */
+.haunt--aayeri.is-haunting .card-media img { animation: haunt-sway 0.8s steps(1) infinite; }
+.haunt--aayeri .haunt-note {
+  left: 80%; top: 22%;
+  font: 700 16px/1 ui-monospace, monospace;
+  color: #D9A520;
+  text-shadow: 2px 2px 0 #3A2A10;
+}
+.haunt--aayeri .haunt-note + .haunt-note { left: 86%; top: 30%; }
+.haunt--aayeri.is-haunting .haunt-note { animation: haunt-float 1.2s steps(4) infinite; }
+.haunt--aayeri.is-haunting .haunt-note + .haunt-note { animation-delay: 0.6s; }
+.haunt--aayeri .haunt-paw {
+  --paw: #6B5A44;
+  width: 3px; height: 3px;
+  top: 76%;
+  box-shadow: 3px 0 var(--paw), 9px 0 var(--paw), 0 3px var(--paw), 12px 3px var(--paw), 3px 6px var(--paw), 6px 6px var(--paw), 9px 6px var(--paw), 3px 9px var(--paw), 6px 9px var(--paw), 9px 9px var(--paw);
+  transform: rotate(90deg);
+}
+.haunt--aayeri .haunt-paw:nth-of-type(3) { left: 3%; }
+.haunt--aayeri .haunt-paw:nth-of-type(4) { left: 11%; top: 72%; }
+.haunt--aayeri .haunt-paw:nth-of-type(5) { left: 84%; }
+.haunt--aayeri .haunt-paw:nth-of-type(6) { left: 92%; top: 72%; }
+.haunt--aayeri.is-haunting .haunt-paw { animation: haunt-appear 0s forwards; }
+.haunt--aayeri.is-haunting .haunt-paw:nth-of-type(4) { animation-delay: 0.25s; }
+.haunt--aayeri.is-haunting .haunt-paw:nth-of-type(5) { animation-delay: 0.75s; }
+.haunt--aayeri.is-haunting .haunt-paw:nth-of-type(6) { animation-delay: 1s; }
+@keyframes haunt-sway {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-2px); }
+  50% { transform: translateX(0); }
+  75% { transform: translateX(2px); }
+}
+@keyframes haunt-float {
+  0% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-20px); }
+}
+
+/* 03 Adam Bhediya: night falls, a pixel full moon rises, and he starts to turn. */
+.haunt--adam-bhediya .haunt-tint { background: linear-gradient(rgba(36, 46, 110, 0.75), rgba(90, 100, 160, 0.45)); }
+.haunt--adam-bhediya .haunt-moon {
+  left: 7%; top: 6%;
+  width: 18%; aspect-ratio: 1;
+  background: #F6E7A8;
+  clip-path: var(--pixel-oval);
+}
+.haunt--adam-bhediya.is-haunting .haunt-moon { animation: haunt-rise 0.5s steps(5) forwards; }
+.haunt--adam-bhediya.is-haunting .card-media img { animation: haunt-growl 0.24s steps(1) 0.5s infinite; }
+@keyframes haunt-rise {
+  from { opacity: 1; transform: translateY(80%); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes haunt-growl {
+  0% { transform: translate(0, 0) scale(1.03); }
+  25% { transform: translate(-2px, 1px) scale(1.03); }
+  50% { transform: translate(2px, -1px) scale(1.03); }
+  75% { transform: translate(0, 1px) scale(1.03); }
+}
+
+/* 04 Ateswar: bobs in the water on spreading ripples. The head is still missing. */
+.haunt--ateswar.is-haunting .card-media img { animation: haunt-bob 1s steps(1) infinite; }
+.haunt--ateswar .haunt-ripple {
+  left: 48%; top: 77%;
+  width: 34%; height: 9%;
+  translate: -50% -50%;
+  border: 3px solid rgba(150, 228, 235, 0.95);
+  clip-path: var(--pixel-oval);
+}
+.haunt--ateswar.is-haunting .haunt-ripple { animation: haunt-ripple 1.5s steps(5) infinite; }
+.haunt--ateswar.is-haunting .haunt-ripple:nth-of-type(2) { animation-delay: 0.5s; }
+.haunt--ateswar.is-haunting .haunt-ripple:nth-of-type(3) { animation-delay: 1s; }
+.haunt--ateswar .haunt-head {
+  left: 62%; top: 2%;
+  font: 700 24px/1 ui-monospace, monospace;
+  color: #2A8F96;
+  text-shadow: 2px 2px 0 #F3EFE4;
+}
+.haunt--ateswar.is-haunting .haunt-head { animation: haunt-appear 0s 0.3s forwards, haunt-blink 0.6s steps(1) 0.3s infinite; }
+@keyframes haunt-bob {
+  0% { transform: translateY(0); }
+  25% { transform: translateY(-3px); }
+  50% { transform: translateY(-6px); }
+  75% { transform: translateY(-3px); }
+}
+@keyframes haunt-ripple {
+  0% { opacity: 1; transform: scale(0.3); }
+  100% { opacity: 0; transform: scale(1.5); }
+}
+
+/* 05 Bagowa Bhoot: a roar shakes the screen and claws rake across it. */
+.haunt--bagowa-bhoot .haunt-tint { background: rgba(255, 140, 40, 0.45); }
+.haunt--bagowa-bhoot.is-haunting .haunt-tint { animation: haunt-flash 0.36s steps(1) forwards; }
+.haunt--bagowa-bhoot.is-haunting .card-media img { animation: haunt-shake 0.4s steps(1); }
+.haunt--bagowa-bhoot .haunt-claw {
+  left: 36%; top: 18%;
+  width: 9px; height: 46%;
+  background: #7A1A12;
+  clip-path: polygon(50% 0, 100% 12%, 100% 88%, 50% 100%, 0 88%, 0 12%);
+  mix-blend-mode: multiply;
+  transform: rotate(28deg) scaleY(0);
+  transform-origin: top;
+}
+.haunt--bagowa-bhoot .haunt-claw:nth-of-type(3) { left: 48%; }
+.haunt--bagowa-bhoot .haunt-claw:nth-of-type(4) { left: 60%; }
+.haunt--bagowa-bhoot.is-haunting .haunt-claw { animation: haunt-rake 0.25s steps(5) 0.3s forwards; }
+.haunt--bagowa-bhoot.is-haunting .haunt-claw:nth-of-type(3) { animation-delay: 0.36s; }
+.haunt--bagowa-bhoot.is-haunting .haunt-claw:nth-of-type(4) { animation-delay: 0.42s; }
+@keyframes haunt-flash {
+  0%, 50% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+  100% { opacity: 0.4; }
+}
+@keyframes haunt-shake {
+  0% { transform: translate(-4px, 0); }
+  20% { transform: translate(4px, -2px); }
+  40% { transform: translate(-3px, 2px); }
+  60% { transform: translate(3px, 0); }
+  80% { transform: translate(-1px, 1px); }
+  100% { transform: translate(0, 0); }
+}
+@keyframes haunt-rake {
+  from { opacity: 1; transform: rotate(28deg) scaleY(0); }
+  to { opacity: 1; transform: rotate(28deg) scaleY(1); }
+}
+
+/* 06 Barul: leaves orbit the whirlwind in 8 frames while it wobbles in place. */
+.haunt--barul.is-haunting .card-media img { animation: haunt-sway 0.4s steps(1) infinite; }
+.haunt--barul .haunt-leaf {
+  left: 50%; top: 42%;
+  width: 9px; height: 9px;
+  background: #8DC04A;
+  box-shadow: 3px 3px #2E4A16, -3px -3px #2E4A16;
+}
+.haunt--barul .haunt-leaf:nth-of-type(even) { background: #D08A3E; box-shadow: 3px 3px #4A2C10, -3px -3px #4A2C10; }
+.haunt--barul.is-haunting .haunt-leaf { animation: haunt-orbit 0.8s steps(8) infinite; }
+@keyframes haunt-orbit {
+  from { opacity: 1; transform: rotate(0deg) translateX(var(--r)); }
+  to { opacity: 1; transform: rotate(360deg) translateX(var(--r)); }
+}
+
+/* 07 Bayangi: pops up from the coconut shell and coins jump out, Mario-style. */
+.haunt--bayangi.is-haunting .card-media img { animation: haunt-pop 0.3s steps(3) both; }
+.haunt--bayangi .haunt-coin {
+  left: 50%; top: 56%;
+  width: 15px; height: 15px;
+  background: #F2C230;
+  box-shadow: inset -3px -3px #B8860B;
+  clip-path: var(--pixel-oval);
+}
+.haunt--bayangi.is-haunting .haunt-coin { animation: haunt-coin 0.9s steps(6) infinite; }
+.haunt--bayangi .haunt-plus {
+  left: 56%; top: 30%;
+  font: 700 14px/1 ui-monospace, monospace;
+  color: #F2C230;
+  text-shadow: 2px 2px 0 #5A3A10;
+}
+.haunt--bayangi.is-haunting .haunt-plus { animation: haunt-float 0.9s steps(4) 0.45s infinite; }
+@keyframes haunt-pop { from { transform: translateY(12px); } }
+@keyframes haunt-coin {
+  0% { opacity: 1; transform: translate(0, 0); }
+  50% { opacity: 1; transform: translate(calc(var(--dx) * 0.6), -48px); }
+  100% { opacity: 0; transform: translate(var(--dx), -20px); }
+}
+
+/* 08 Besho Bhoot: a fallen bamboo springs upright as you cross it. */
+.haunt--besho-bhoot.is-haunting .card-media img { animation: haunt-sway 1.2s steps(1) infinite; }
+.haunt--besho-bhoot .haunt-bamboo {
+  left: 16%; top: 30%;
+  width: 9px; height: 52%;
+  background: repeating-linear-gradient(#6E9B3A 0 18px, #3F6420 18px 21px);
+  box-shadow: inset -3px 0 #4F7A2A;
+  transform-origin: bottom center;
+  transform: rotate(90deg);
+}
+.haunt--besho-bhoot.is-haunting .haunt-bamboo { animation: haunt-raise 0.4s steps(4) 0.35s both; }
+.haunt--besho-bhoot .haunt-alert {
+  left: 22%; top: 20%;
+  font: 700 24px/1 ui-monospace, monospace;
+  color: #C0392B;
+  text-shadow: 2px 2px 0 #F3EFE4;
+}
+.haunt--besho-bhoot.is-haunting .haunt-alert { animation: haunt-appear 0s 0.8s forwards, haunt-blink 0.5s steps(1) 0.8s infinite; }
+@keyframes haunt-raise {
+  from { opacity: 1; transform: rotate(90deg); }
+  to { opacity: 1; transform: rotate(0deg); }
+}
+
+/* 09 Brahmadaitya: vakula blossoms fall, and helping ends his ghostly term. */
+.haunt--brahmadaitya.is-haunting .card-media img { animation: haunt-ascend 1.6s steps(6) 0.4s both; }
+.haunt--brahmadaitya .haunt-blossom {
+  top: 0;
+  width: 9px; height: 9px;
+  background: #E0A040;
+  box-shadow: inset 0 0 0 3px #FFF6E0;
+  clip-path: var(--pixel-oval);
+}
+.haunt--brahmadaitya.is-haunting .haunt-blossom { animation: haunt-fall 1.4s steps(7) infinite; }
+.haunt--brahmadaitya .haunt-sparkle {
+  left: 22%; top: 20%;
+  font: 700 16px/1 ui-monospace, monospace;
+  color: #E0A040;
+}
+.haunt--brahmadaitya .haunt-sparkle + .haunt-sparkle { left: 74%; top: 34%; }
+.haunt--brahmadaitya.is-haunting .haunt-sparkle { animation: haunt-appear 0s 1.4s forwards, haunt-blink 0.4s steps(1) 1.4s infinite; }
+.haunt--brahmadaitya.is-haunting .haunt-sparkle + .haunt-sparkle { animation-delay: 1.6s; }
+@keyframes haunt-ascend {
+  to { transform: translateY(-8px); filter: brightness(1.15); }
+}
+@keyframes haunt-fall {
+  0% { opacity: 1; transform: translateY(-10px); }
+  100% { opacity: 0; transform: translateY(150px); }
+}
+
+/* 10 Brahmarakshasa: scholar and devourer. The light flips between gold and
+   blood red while pages fly from his manuscript. */
+.haunt--brahmarakshasa.is-haunting .haunt-tint { animation: haunt-duality 1s steps(1) infinite; }
+.haunt--brahmarakshasa .haunt-page {
+  left: 74%; top: 52%;
+  width: 12px; height: 9px;
+  background: #F3E2B0;
+  box-shadow: inset 0 -3px #C8A860;
+}
+.haunt--brahmarakshasa.is-haunting .haunt-page { animation: haunt-page 1.2s steps(6) infinite; }
+@keyframes haunt-duality {
+  0% { opacity: 1; background: rgba(240, 190, 60, 0.35); }
+  50% { opacity: 1; background: rgba(170, 20, 20, 0.45); }
+}
+@keyframes haunt-page {
+  0% { opacity: 1; transform: translate(0, 0); }
+  100% { opacity: 0; transform: translate(var(--dx), var(--dy)) rotate(90deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .haunt .haunt-fx { display: none; }
+  .haunt.is-haunting .card-media img { animation: none; }
+  .haunt.is-haunting .haunt-say, .haunt.is-haunting .haunt-text, .haunt.is-haunting .haunt-say::after { animation: none; }
+  .haunt.is-haunting .haunt-say { transform: none; }
+  .haunt.is-haunting .haunt-text { clip-path: none; }
+}
 
 .modal-backdrop {
   position: fixed; inset: 0;
