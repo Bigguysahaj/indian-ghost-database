@@ -4,7 +4,7 @@ An open, growing research resource for developers making games rooted in Indian 
 
 **84 names indexed · 84 entries with initial sourced notes · 0 name-only research stubs · 0 fully reviewed entries.**
 
-Browse the [website](site/index.html), start with the [Markdown catalogue](GHOSTS.md), load the [JSON database](data/ghosts.json), or [contribute a tradition you know](CONTRIBUTING.md).
+Browse the [website](site/) (Svelte + Vite; see `site/README.md`), start with the [Markdown catalogue](GHOSTS.md), load the [JSON database](data/ghosts.json), or [contribute a tradition you know](CONTRIBUTING.md).
 
 ## What this contains
 
@@ -47,7 +47,7 @@ for ghost in database['ghosts']:
 | `GHOSTS.md`, `ghosts/*.md` | Generated index and individual Markdown entries |
 | `research/RESEARCH.md` | Method, gaps and next research work |
 | `RELATED_PROJECTS.md` | Existing GitHub projects to inspect |
-| `site/` | Static, zero-build website: a searchable card grid of all 84 entries. See `site/README.md`. |
+| `site/` | Svelte + Vite website: a searchable card grid of all 84 entries. See `site/README.md`. |
 
 ## Contribute
 

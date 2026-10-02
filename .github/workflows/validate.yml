@@ -15,3 +15,17 @@ jobs:
         run: |
           python scripts/sync_site.py
           git diff --exit-code -- site/ || (echo "site/ is out of date; run scripts/sync_site.py and commit the result" && exit 1)
+  build-site:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: site
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+      - run: npm ci
+      - run: npm run build
