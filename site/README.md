@@ -7,6 +7,7 @@ Open `index.html` directly, or serve the folder (`python -m http.server` from in
 ## Files
 
 - `index.html`, `styles.css`, `app.js` — the page.
+- `motion.js` — hover motion for selected portraits: a spring-driven 3D tilt with parallax, glare and shadow, plus overlays matched to each ghost's demeanour (entries #10–16 so far). Add a ghost by giving it an entry in `PERSONAS`; overlay positions are fractions of the portrait crop. Turned off entirely under `prefers-reduced-motion`.
 - `data/` — a synced copy of `data/ghosts.json`, `data/references.json` and `research/evidence.json`.
 - `images/ghosts/*.webp` — a synced copy of the per-entry portrait crops.
 

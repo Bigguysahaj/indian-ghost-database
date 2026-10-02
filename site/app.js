@@ -110,6 +110,7 @@ function render() {
       </div>
     `;
     card.addEventListener('click', () => openModal(ghost));
+    window.GhostMotion?.attach(card, ghost.id);
     frag.appendChild(card);
   }
   grid.appendChild(frag);
