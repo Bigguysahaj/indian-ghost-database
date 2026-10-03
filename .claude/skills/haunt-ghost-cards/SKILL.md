@@ -11,7 +11,7 @@ label such as `01 AACHERI`. Cards with a "haunt" play a short animation on hover
 It's a nod to that art style: motion is **frame-by-frame**, like a sprite, and an
 **RPG dialog box** slides up over the label and types out one line.
 
-Entries 1–74 are done. Study them before you design new ones: they are the
+Entries 1–84 are done. Study them before you design new ones: they are the
 reference for tone, density and technique. `batch.py` (step 1) lists which ids
 already have a haunt.
 

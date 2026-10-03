@@ -20,7 +20,9 @@
 // that is never sated, a guise over a demoness, stolen sweets, an owl's false directions, a fighter of two alignments,
 // a predator that stirs, avalanches, a head that differs by text, a deceased
 // Brahmin turned fiend, conch bangles, a battle death, wet hair, and a
-// shapeshifter that keeps animal traits).
+// shapeshifter that keeps animal traits, a railway death, a dream-visiting
+// demon, a teenager, a helpful boy, a flame-mouthed woman, the twenty-five
+// tales, a warrior guardian, guarded wealth, chest eyes, and a harmless headless ghost).
 // The fx strings are static markup rendered with {@html}; nothing user-supplied.
 const leaves = [0, 0.15, 0.3, 0.45].map((d, i) => `<span class="haunt-leaf" style="--r:${60 + i * 12}px;animation-delay:${d}s"></span>`).join('');
 const coins = [-34, -6, 26].map((dx, i) => `<span class="haunt-coin" style="--dx:${dx}px;animation-delay:${0.25 + i * 0.2}s"></span>`).join('');
@@ -49,6 +51,19 @@ const clinks = [[31, 56, 0.2], [71.5, 54, 0.6]].map(([x, y, d]) => `<span class=
 const hairdrips = [[12, 0], [22, 0.5], [80, 0.25], [90, 0.75]].map(([x, d]) => `<span class="haunt-hairdrip" style="left:${x}%;animation-delay:${d}s"></span>`).join('');
 const rings = [0, 0.5, 1].map((d) => `<span class="haunt-ring" style="animation-delay:${d}s"></span>`).join('');
 const sand = [[16, 0], [34, 0.3], [52, 0.15], [68, 0.45]].map(([y, d]) => `<span class="haunt-sand" style="top:${y}%;animation-delay:${d}s"></span>`).join('');
+const railsparks = [[16, 0], [28, 0.3], [66, 0.15], [78, 0.45]].map(([x, d]) => `<span class="haunt-railspark" style="left:${x}%;animation-delay:${d}s"></span>`).join('');
+const sucHearts = [[22, 66, 0], [78, 58, 0.5], [30, 48, 1]].map(([x, y, d]) => `<span class="haunt-suchheart" style="left:${x}%;top:${y}%;animation-delay:${d}s"></span>`).join('');
+const puffs = [[36, 0], [50, 0.4], [62, 0.8]].map(([x, d]) => `<span class="haunt-puff" style="left:${x}%;animation-delay:${d}s"></span>`).join('');
+const waves = [[13, 0], [7, 0.2]].map(([x, d]) => `<span class="haunt-wave" style="left:${x}%;animation-delay:${d}s">(</span>`).join('');
+const spits = [[30, -14, 0], [40, -4, 0.06], [24, -22, 0.12], [36, 6, 0.18]].map(([dx, dy, d]) => `<span class="haunt-spit" style="--dx:${dx}px;--dy:${dy}px;animation-delay:${d}s"></span>`).join('');
+const tales = [1, 2, 3].map((n, i) => `<span class="haunt-tale" style="animation-delay:${i}s">TALE ${n}/25</span>`).join('');
+const riddleQs = [[34, 48, 0], [66, 46, 0.6]].map(([x, y, d]) => `<span class="haunt-riddleq" style="left:${x}%;top:${y}%;animation-delay:${d}s">?</span>`).join('');
+const potglints = [[68, 24, 0], [74, 30, 0.3], [64, 33, 0.6]].map(([x, y, d]) => `<span class="haunt-potglint" style="left:${x}%;top:${y}%;animation-delay:${d}s"></span>`).join('');
+const ycoins = [-30, -8, 16].map((dx, i) => `<span class="haunt-ycoin" style="--dx:${dx}px;animation-delay:${i * 0.3}s"></span>`).join('');
+const golds = [50, 100, 150].map((n, i) => `<span class="haunt-gold" style="animation-delay:${i * 0.6}s">+${n} G</span>`).join('');
+const pupils = [42, 55].map((x) => `<span class="haunt-pupil" style="left:${x}%"></span>`).join('');
+const chestlids = [42, 55].map((x) => `<span class="haunt-chestlid" style="left:${x}%"></span>`).join('');
+const zrings = [0, 0.5, 1].map((d) => `<span class="haunt-zring" style="animation-delay:${d}s"></span>`).join('');
 const stones = [[96, 22, -150, 0.2], [96, 34, -110, 0.7], [-4, 28, 130, 1.2]].map(([x, y, dx, d]) => `<span class="haunt-stone" style="left:${x}%;top:${y}%;--dx:${dx}px;animation-delay:${d}s"></span>`).join('');
 const mists = [[0, 0], [52, 0.6]].map(([x, d]) => `<span class="haunt-mist" style="left:${x}%;animation-delay:${d}s"></span>`).join('');
 const chimes = [[38, 76, 0], [54, 78, 0.25], [46, 74, 0.5]].map(([x, y, d]) => `<span class="haunt-chime" style="left:${x}%;top:${y}%;animation-delay:${d}s">✦</span>`).join('');
@@ -361,6 +376,46 @@ export const HAUNTS = {
   sila: {
     line: 'SHAPESHIFTER… MIND THE EARS.',
     fx: `<span class="haunt-tint"></span>${sand}<span class="haunt-ear-l"></span><span class="haunt-ear-r"></span>`,
+  },
+  skondhokata: {
+    line: 'LAST STOP: SKONDHOKATA.',
+    fx: `<span class="haunt-tint"></span><span class="haunt-headlight"></span>${railsparks}<span class="haunt-flash"></span><span class="haunt-toot">TOOT!</span>`,
+  },
+  succubus: {
+    line: 'SWEET DREAMS, SLEEPER…',
+    fx: `<span class="haunt-tint"></span>${sucHearts}<span class="haunt-hpbar">HP<span class="haunt-hpfill"></span></span><span class="haunt-hp">-1</span><span class="haunt-moonglint"></span>`,
+  },
+  supurus: {
+    line: 'A TEENAGE GHOST… SUPURUS.',
+    fx: `<span class="haunt-tint"></span>${puffs}<span class="haunt-age">AGE: TEEN</span>`,
+  },
+  tola: {
+    line: 'NEED A HAND? TOLA HELPS.',
+    fx: `${waves}<span class="haunt-quest">!</span><span class="haunt-done">✓</span><span class="haunt-help">+1 HELP</span>`,
+  },
+  ulkamukhi: {
+    line: 'ULKAMUKHI USED EMBER!',
+    fx: `<span class="haunt-tint"></span><span class="haunt-charge"></span>${spits}<span class="haunt-flash"></span>`,
+  },
+  vetala: {
+    line: 'RIDDLE ME THIS, VIKRAM…',
+    fx: `<span class="haunt-tint"></span>${tales}${riddleQs}`,
+  },
+  viran: {
+    line: 'HALT. VIRAN GUARDS HERE.',
+    fx: '<span class="haunt-glint"></span><span class="haunt-slash"></span><span class="haunt-slash-b"></span>',
+  },
+  yaksha: {
+    line: 'GOLD? HE GUARDS IT WELL.',
+    fx: `${potglints}${ycoins}${golds}`,
+  },
+  yugini: {
+    line: 'SHE SEES… WITHOUT A HEAD.',
+    fx: `<span class="haunt-tint"></span>${pupils}${chestlids}`,
+  },
+  zoting: {
+    line: 'HARMLESS. HEADLESS. ZOTING.',
+    fx: `${zrings}<span class="haunt-dmg">DMG 0</span><span class="haunt-miss">MISS!</span>`,
   },
 };
 

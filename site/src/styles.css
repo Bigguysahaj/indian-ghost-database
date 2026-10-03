@@ -1854,6 +1854,441 @@ main { max-width: 1180px; margin: 0 auto; padding: 32px 16px 64px; }
   85%, 100% { opacity: 0; }
 }
 
+/* 75 Skondhokata: a headless man, killed on the railway. A headlight runs in
+   along the rails, sparks fly, the horn sounds and the train flashes past. */
+.haunt--skondhokata .haunt-tint { background: rgba(60, 60, 80, 0.35); }
+.haunt--skondhokata.is-haunting .card-media img { animation: haunt-skondhokata-rumble 2.4s steps(1) infinite; }
+@keyframes haunt-skondhokata-rumble {
+  0% { transform: translate(0, 0); }
+  12% { transform: translate(2px, 0); }
+  24% { transform: translate(0, 0); }
+  36% { transform: translate(-2px, 0); }
+  48% { transform: translate(0, 0); }
+  55% { transform: translate(-4px, 0); }
+  59% { transform: translate(4px, -2px); }
+  63% { transform: translate(-3px, 2px); }
+  67% { transform: translate(3px, 0); }
+  71% { transform: translate(-1px, 1px); }
+  75%, 100% { transform: translate(0, 0); }
+}
+.haunt--skondhokata .haunt-headlight {
+  left: -4%; top: 72%;
+  width: 14px; height: 10px;
+  background: #FFF2A0;
+  box-shadow: 0 0 0 3px rgba(255, 210, 60, 0.6);
+  clip-path: var(--pixel-oval);
+}
+.haunt--skondhokata.is-haunting .haunt-headlight { animation: haunt-skondhokata-train 2.4s steps(1) infinite; }
+@keyframes haunt-skondhokata-train {
+  0% { opacity: 1; transform: translateX(0) scale(0.6); }
+  10% { opacity: 1; transform: translateX(18px) scale(0.8); }
+  20% { opacity: 1; transform: translateX(42px) scale(1); }
+  30% { opacity: 1; transform: translateX(72px) scale(1.3); }
+  40% { opacity: 1; transform: translateX(108px) scale(1.7); }
+  48% { opacity: 1; transform: translateX(150px) scale(2.2); }
+  54%, 100% { opacity: 0; transform: translateX(150px) scale(2.2); }
+}
+.haunt--skondhokata .haunt-flash { inset: 0; background: #FFFBE8; }
+.haunt--skondhokata.is-haunting .haunt-flash { animation: haunt-skondhokata-flash 2.4s steps(1) infinite; }
+@keyframes haunt-skondhokata-flash {
+  0%, 53% { opacity: 0; }
+  54% { opacity: 0.85; }
+  57% { opacity: 0.4; }
+  60%, 100% { opacity: 0; }
+}
+.haunt--skondhokata .haunt-railspark {
+  top: 79%;
+  width: 4px; height: 4px;
+  background: #FFD040;
+  box-shadow: 0 0 0 2px #C05010;
+}
+.haunt--skondhokata.is-haunting .haunt-railspark { animation: haunt-skondhokata-spark 0.8s steps(1) infinite; }
+@keyframes haunt-skondhokata-spark {
+  0% { opacity: 1; transform: translateY(0); }
+  20% { opacity: 1; transform: translateY(-8px); }
+  40% { opacity: 1; transform: translateY(-12px); }
+  60% { opacity: 1; transform: translateY(-8px); }
+  80%, 100% { opacity: 0; transform: translateY(0); }
+}
+.haunt--skondhokata .haunt-toot {
+  left: 4%; top: 8%;
+  font: 900 13px/1 ui-monospace, monospace;
+  color: #F2C230;
+  text-shadow: 2px 2px 0 #3A2A10;
+}
+.haunt--skondhokata.is-haunting .haunt-toot { animation: haunt-skondhokata-toot 2.4s steps(1) infinite; }
+@keyframes haunt-skondhokata-toot {
+  0%, 39% { opacity: 0; transform: translateY(0) scale(1); }
+  40% { opacity: 1; transform: translateY(0) scale(1.4); }
+  48% { opacity: 1; transform: translateY(-4px) scale(1); }
+  60% { opacity: 1; transform: translateY(-8px) scale(1); }
+  72%, 100% { opacity: 0; transform: translateY(-12px) scale(1); }
+}
+
+/* 76 Succubus: a dream-visiting demon that seduces sleeping men; repeated visits
+   are linked to wasting illness. Hearts drift up and the sleeper's HP bar
+   drains a block at a time, each with a damage number; the moon glints. */
+.haunt--succubus .haunt-tint { background: rgba(70, 40, 120, 0.3); }
+.haunt--succubus.is-haunting .card-media img { animation: haunt-bob 1.4s steps(1) infinite; }
+.haunt--succubus .haunt-suchheart {
+  width: 11px; height: 10px;
+  background: #FF6AA8;
+  box-shadow: inset -3px -3px #C03070;
+  clip-path: polygon(0 20%, 20% 0, 40% 0, 50% 20%, 60% 0, 80% 0, 100% 20%, 100% 50%, 80% 70%, 60% 85%, 50% 100%, 40% 85%, 20% 70%, 0 50%);
+}
+.haunt--succubus.is-haunting .haunt-suchheart { animation: haunt-float 1.2s steps(5) infinite; }
+.haunt--succubus .haunt-hpbar {
+  left: 4%; top: 5%;
+  display: flex; align-items: center; gap: 4px;
+  padding: 3px 4px;
+  font: 700 8px/1 ui-monospace, monospace;
+  color: #F3EFE4;
+  background: #1D1A2E;
+}
+.haunt--succubus .haunt-hpfill {
+  display: inline-block;
+  width: 40px; height: 6px;
+  background: #E04060;
+  box-shadow: 0 0 0 1px #F3EFE4;
+}
+.haunt--succubus.is-haunting .haunt-hpbar { animation: haunt-appear 0s forwards; }
+.haunt--succubus.is-haunting .haunt-hpfill { animation: haunt-succubus-drain 2.4s steps(1) infinite; }
+@keyframes haunt-succubus-drain {
+  0% { width: 40px; }
+  25% { width: 30px; }
+  50% { width: 20px; }
+  75% { width: 10px; background: #F0A030; }
+  95% { width: 2px; background: #F0A030; }
+}
+.haunt--succubus .haunt-hp {
+  left: 32%; top: 13%;
+  font: 900 11px/1 ui-monospace, monospace;
+  color: #FF5A4A;
+  text-shadow: 2px 2px 0 #1D1A2E;
+}
+.haunt--succubus.is-haunting .haunt-hp { animation: haunt-float 0.6s steps(3) 0.6s infinite; }
+.haunt--succubus .haunt-moonglint {
+  left: 84%; top: 6%;
+  width: 9px; height: 9px;
+  background: #FFFFFF;
+  clip-path: polygon(40% 0, 60% 0, 60% 40%, 100% 40%, 100% 60%, 60% 60%, 60% 100%, 40% 100%, 40% 60%, 0 60%, 0 40%, 40% 40%);
+}
+.haunt--succubus.is-haunting .haunt-moonglint { animation: haunt-shankhchunni-glint 1.2s steps(1) 0.3s infinite; }
+
+/* 77 Supurus: a teenage male ghost. Nothing else is claimed, so the effect stays
+   generic: he flickers out and back a step to each side, the violet mist
+   pulses and puffs rise from his feet, and a stat tag shows his age. */
+.haunt--supurus .haunt-tint { background: rgba(130, 70, 190, 0.35); }
+.haunt--supurus.is-haunting .haunt-tint { animation: haunt-appear 0.4s steps(4) forwards, haunt-blink 1.2s steps(1) 0.4s infinite; }
+.haunt--supurus.is-haunting .card-media img { animation: haunt-supurus-flicker 2s steps(1) infinite; }
+@keyframes haunt-supurus-flicker {
+  0%, 39% { opacity: 1; transform: translateX(0); }
+  40% { opacity: 0; transform: translateX(0); }
+  44% { opacity: 1; transform: translateX(-6px); }
+  60% { opacity: 0; transform: translateX(-6px); }
+  64% { opacity: 1; transform: translateX(6px); }
+  80% { opacity: 0; transform: translateX(6px); }
+  84%, 100% { opacity: 1; transform: translateX(0); }
+}
+.haunt--supurus .haunt-puff {
+  top: 74%;
+  width: 8px; height: 8px;
+  background: #B080E0;
+  box-shadow: 0 0 0 2px #5A3A8A;
+}
+.haunt--supurus.is-haunting .haunt-puff { animation: haunt-float 1.2s steps(4) infinite; }
+.haunt--supurus .haunt-age {
+  right: 3%; top: 4%;
+  padding: 2px 4px;
+  font: 700 8px/1 ui-monospace, monospace;
+  color: #C9A0F0;
+  background: #1D1A2E;
+  box-shadow: inset 0 0 0 1px #C9A0F0;
+}
+.haunt--supurus.is-haunting .haunt-age { animation: haunt-appear 0s 0.3s forwards; }
+
+/* 78 Tola: a helpful boy ghost. He waves, a quest-giver "!" bobs beside his
+   head, then the quest completes: the "!" turns into a tick and "+1 HELP"
+   floats up. */
+.haunt--tola.is-haunting .card-media img { animation: haunt-sway 0.8s steps(1) infinite; }
+.haunt--tola .haunt-wave {
+  top: 18%;
+  font: 900 16px/1 ui-monospace, monospace;
+  color: #2A7A8A;
+}
+.haunt--tola.is-haunting .haunt-wave { animation: haunt-appear 0s forwards, haunt-blink 0.4s steps(1) infinite; }
+.haunt--tola .haunt-quest, .haunt--tola .haunt-done {
+  left: 68%; top: 6%;
+  font: 900 26px/1 ui-monospace, monospace;
+  text-shadow: 2px 0 0 #3A2A10, -2px 0 0 #3A2A10, 0 2px 0 #3A2A10, 0 -2px 0 #3A2A10;
+}
+.haunt--tola .haunt-quest { color: #F2C230; }
+.haunt--tola .haunt-done { color: #5AD06A; }
+.haunt--tola.is-haunting .haunt-quest { animation: haunt-tola-quest 2.4s steps(1) infinite; }
+.haunt--tola.is-haunting .haunt-done { animation: haunt-tola-done 2.4s steps(1) infinite; }
+@keyframes haunt-tola-quest {
+  0% { opacity: 1; transform: translateY(0); }
+  12% { opacity: 1; transform: translateY(-3px); }
+  24% { opacity: 1; transform: translateY(-6px); }
+  36% { opacity: 1; transform: translateY(-3px); }
+  48% { opacity: 1; transform: translateY(0); }
+  50%, 100% { opacity: 0; transform: translateY(0); }
+}
+@keyframes haunt-tola-done {
+  0%, 49% { opacity: 0; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.4); }
+  56%, 100% { opacity: 1; transform: scale(1); }
+}
+.haunt--tola .haunt-help {
+  left: 4%; top: 34%;
+  font: 900 11px/1 ui-monospace, monospace;
+  color: #3AAA5A;
+  text-shadow: 2px 2px 0 #F3EFE4;
+}
+.haunt--tola.is-haunting .haunt-help { animation: haunt-tola-help 2.4s steps(1) infinite; }
+@keyframes haunt-tola-help {
+  0%, 49% { opacity: 0; transform: translateY(0); }
+  50% { opacity: 1; transform: translateY(0); }
+  66% { opacity: 1; transform: translateY(-6px); }
+  82% { opacity: 1; transform: translateY(-12px); }
+  100% { opacity: 0; transform: translateY(-18px); }
+}
+
+/* 79 Ulkamukhi: a flame-mouthed female ghost. The flame charges up, a burst
+   of fireballs flies out, she recoils and the screen flashes orange. */
+.haunt--ulkamukhi .haunt-tint { background: rgba(255, 150, 60, 0.3); }
+.haunt--ulkamukhi.is-haunting .card-media img { animation: haunt-ulkamukhi-recoil 2s steps(1) infinite; }
+@keyframes haunt-ulkamukhi-recoil {
+  0% { transform: translateX(0); }
+  15% { transform: translateX(2px); }
+  30% { transform: translateX(0); }
+  45% { transform: translateX(-3px); }
+  50% { transform: translateX(-4px); }
+  60%, 100% { transform: translateX(0); }
+}
+.haunt--ulkamukhi .haunt-charge {
+  left: 60%; top: 10%;
+  width: 18px; height: 18px;
+  background: rgba(255, 210, 70, 0.85);
+  clip-path: var(--pixel-oval);
+}
+.haunt--ulkamukhi.is-haunting .haunt-charge { animation: haunt-ulkamukhi-charge 2s steps(1) infinite; }
+@keyframes haunt-ulkamukhi-charge {
+  0% { opacity: 1; transform: scale(0.4); }
+  10% { opacity: 1; transform: scale(0.6); }
+  20% { opacity: 1; transform: scale(0.8); }
+  30% { opacity: 1; transform: scale(1); }
+  40% { opacity: 1; transform: scale(1.3); }
+  45%, 100% { opacity: 0; transform: scale(1.3); }
+}
+.haunt--ulkamukhi .haunt-spit {
+  left: 64%; top: 13%;
+  width: 7px; height: 7px;
+  background: #FFC030;
+  box-shadow: 0 0 0 2px #E05010;
+}
+.haunt--ulkamukhi.is-haunting .haunt-spit { animation: haunt-ulkamukhi-spit 2s steps(1) infinite; }
+@keyframes haunt-ulkamukhi-spit {
+  0%, 44% { opacity: 0; transform: translate(0, 0) scale(0.6); }
+  45% { opacity: 1; transform: translate(0, 0) scale(0.6); }
+  55% { opacity: 1; transform: translate(calc(var(--dx) * 0.33), calc(var(--dy) * 0.33)) scale(0.8); }
+  65% { opacity: 1; transform: translate(calc(var(--dx) * 0.66), calc(var(--dy) * 0.66)) scale(1); }
+  75% { opacity: 1; transform: translate(var(--dx), var(--dy)) scale(1.2); }
+  80%, 100% { opacity: 0; transform: translate(var(--dx), var(--dy)) scale(1.2); }
+}
+.haunt--ulkamukhi .haunt-flash { inset: 0; background: rgba(255, 170, 60, 0.55); }
+.haunt--ulkamukhi.is-haunting .haunt-flash { animation: haunt-ulkamukhi-flash 2s steps(1) infinite; }
+@keyframes haunt-ulkamukhi-flash {
+  0%, 74% { opacity: 0; }
+  75% { opacity: 1; }
+  79%, 100% { opacity: 0; }
+}
+
+/* 80 Vetala: a corpse-spirit that frames the twenty-five stories, with riddles.
+   He swings from the branch, question marks rise beside his head and a tale
+   counter ticks up. */
+.haunt--vetala .haunt-tint { background: rgba(60, 80, 140, 0.35); }
+.haunt--vetala.is-haunting .card-media img { animation: haunt-vetala-swing 1.6s steps(1) infinite; }
+@keyframes haunt-vetala-swing {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  50% { transform: translateX(0); }
+  75% { transform: translateX(4px); }
+}
+.haunt--vetala .haunt-tale {
+  left: 3%; top: 58%;
+  padding: 2px 4px;
+  font: 700 8px/1 ui-monospace, monospace;
+  color: #E8D890;
+  background: #1D1A2E;
+  box-shadow: inset 0 0 0 1px #E8D890;
+}
+.haunt--vetala.is-haunting .haunt-tale { animation: haunt-vetala-count 3s steps(1) infinite; }
+@keyframes haunt-vetala-count {
+  0%, 32% { opacity: 1; }
+  33%, 100% { opacity: 0; }
+}
+.haunt--vetala .haunt-riddleq {
+  font: 900 16px/1 ui-monospace, monospace;
+  color: #E8D890;
+  text-shadow: 2px 2px 0 #1D1A2E;
+}
+.haunt--vetala.is-haunting .haunt-riddleq { animation: haunt-float 1.2s steps(4) infinite; }
+
+/* 81 Viran: a warrior guardian. A glint runs down his sword, then he cuts an X:
+   two slashes, a jolt on each. */
+.haunt--viran.is-haunting .card-media img { animation: haunt-viran-jolt 1.6s steps(1) infinite; }
+@keyframes haunt-viran-jolt {
+  0%, 38% { transform: translateX(0); }
+  40% { transform: translateX(-4px); }
+  44% { transform: translateX(3px); }
+  48%, 66% { transform: translateX(0); }
+  68% { transform: translateX(4px); }
+  72% { transform: translateX(-3px); }
+  76%, 100% { transform: translateX(0); }
+}
+.haunt--viran .haunt-glint {
+  left: 25%; top: 62%;
+  width: 6px; height: 6px;
+  background: #FFFFFF;
+  box-shadow: 0 0 0 2px #5A6A90;
+}
+.haunt--viran.is-haunting .haunt-glint { animation: haunt-viran-glint 1.6s steps(1) infinite; }
+@keyframes haunt-viran-glint {
+  0% { opacity: 1; transform: translate(0, 0); }
+  6% { opacity: 1; transform: translate(6px, 12px); }
+  12% { opacity: 1; transform: translate(16px, 22px); }
+  18% { opacity: 1; transform: translate(28px, 30px); }
+  24%, 100% { opacity: 0; transform: translate(28px, 30px); }
+}
+.haunt--viran .haunt-slash, .haunt--viran .haunt-slash-b {
+  left: 16%; top: 54%;
+  width: 68%; height: 5px;
+  background: #FFFFFF;
+  box-shadow: 0 0 0 2px #5A6A90;
+  transform-origin: 0 50%;
+}
+.haunt--viran .haunt-slash-b { top: 22%; }
+.haunt--viran.is-haunting .haunt-slash { animation: haunt-viran-slash 1.6s steps(1) infinite; }
+.haunt--viran.is-haunting .haunt-slash-b { animation: haunt-viran-slash-b 1.6s steps(1) infinite; }
+@keyframes haunt-viran-slash {
+  0%, 24% { opacity: 0; transform: rotate(-28deg) scaleX(0); }
+  26% { opacity: 1; transform: rotate(-28deg) scaleX(0.25); }
+  30% { opacity: 1; transform: rotate(-28deg) scaleX(0.5); }
+  34% { opacity: 1; transform: rotate(-28deg) scaleX(0.75); }
+  38% { opacity: 1; transform: rotate(-28deg) scaleX(1); }
+  50%, 100% { opacity: 0; transform: rotate(-28deg) scaleX(1); }
+}
+@keyframes haunt-viran-slash-b {
+  0%, 54% { opacity: 0; transform: rotate(28deg) scaleX(0); }
+  56% { opacity: 1; transform: rotate(28deg) scaleX(0.25); }
+  60% { opacity: 1; transform: rotate(28deg) scaleX(0.5); }
+  64% { opacity: 1; transform: rotate(28deg) scaleX(0.75); }
+  68% { opacity: 1; transform: rotate(28deg) scaleX(1); }
+  80%, 100% { opacity: 0; transform: rotate(28deg) scaleX(1); }
+}
+
+/* 82 Yaksha: may guard wealth. The golden pot glints, coins hop out of it and
+   the gold count ticks up. */
+.haunt--yaksha.is-haunting .card-media img { animation: haunt-sway 1.2s steps(1) infinite; }
+.haunt--yaksha .haunt-potglint {
+  width: 11px; height: 11px;
+  background: #FFFFFF;
+  filter: drop-shadow(0 0 1px #8A5A10);
+  clip-path: polygon(40% 0, 60% 0, 60% 40%, 100% 40%, 100% 60%, 60% 60%, 60% 100%, 40% 100%, 40% 60%, 0 60%, 0 40%, 40% 40%);
+}
+.haunt--yaksha.is-haunting .haunt-potglint { animation: haunt-shankhchunni-glint 0.8s steps(1) infinite; }
+.haunt--yaksha .haunt-ycoin {
+  left: 70%; top: 21%;
+  width: 8px; height: 8px;
+  background: #F2C230;
+  box-shadow: inset -2px -2px #B07A10, 0 0 0 2px #5A3A10;
+}
+.haunt--yaksha.is-haunting .haunt-ycoin { animation: haunt-coin 0.9s steps(6) infinite; }
+.haunt--yaksha .haunt-gold {
+  left: 4%; top: 6%;
+  font: 900 11px/1 ui-monospace, monospace;
+  color: #F2C230;
+  text-shadow: 2px 2px 0 #3A2A10;
+}
+.haunt--yaksha.is-haunting .haunt-gold { animation: haunt-yaksha-tick 1.8s steps(1) infinite; }
+@keyframes haunt-yaksha-tick {
+  0% { opacity: 1; transform: translateY(0); }
+  16% { opacity: 1; transform: translateY(-3px); }
+  33%, 100% { opacity: 0; transform: translateY(-3px); }
+}
+
+/* 83 Yugini: a headless woman with eyes on her chest. The chest eyes look
+   left, then right, then blink shut, one dark eyelid each. */
+.haunt--yugini .haunt-tint { background: rgba(60, 60, 170, 0.3); }
+.haunt--yugini.is-haunting .card-media img { animation: haunt-bob 1.4s steps(1) infinite; }
+.haunt--yugini .haunt-pupil {
+  top: 16%;
+  width: 5px; height: 5px;
+  translate: -50% -50%;
+  background: #1A1430;
+}
+.haunt--yugini.is-haunting .haunt-pupil { animation: haunt-yugini-look 1.6s steps(1) infinite; }
+@keyframes haunt-yugini-look {
+  0% { opacity: 1; transform: translateX(0); }
+  15% { opacity: 1; transform: translateX(-3px); }
+  30% { opacity: 1; transform: translateX(3px); }
+  45%, 59% { opacity: 1; transform: translateX(0); }
+  60%, 75% { opacity: 0; transform: translateX(0); }
+  76%, 100% { opacity: 1; transform: translateX(0); }
+}
+.haunt--yugini .haunt-chestlid {
+  top: 16%;
+  width: 26px; height: 22px;
+  translate: -50% -50%;
+  background: #262C5C;
+}
+.haunt--yugini.is-haunting .haunt-chestlid { animation: haunt-yugini-blink 1.6s steps(1) infinite; }
+@keyframes haunt-yugini-blink {
+  0%, 59% { opacity: 0; }
+  60%, 75% { opacity: 1; }
+  76%, 100% { opacity: 0; }
+}
+
+/* 84 Zoting: a harmless, headless ghost from the Konkan. It bobs on the water
+   and lunges twice: one hit for zero damage, then a miss. */
+.haunt--zoting.is-haunting .card-media img { animation: haunt-zoting-lunge 2s steps(1) infinite; }
+@keyframes haunt-zoting-lunge {
+  0% { transform: translate(0, 0); }
+  10% { transform: translate(0, -3px); }
+  20% { transform: translate(6px, -2px); }
+  26% { transform: translate(0, 0); }
+  36% { transform: translate(0, -3px); }
+  48% { transform: translate(0, -6px); }
+  60% { transform: translate(0, -3px); }
+  70% { transform: translate(-6px, -2px); }
+  76%, 100% { transform: translate(0, 0); }
+}
+.haunt--zoting .haunt-zring {
+  left: 52%; top: 80%;
+  width: 60%; height: 12%;
+  translate: -50% -50%;
+  background: rgba(30, 110, 130, 0.4);
+  clip-path: var(--pixel-oval);
+}
+.haunt--zoting.is-haunting .haunt-zring { animation: haunt-ripple 1.5s steps(5) infinite; }
+.haunt--zoting .haunt-dmg, .haunt--zoting .haunt-miss {
+  font: 900 11px/1 ui-monospace, monospace;
+  color: #FFFFFF;
+  text-shadow: 2px 0 0 #2A3A50, -2px 0 0 #2A3A50, 0 2px 0 #2A3A50, 0 -2px 0 #2A3A50;
+}
+.haunt--zoting .haunt-dmg { left: 60%; top: 14%; }
+.haunt--zoting .haunt-miss { left: 14%; top: 14%; }
+.haunt--zoting.is-haunting .haunt-dmg { animation: haunt-zoting-pop 2s steps(1) infinite; }
+.haunt--zoting.is-haunting .haunt-miss { animation: haunt-zoting-pop 2s steps(1) 1s infinite; }
+@keyframes haunt-zoting-pop {
+  0%, 19% { opacity: 0; transform: translateY(0); }
+  20% { opacity: 1; transform: translateY(0); }
+  30% { opacity: 1; transform: translateY(-6px); }
+  40% { opacity: 1; transform: translateY(-12px); }
+  50%, 100% { opacity: 0; transform: translateY(-12px); }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .haunt .haunt-fx { display: none; }
   .haunt.is-haunting .card-media img { animation: none; }
