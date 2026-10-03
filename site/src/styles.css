@@ -514,6 +514,1346 @@ main { max-width: 1180px; margin: 0 auto; padding: 32px 16px 64px; }
   100% { opacity: 0; transform: translate(var(--dx), var(--dy)) rotate(90deg); }
 }
 
+/* 11 Chanda: a gunin's summoning ("created by gunins"). A ritual glow pulses
+   at the hem, sparks rise from it and the figure flickers into being. */
+.haunt--chanda.is-haunting .card-media img { animation: haunt-summon 0.8s steps(1) both; }
+.haunt--chanda .haunt-ring {
+  left: 50%; top: 78%;
+  width: 70%; height: 12%;
+  translate: -50% -50%;
+  background: rgba(199, 125, 255, 0.5);
+  clip-path: var(--pixel-oval);
+}
+.haunt--chanda.is-haunting .haunt-ring { animation: haunt-ring-pulse 0.8s steps(1) infinite; }
+.haunt--chanda .haunt-spark {
+  top: 74%;
+  width: 9px; height: 9px;
+  background: #F0D0FF;
+  box-shadow: 0 0 0 3px #7A2EB0;
+}
+.haunt--chanda.is-haunting .haunt-spark { animation: haunt-spark-rise 1.2s steps(6) infinite; }
+@keyframes haunt-summon {
+  0% { opacity: 0; }
+  15% { opacity: 0.5; }
+  30% { opacity: 0.1; }
+  45% { opacity: 0.75; }
+  60% { opacity: 0.3; }
+  75%, 100% { opacity: 1; }
+}
+@keyframes haunt-ring-pulse {
+  0% { opacity: 1; transform: scale(0.9); }
+  50% { opacity: 1; transform: scale(1.06); }
+}
+@keyframes haunt-spark-rise {
+  0% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-72px); }
+}
+
+/* 12 Chedipe: night falls, the household sleeps, and she drains blood
+   ("enters homes at night, induces sleep and drains blood"), shown as an HP bar. */
+.haunt--chedipe .haunt-tint { background: linear-gradient(rgba(30, 36, 100, 0.65), rgba(60, 70, 140, 0.4)); }
+.haunt--chedipe.is-haunting .haunt-tint { animation: haunt-appear 0.4s steps(4) forwards; }
+.haunt--chedipe .haunt-z {
+  font: 700 12px/1 ui-monospace, monospace;
+  color: #E8EEFF;
+  text-shadow: 2px 2px 0 #1D1A2E;
+}
+.haunt--chedipe.is-haunting .haunt-z { animation: haunt-float 1.2s steps(4) infinite; }
+.haunt--chedipe .haunt-hp {
+  left: 56%; top: 5%; width: 38%;
+  display: flex; align-items: center; gap: 5px;
+  font: 700 9px/1 ui-monospace, monospace;
+  color: #F3EFE4;
+  text-shadow: 1px 1px 0 #1D1A2E;
+}
+.haunt--chedipe .haunt-hp-bar {
+  position: relative;
+  flex: 1; height: 6px;
+  background: #3A1010;
+  box-shadow: 0 0 0 2px #1D1A2E;
+}
+.haunt--chedipe .haunt-hp-bar::after {
+  content: "";
+  position: absolute; inset: 0;
+  background: #E04040;
+  transform-origin: left;
+}
+.haunt--chedipe.is-haunting .haunt-hp { animation: haunt-appear 0s 0.3s forwards; }
+.haunt--chedipe.is-haunting .haunt-hp-bar::after { animation: haunt-drain 2.4s steps(6) 0.6s forwards; }
+@keyframes haunt-drain { to { transform: scaleX(0.15); } }
+
+/* 13 Chetkin: the road scrolls past, headlights close in, then a flash and a
+   jolt ("causes road accidents"). One 2.4s cycle shared by every layer. */
+.haunt--chetkin.is-haunting .card-media img { animation: haunt-crash 2.4s steps(1) infinite; }
+.haunt--chetkin .haunt-road {
+  left: 0; right: 0; top: 82%;
+  height: 4px;
+  background: repeating-linear-gradient(90deg, #F2C230 0 12px, transparent 12px 24px);
+}
+.haunt--chetkin.is-haunting .haunt-road { animation: haunt-appear 0s forwards, haunt-scroll 0.3s steps(4) infinite; }
+.haunt--chetkin .haunt-headlight {
+  top: 64%;
+  width: 20px; height: 14px;
+  translate: -50% -50%;
+  background: #FFF3B0;
+  box-shadow: inset 0 0 0 2px #E0B030;
+  clip-path: var(--pixel-oval);
+}
+.haunt--chetkin.is-haunting .haunt-headlight { animation: haunt-approach 2.4s steps(1) infinite; }
+.haunt--chetkin .haunt-flash { inset: 0; background: #FFF8D8; }
+.haunt--chetkin.is-haunting .haunt-flash { animation: haunt-crash-flash 2.4s steps(1) infinite; }
+@keyframes haunt-scroll { to { background-position: -24px 0; } }
+@keyframes haunt-approach {
+  0% { opacity: 1; transform: scale(0.4); }
+  7% { opacity: 1; transform: scale(0.8); }
+  14% { opacity: 1; transform: scale(1.2); }
+  21% { opacity: 1; transform: scale(1.6); }
+  28% { opacity: 1; transform: scale(2); }
+  35% { opacity: 1; transform: scale(2.4); }
+  38%, 100% { opacity: 0; transform: scale(2.4); }
+}
+@keyframes haunt-crash-flash {
+  0%, 37% { opacity: 0; }
+  38% { opacity: 0.9; }
+  42% { opacity: 0; }
+  45% { opacity: 0.6; }
+  48%, 100% { opacity: 0; }
+}
+@keyframes haunt-crash {
+  0%, 37% { transform: translate(0, 0); }
+  38% { transform: translate(-4px, 0); }
+  42% { transform: translate(4px, -2px); }
+  46% { transform: translate(-3px, 2px); }
+  50% { transform: translate(2px, 0); }
+  54%, 100% { transform: translate(0, 0); }
+}
+
+/* 14 Chirbatti: at night the lights hop, pause and change colour ("move, pause
+   or follow observers", "changing colour"). */
+.haunt--chirbatti .haunt-tint { background: linear-gradient(rgba(20, 26, 70, 0.7), rgba(40, 50, 90, 0.5)); }
+.haunt--chirbatti.is-haunting .haunt-tint { animation: haunt-appear 0.4s steps(4) forwards; }
+.haunt--chirbatti.is-haunting .card-media img { animation: haunt-wander 2.8s steps(1) infinite; }
+@keyframes haunt-wander {
+  0% { transform: translate(0, 0); filter: hue-rotate(0deg) brightness(1.15); }
+  20% { transform: translate(3px, -2px); filter: hue-rotate(50deg) brightness(1.15); }
+  45% { transform: translate(-2px, -4px); filter: hue-rotate(150deg) brightness(1.15); }
+  70% { transform: translate(2px, 0); filter: hue-rotate(260deg) brightness(1.15); }
+}
+
+/* 15 Chiroguni: still, then the possession takes hold in glitching bursts
+   ("possesses children and adults"), and a "P2" badge says who is in control. */
+.haunt--chiroguni .haunt-tint { background: rgba(110, 60, 150, 0.35); }
+.haunt--chiroguni.is-haunting .haunt-tint { animation: haunt-appear 0.4s steps(4) forwards; }
+.haunt--chiroguni.is-haunting .card-media img { animation: haunt-possess 2.2s steps(1) infinite; }
+.haunt--chiroguni .haunt-p2 {
+  left: 80%; top: 5%;
+  padding: 3px 5px;
+  background: #1D1A2E;
+  color: #F2C230;
+  font: 700 10px/1 ui-monospace, monospace;
+  box-shadow: inset 0 0 0 2px #F2C230;
+}
+.haunt--chiroguni.is-haunting .haunt-p2 { animation: haunt-appear 0s 1.2s forwards, haunt-blink 0.5s steps(1) 1.2s infinite; }
+@keyframes haunt-possess {
+  0%, 55% { transform: translate(0, 0); filter: none; }
+  56% { transform: translate(3px, 0); filter: invert(1) hue-rotate(180deg); }
+  60% { transform: translate(-3px, 1px); filter: none; }
+  64% { transform: translate(2px, -1px); filter: invert(1) hue-rotate(180deg); }
+  68%, 100% { transform: translate(0, 0); filter: none; }
+}
+
+/* 16 Chordewa: the record describes a woman and the art note says the cat is
+   unsourced, so the light falls on the smoky woman behind it while the cat blinks. */
+.haunt--chordewa .haunt-tint { background: radial-gradient(ellipse 26% 42% at 76% 30%, transparent 55%, rgba(30, 22, 50, 0.65) 100%); }
+.haunt--chordewa.is-haunting .haunt-tint { animation: haunt-appear 0.4s steps(4) forwards; }
+.haunt--chordewa .haunt-eyelid {
+  top: 48.2%;
+  width: 8px; height: 6px;
+  translate: -50% -50%;
+  background: #141016;
+}
+.haunt--chordewa.is-haunting .haunt-eyelid { animation: haunt-eyelid 2s steps(1) 0.6s infinite; }
+@keyframes haunt-eyelid {
+  0%, 79% { opacity: 0; }
+  80%, 87% { opacity: 1; }
+  88%, 100% { opacity: 0; }
+}
+
+/* 17 Chudail: a cold light falls and her footprints walk away from you, toes
+   pointing back the way she came (her feet face backward). */
+.haunt--chudail .haunt-tint { background: rgba(120, 140, 175, 0.4); }
+.haunt--chudail.is-haunting .card-media img { animation: haunt-sway 1.2s steps(1) infinite; }
+.haunt--chudail .haunt-footprint {
+  --foot: #3A3530;
+  width: 3px; height: 3px;
+  background: var(--foot);
+  box-shadow: 3px 0 var(--foot), 6px 0 var(--foot), 0 3px var(--foot), 3px 3px var(--foot), 6px 3px var(--foot),
+    12px -3px var(--foot), 12px 1px var(--foot), 12px 5px var(--foot);
+}
+.haunt--chudail.is-haunting .haunt-footprint { animation: haunt-appear 0s forwards; }
+
+/* 18 Daag: demands harvest offerings. Grains rise from the field into the
+   smoke, which swells a frame with each one. */
+.haunt--daag .haunt-tint { background: rgba(200, 60, 30, 0.3); }
+.haunt--daag.is-haunting .card-media img { animation: haunt-daag-feed 0.8s steps(1) 0.6s infinite; }
+.haunt--daag .haunt-grain {
+  top: 72%;
+  width: 6px; height: 9px;
+  background: #E8C048;
+  box-shadow: 0 0 0 3px #4A2C10;
+}
+.haunt--daag.is-haunting .haunt-grain { animation: haunt-daag-offer 1.2s steps(6) infinite; }
+@keyframes haunt-daag-offer {
+  0% { opacity: 1; transform: translate(0, 0); }
+  100% { opacity: 0; transform: translate(var(--dx), -108px); }
+}
+@keyframes haunt-daag-feed {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.04); }
+}
+
+/* 19 Dakan Sakan: shapeless. The sprite won't hold one form, squashing and
+   stretching frame by frame, and question marks drift off it. */
+.haunt--dakan-sakan .card-media img { transform-origin: 50% 82%; }
+.haunt--dakan-sakan.is-haunting .card-media img { animation: haunt-dakan-sakan-morph 1.2s steps(1) infinite; }
+.haunt--dakan-sakan .haunt-shape {
+  font: 700 18px/1 ui-monospace, monospace;
+  color: #6A5AA0;
+  text-shadow: 2px 2px 0 #F3EFE4;
+}
+.haunt--dakan-sakan.is-haunting .haunt-shape { animation: haunt-float 1.2s steps(4) infinite; }
+@keyframes haunt-dakan-sakan-morph {
+  0% { transform: scale(1, 1); }
+  25% { transform: scale(1.08, 1); }
+  50% { transform: scale(1, 1.08); }
+  75% { transform: scale(1.06, 1.04); }
+}
+
+/* 20 Dakini: one name, two traditions (fierce attendant, wisdom guide) that
+   need separate treatment. Two halves of light swap sides, never blending. */
+.haunt--dakini .haunt-half { top: 0; bottom: 0; left: 0; width: 50%; mix-blend-mode: multiply; }
+.haunt--dakini .haunt-half + .haunt-half { left: 50%; }
+.haunt--dakini.is-haunting .haunt-half { animation: haunt-dakini-swap 1.2s steps(1) infinite; }
+.haunt--dakini.is-haunting .haunt-half + .haunt-half { animation-delay: -0.6s; }
+@keyframes haunt-dakini-swap {
+  0% { opacity: 1; background: rgba(170, 20, 30, 0.45); }
+  50% { opacity: 1; background: rgba(90, 140, 220, 0.4); }
+}
+
+/* 21 Damori: summoned by occult practitioners. A thrown orb lands between his
+   feet, flashes, and the imp pops out of it, monster-catcher style. */
+.haunt--damori .card-media img { transform-origin: 50% 82%; }
+.haunt--damori.is-haunting .card-media img { animation: haunt-damori-summon 0.32s steps(4) 0.75s both; }
+.haunt--damori .haunt-orb {
+  left: 47%; top: 76%;
+  width: 15px; height: 15px;
+  background: linear-gradient(#D0302A 0 50%, #2A1A1A 50% 60%, #F3EFE4 60%);
+  box-shadow: inset 0 0 0 3px #2A1A1A;
+  clip-path: var(--pixel-oval);
+}
+.haunt--damori.is-haunting .haunt-orb { animation: haunt-damori-throw 0.7s steps(7) forwards; }
+.haunt--damori .haunt-burst { inset: 0; background: #FFFDF2; }
+.haunt--damori.is-haunting .haunt-burst { animation: haunt-damori-burst 0.3s steps(1) 0.7s forwards; }
+@keyframes haunt-damori-throw {
+  0% { opacity: 1; transform: translate(-96px, -72px); }
+  30% { opacity: 1; transform: translate(-60px, -102px); }
+  60% { opacity: 1; transform: translate(-24px, -48px); }
+  85% { opacity: 1; transform: translate(0, 0); }
+  100% { opacity: 1; transform: translate(0, 0); }
+}
+@keyframes haunt-damori-burst {
+  0%, 66% { opacity: 0.9; }
+  33%, 100% { opacity: 0; }
+}
+@keyframes haunt-damori-summon {
+  from { transform: scale(0); filter: brightness(3); }
+  to { transform: scale(1); filter: brightness(1); }
+}
+
+/* 22 Dayani: moves between possessed bodies. The spirit leaps out of this
+   one, and the body it leaves turns grey. */
+.haunt--dayani.is-haunting .card-media img { animation: haunt-dayani-vacate 0.3s steps(3) 0.8s forwards; }
+.haunt--dayani .haunt-wisp {
+  left: 52%; top: 30%;
+  width: 15px; height: 18px;
+  background: #B8E070;
+  box-shadow: inset 0 0 0 3px #2E4A16;
+  clip-path: var(--pixel-oval);
+}
+.haunt--dayani.is-haunting .haunt-wisp {
+  animation: haunt-appear 0s 0.3s forwards, haunt-dayani-leap 0.6s steps(6) 0.3s forwards;
+}
+@keyframes haunt-dayani-leap {
+  0% { transform: translate(0, 0); }
+  35% { transform: translate(24px, -30px); }
+  70% { transform: translate(54px, -24px); }
+  100% { transform: translate(72px, 12px); }
+}
+@keyframes haunt-dayani-vacate { to { filter: grayscale(1) brightness(0.9); } }
+
+/* 23 Drakshi: a forest demoness with dark fur. The forest closes in and the
+   icy art (which the review says isn't established) darkens to fur. */
+.haunt--drakshi .haunt-tint { background: rgba(80, 52, 34, 0.7); }
+.haunt--drakshi.is-haunting .card-media img { animation: haunt-sway 1.2s steps(1) infinite; }
+.haunt--drakshi .haunt-pine {
+  bottom: 12%;
+  width: 14%; height: 38%;
+  background: #1F3A2A;
+  clip-path: polygon(50% 0, 66% 25%, 58% 25%, 80% 50%, 68% 50%, 100% 85%, 58% 85%, 58% 100%, 42% 100%, 42% 85%, 0 85%, 32% 50%, 20% 50%, 42% 25%, 34% 25%);
+}
+.haunt--drakshi.is-haunting .haunt-pine { animation: haunt-drakshi-grow 0.4s steps(4) both; }
+@keyframes haunt-drakshi-grow {
+  from { opacity: 1; transform: translateY(100%); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 24 Dund: a headless mounted warrior, but the portrait left out the horse.
+   He gallops, and its hoofprints appear on either side. */
+.haunt--dund.is-haunting .card-media img { animation: haunt-bob 0.5s steps(1) infinite; }
+.haunt--dund .haunt-hoof {
+  --hoof: #4A3A2A;
+  width: 3px; height: 3px;
+  background: var(--hoof);
+  box-shadow: 9px 0 var(--hoof), 0 3px var(--hoof), 9px 3px var(--hoof), 0 6px var(--hoof), 9px 6px var(--hoof), 3px 9px var(--hoof), 6px 9px var(--hoof);
+}
+.haunt--dund.is-haunting .haunt-hoof { animation: haunt-appear 0s forwards; }
+
+/* 25 Ekanore: one ear, one leg. He hops in place and kicks up dust each time
+   he lands. */
+.haunt--ekanore.is-haunting .card-media img { animation: haunt-ekanore-hop 0.6s steps(1) infinite; }
+.haunt--ekanore .haunt-dust {
+  left: 36%; top: 78%;
+  width: 30px; height: 15px;
+  background: #EFE6CC;
+  box-shadow: inset 0 0 0 3px #7A6440;
+  clip-path: var(--pixel-oval);
+}
+.haunt--ekanore .haunt-dust + .haunt-dust { left: 62%; }
+.haunt--ekanore.is-haunting .haunt-dust { animation: haunt-ekanore-dust 0.6s steps(1) infinite; }
+@keyframes haunt-ekanore-hop {
+  0% { transform: translateY(0); }
+  20% { transform: translateY(-4px); }
+  40% { transform: translateY(-6px); }
+  60% { transform: translateY(-4px); }
+  80% { transform: translateY(0); }
+}
+@keyframes haunt-ekanore-dust {
+  0% { opacity: 1; transform: scale(1); }
+  20% { opacity: 0.5; transform: scale(1.4); }
+  40%, 70% { opacity: 0; transform: scale(0.6); }
+  80% { opacity: 1; transform: scale(0.8); }
+}
+
+/* 26 Ekthengo: a one-legged ghost. He hops on his one leg, and the wooden,
+   leafy body the art review calls invented sheds its leaves. */
+.haunt--ekthengo.is-haunting .card-media img { animation: haunt-ekanore-hop 0.6s steps(1) infinite; }
+.haunt--ekthengo .haunt-shed {
+  width: 12px; height: 9px;
+  background: #D08A3E;
+  box-shadow: 0 0 0 3px #4A2C10;
+}
+.haunt--ekthengo.is-haunting .haunt-shed { animation: haunt-fall 1.4s steps(7) infinite; }
+
+/* 27 Galasi: a vengeful haunting. The light turns cold red and she lurches
+   closer, a frame at a time. */
+.haunt--galasi .haunt-tint { background: rgba(130, 30, 60, 0.35); }
+.haunt--galasi .card-media img { transform-origin: 50% 25%; }
+.haunt--galasi.is-haunting .card-media img { animation: haunt-galasi-approach 1.6s steps(1) 0.3s forwards; }
+@keyframes haunt-galasi-approach {
+  0% { transform: scale(1); }
+  20% { transform: scale(1.04); }
+  40% { transform: scale(1.04) translateX(-2px); }
+  60% { transform: scale(1.08); }
+  80% { transform: scale(1.08) translateX(2px); }
+  100% { transform: scale(1.12); }
+}
+
+/* 28 Gandharva: divine music-making. A golden glow, notes rise off the
+   veena's neck, and a rhythm-game "PERFECT!" pops. */
+.haunt--gandharva .haunt-tint { background: rgba(240, 190, 60, 0.3); }
+.haunt--gandharva.is-haunting .card-media img { animation: haunt-sway 1.2s steps(1) infinite; }
+.haunt--gandharva .haunt-melody {
+  font: 700 20px/1 ui-monospace, monospace;
+  color: #FFF6E0;
+  text-shadow: 2px 2px 0 #3A2A10, -2px -2px 0 #3A2A10;
+}
+.haunt--gandharva.is-haunting .haunt-melody { animation: haunt-float 1.2s steps(4) infinite; }
+.haunt--gandharva .haunt-perfect {
+  left: 63%; top: 3%;
+  font: 700 13px/1 ui-monospace, monospace;
+  color: #F2C230;
+  text-shadow: 2px 2px 0 #7A2A10;
+}
+.haunt--gandharva.is-haunting .haunt-perfect { animation: haunt-appear 0s 1s forwards, haunt-blink 0.5s steps(1) 1s infinite; }
+
+/* 29 Gayal: a spirit deprived of funerary rites. Dusk falls and the lamps of
+   the reported customs light on either side of him. */
+.haunt--gayal .haunt-tint { background: linear-gradient(rgba(40, 40, 100, 0.55), rgba(70, 60, 120, 0.35)); }
+.haunt--gayal .haunt-lamp {
+  top: 76%;
+  width: 27px; height: 12px;
+  background: #A0522D;
+  box-shadow: inset 0 -3px #5A2A10, 0 0 0 2px #2E1A0A;
+}
+.haunt--gayal .haunt-lamp::before {
+  content: "";
+  position: absolute; left: 10px; top: -15px;
+  width: 7px; height: 15px;
+  background: #FFD060;
+  box-shadow: inset 0 -3px #F07020;
+}
+.haunt--gayal.is-haunting .haunt-lamp { animation: haunt-appear 0s forwards; }
+.haunt--gayal.is-haunting .haunt-lamp::before { animation: haunt-gayal-flame 0.4s steps(1) infinite; }
+@keyframes haunt-gayal-flame {
+  0% { transform: translateX(0); height: 15px; top: -15px; }
+  50% { transform: translateX(-2px); height: 12px; top: -12px; }
+}
+
+/* 30 Ghoul: lures humans and may disguise itself as a person. The disguise is
+   a name tag stuck on its back. */
+.haunt--ghoul .haunt-tint { background: rgba(50, 80, 60, 0.35); }
+.haunt--ghoul.is-haunting .card-media img { animation: haunt-sway 1.2s steps(1) infinite; }
+.haunt--ghoul .haunt-tag {
+  left: 24%; top: 24%;
+  display: flex; flex-direction: column; align-items: center;
+  padding: 2px 3px 3px;
+  background: #C0392B;
+  color: #F3EFE4;
+  font: 700 7px/1 ui-monospace, monospace;
+  box-shadow: 0 0 0 2px #1D1A2E;
+}
+.haunt--ghoul .haunt-tag b {
+  margin-top: 2px; padding: 2px 3px;
+  background: #F3EFE4;
+  color: #1D1A2E;
+  font-size: 9px;
+}
+.haunt--ghoul.is-haunting .haunt-tag { animation: haunt-ghoul-slap 0.3s steps(3) 0.3s forwards; }
+@keyframes haunt-ghoul-slap {
+  from { opacity: 1; transform: translateY(-24px) scale(1.4); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* 31 Gutiya Deo: a dwarf ghost. A height chart appears and he power-downs,
+   Mario-style, flickering between sizes before settling small. */
+.haunt--gutiya-deo .card-media { background: #F7F2E4; }
+.haunt--gutiya-deo .card-media img { transform-origin: 50% 82%; }
+.haunt--gutiya-deo.is-haunting .card-media img { animation: haunt-gutiya-shrink 0.9s steps(1) 0.3s forwards; }
+.haunt--gutiya-deo .haunt-ruler {
+  left: 90%; top: 10%;
+  width: 6px; height: 70%;
+  background: repeating-linear-gradient(#1D1A2E 0 3px, transparent 3px 12px), #E8C048;
+  box-shadow: 0 0 0 2px #1D1A2E;
+}
+.haunt--gutiya-deo.is-haunting .haunt-ruler { animation: haunt-appear 0s forwards; }
+.haunt--gutiya-deo .haunt-marker {
+  left: 80%; top: 12%;
+  font: 700 14px/1 ui-monospace, monospace;
+  color: #C0392B;
+  text-shadow: 2px 2px 0 #F3EFE4;
+}
+.haunt--gutiya-deo.is-haunting .haunt-marker { animation: haunt-gutiya-mark 0.9s steps(1) 0.3s forwards; }
+@keyframes haunt-gutiya-shrink {
+  0% { transform: scale(1); }
+  15% { transform: scale(0.8); }
+  30% { transform: scale(1); }
+  45% { transform: scale(0.8); }
+  60% { transform: scale(1); }
+  75%, 100% { transform: scale(0.8); }
+}
+@keyframes haunt-gutiya-mark {
+  0%, 74% { opacity: 1; top: 12%; }
+  75%, 100% { opacity: 1; top: 26%; }
+}
+
+/* 32 Guyasi: suffocates victims in dark refuse-strewn places. The dark closes
+   in on her, a frame at a time, while an underwater-style air countdown runs. */
+.haunt--guyasi .haunt-dark {
+  left: 46%; top: 22%;
+  width: 300%; height: 300%;
+  translate: -50% -50%;
+  background: radial-gradient(circle, transparent 10%, rgba(25, 12, 40, 0.88) 22%);
+}
+.haunt--guyasi.is-haunting .haunt-dark { animation: haunt-guyasi-close 1.6s steps(4) forwards; }
+.haunt--guyasi .haunt-count {
+  left: 80%; top: 6%;
+  font: 700 22px/1 ui-monospace, monospace;
+  color: #F3EFE4;
+  text-shadow: 2px 2px 0 #1D1A2E, -2px -2px 0 #1D1A2E;
+}
+.haunt--guyasi.is-haunting .haunt-count { animation: haunt-guyasi-count 0.6s steps(1) forwards; }
+.haunt--guyasi.is-haunting .haunt-count:last-child { animation: haunt-appear 0s forwards, haunt-blink 0.4s steps(1) infinite; }
+@keyframes haunt-guyasi-close {
+  from { opacity: 1; transform: scale(2.2); }
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes haunt-guyasi-count {
+  0%, 99% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* 33 Hara: haunts still ponds and lakes, not the forest the art suggests.
+   Still water rises over the leafy ground in four frames. */
+.haunt--hara .haunt-tint { background: rgba(60, 110, 150, 0.25); }
+.haunt--hara .haunt-pond {
+  left: 0; right: 0; top: 66%; bottom: 0;
+  background: repeating-linear-gradient(transparent 0 9px, rgba(220, 240, 250, 0.7) 9px 12px), rgba(50, 110, 150, 0.7);
+}
+.haunt--hara.is-haunting .haunt-pond { animation: haunt-hara-fill 0.8s steps(4) 0.3s both; }
+@keyframes haunt-hara-fill {
+  from { opacity: 1; transform: translateY(100%); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 34 Ifrit: offers to bring the queen's throne to Solomon. A puff of smoke
+   in the corner, and the throne is there. */
+.haunt--ifrit.is-haunting .card-media img { animation: haunt-ifrit-burn 0.5s steps(1) infinite; }
+.haunt--ifrit .haunt-puff {
+  left: 4%; top: 4%;
+  width: 22%; aspect-ratio: 1;
+  background: #B8B0A8;
+  box-shadow: inset -6px -6px #7A7068;
+  clip-path: var(--pixel-oval);
+}
+.haunt--ifrit.is-haunting .haunt-puff { animation: haunt-ifrit-puff 0.5s steps(5) 0.3s forwards; }
+.haunt--ifrit .haunt-throne {
+  left: 7%; top: 6%;
+  width: 16%; height: 20%;
+  background: linear-gradient(transparent 55%, #B02A2A 55% 70%, transparent 70%), #E0B040;
+  clip-path: polygon(15% 0, 85% 0, 85% 55%, 100% 55%, 100% 70%, 90% 70%, 90% 100%, 75% 100%, 75% 70%, 25% 70%, 25% 100%, 10% 100%, 10% 70%, 0 70%, 0 55%, 15% 55%);
+}
+.haunt--ifrit.is-haunting .haunt-throne { animation: haunt-appear 0s 0.6s forwards, haunt-ifrit-gleam 0.8s steps(1) 0.6s infinite; }
+@keyframes haunt-ifrit-burn {
+  0% { filter: brightness(1); transform: translateY(0); }
+  50% { filter: brightness(1.15); transform: translateY(-2px); }
+}
+@keyframes haunt-ifrit-puff {
+  0% { opacity: 1; transform: scale(0.4); }
+  60% { opacity: 1; transform: scale(1.2); }
+  100% { opacity: 0; transform: scale(1.4); }
+}
+@keyframes haunt-ifrit-gleam {
+  0% { filter: brightness(1); }
+  50% { filter: brightness(1.3); }
+}
+
+/* 35 Jhapri: a tree-dweller in a toka hat who defecates on passersby.
+   Something drops from the branch and lands with a splat. He giggles. */
+.haunt--jhapri.is-haunting .card-media img { animation: haunt-sway 0.4s steps(1) 0.9s infinite; }
+.haunt--jhapri .haunt-drop {
+  left: 43%; top: 64%;
+  width: 9px; height: 9px;
+  background: #7A5230;
+  box-shadow: 0 0 0 2px #2E1A0A;
+}
+.haunt--jhapri.is-haunting .haunt-drop { animation: haunt-jhapri-drop 0.5s steps(5) 0.3s forwards; }
+.haunt--jhapri .haunt-splat {
+  left: 38%; top: 81%;
+  width: 30px; height: 9px;
+  background: #7A5230;
+  box-shadow: inset 0 0 0 2px #2E1A0A;
+  clip-path: polygon(0 34%, 20% 34%, 20% 0, 40% 0, 40% 34%, 60% 34%, 60% 0, 80% 0, 80% 34%, 100% 34%, 100% 100%, 0 100%);
+}
+.haunt--jhapri.is-haunting .haunt-splat { animation: haunt-appear 0s 0.8s forwards; }
+@keyframes haunt-jhapri-drop {
+  0% { opacity: 1; top: 64%; }
+  99% { opacity: 1; top: 80%; }
+  100% { opacity: 0; top: 80%; }
+}
+
+/* 36 Jilaiya: a nocturnal bird that drinks the blood of people whose names
+   it hears. Night falls and an arcade name-entry box waits for yours. */
+.haunt--jilaiya .haunt-tint { background: linear-gradient(rgba(30, 26, 90, 0.6), rgba(70, 40, 110, 0.4)); }
+.haunt--jilaiya .haunt-name {
+  left: 56%; top: 6%;
+  padding: 4px 6px;
+  background: #1D1A2E;
+  color: #F3EFE4;
+  font: 700 11px/1 ui-monospace, monospace;
+  box-shadow: inset 0 0 0 2px #E04040;
+}
+.haunt--jilaiya .haunt-cursor { position: static; margin-left: 4px; color: #E04040; }
+.haunt--jilaiya.is-haunting .haunt-name { animation: haunt-appear 0s 0.4s forwards; }
+.haunt--jilaiya.is-haunting .haunt-cursor { animation: haunt-blink 0.5s steps(1) infinite; }
+
+/* 37 Jinn: created from smokeless flame, so it flickers like fire and sheds
+   embers, but there's no smoke. */
+.haunt--jinn.is-haunting .card-media img { animation: haunt-ifrit-burn 0.4s steps(1) infinite; }
+.haunt--jinn .haunt-ember {
+  top: 70%;
+  width: 9px; height: 9px;
+  background: #FFE070;
+  box-shadow: inset -3px -3px #F08020, 0 0 0 2px #A03010;
+}
+.haunt--jinn.is-haunting .haunt-ember { animation: haunt-spark-rise 1.2s steps(6) infinite; }
+
+/* 38 Kalpurush: shapeshifting, with long arms. Night falls, the sprite
+   stretches its reach, and its shape slips for a frame. */
+.haunt--kalpurush .haunt-tint { background: rgba(40, 40, 100, 0.4); }
+.haunt--kalpurush .card-media img { transform-origin: 50% 40%; }
+.haunt--kalpurush.is-haunting .card-media img { animation: haunt-kalpurush-reach 1.6s steps(1) 0.3s infinite; }
+@keyframes haunt-kalpurush-reach {
+  0% { transform: scale(1, 1); filter: none; }
+  20% { transform: scale(1.06, 1); }
+  40% { transform: scale(1.12, 1); }
+  55% { transform: scale(1.12, 0.96); filter: invert(1) hue-rotate(180deg); }
+  60% { transform: scale(1.12, 1); filter: none; }
+  80% { transform: scale(1.06, 1); }
+}
+
+/* 39 Kanavulo: makes travellers lose their way in deserted meadows. A haze
+   settles and the compass needle can't hold a heading. */
+.haunt--kanavulo .haunt-tint { background: rgba(150, 170, 110, 0.35); }
+.haunt--kanavulo.is-haunting .card-media img { animation: haunt-sway 1.6s steps(1) infinite; }
+.haunt--kanavulo .haunt-compass {
+  left: 76%; top: 5%;
+  width: 18%; aspect-ratio: 1;
+  background: #3A3530;
+  clip-path: var(--pixel-oval);
+}
+.haunt--kanavulo .haunt-compass::before {
+  content: "";
+  position: absolute; inset: 4px;
+  background: #F3EFE4;
+  clip-path: var(--pixel-oval);
+}
+.haunt--kanavulo .haunt-needle {
+  position: absolute; left: 50%; top: 15%;
+  width: 4px; height: 70%;
+  translate: -50% 0;
+  background: linear-gradient(#C0392B 50%, #3A3530 50%);
+}
+.haunt--kanavulo.is-haunting .haunt-compass { animation: haunt-appear 0s 0.2s forwards; }
+.haunt--kanavulo.is-haunting .haunt-needle { animation: haunt-kanavulo-spin 1.2s steps(1) infinite; }
+@keyframes haunt-kanavulo-spin {
+  0% { transform: rotate(0deg); }
+  20% { transform: rotate(135deg); }
+  40% { transform: rotate(-60deg); }
+  60% { transform: rotate(200deg); }
+  80% { transform: rotate(30deg); }
+}
+
+/* 40 Kanipishachi: washes rags at ponds and attacks wearers of torn
+   clothes. She scrubs, the water ripples, and then she notices you. */
+.haunt--kanipishachi.is-haunting .card-media img { animation: haunt-kanipishachi-scrub 0.5s steps(1) infinite; }
+.haunt--kanipishachi .haunt-ripple {
+  left: 36%; top: 76%;
+  width: 44%; height: 12%;
+  translate: -50% -50%;
+  background: rgba(30, 70, 140, 0.4);
+  clip-path: var(--pixel-oval);
+}
+.haunt--kanipishachi.is-haunting .haunt-ripple { animation: haunt-ripple 1.5s steps(5) infinite; }
+.haunt--kanipishachi.is-haunting .haunt-ripple:nth-of-type(2) { animation-delay: 0.75s; }
+.haunt--kanipishachi .haunt-alert {
+  left: 14%; top: 6%;
+  font: 700 24px/1 ui-monospace, monospace;
+  color: #C0392B;
+  text-shadow: 2px 2px 0 #F3EFE4;
+}
+.haunt--kanipishachi.is-haunting .haunt-alert { animation: haunt-appear 0s 1.2s forwards, haunt-blink 0.5s steps(1) 1.2s infinite; }
+@keyframes haunt-kanipishachi-scrub {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(3px); }
+}
+
+/* 41 Khabish: curses passersby. A sickly flash, a jolt, and an RPG status
+   badge says what you caught. */
+.haunt--khabish .haunt-tint { background: rgba(110, 150, 50, 0.35); }
+.haunt--khabish.is-haunting .haunt-tint { animation: haunt-flash 0.36s steps(1) forwards; }
+.haunt--khabish.is-haunting .card-media img { animation: haunt-shake 0.4s steps(1); }
+.haunt--khabish .haunt-status {
+  left: 4%; top: 5%;
+  padding: 3px 5px;
+  background: #5A2A80;
+  color: #F3EFE4;
+  font: 700 10px/1 ui-monospace, monospace;
+  box-shadow: inset 0 0 0 2px #1D1A2E;
+}
+.haunt--khabish.is-haunting .haunt-status { animation: haunt-appear 0s 0.5s forwards, haunt-blink 0.6s steps(1) 0.5s infinite; }
+
+/* 42 Kichin: the spirit of an unmarried woman who seeks the living. A dusky
+   light, and pixel hearts drift off her. */
+.haunt--kichin .haunt-tint { background: rgba(130, 40, 100, 0.3); }
+.haunt--kichin.is-haunting .card-media img { animation: haunt-bob 1.2s steps(1) infinite; }
+.haunt--kichin .haunt-heart {
+  width: 21px; height: 18px;
+  background: #FF6AA8;
+  clip-path: polygon(14% 0, 43% 0, 43% 17%, 57% 17%, 57% 0, 86% 0, 86% 17%, 100% 17%, 100% 50%, 86% 50%, 86% 67%, 71% 67%, 71% 83%, 57% 83%, 57% 100%, 43% 100%, 43% 83%, 29% 83%, 29% 67%, 14% 67%, 14% 50%, 0 50%, 0 17%, 14% 17%);
+}
+.haunt--kichin.is-haunting .haunt-heart { animation: haunt-float 1.2s steps(4) infinite; }
+
+/* 43 Kollivai Pisaasu: glowing embers in its mouth. Night falls so the maw
+   glows brighter, and cinders drift up from it. */
+.haunt--kollivai-pisaasu .haunt-tint { background: rgba(30, 24, 70, 0.6); }
+.haunt--kollivai-pisaasu .haunt-maw {
+  left: 61%; top: 32%;
+  width: 9%; height: 6%;
+  translate: -50% -50%;
+  background: rgba(255, 170, 40, 0.7);
+  mix-blend-mode: screen;
+  clip-path: var(--pixel-oval);
+}
+.haunt--kollivai-pisaasu.is-haunting .haunt-maw { animation: haunt-ring-pulse 0.6s steps(1) infinite; }
+.haunt--kollivai-pisaasu .haunt-cinder {
+  top: 28%;
+  width: 6px; height: 6px;
+  background: #FFD060;
+}
+.haunt--kollivai-pisaasu.is-haunting .haunt-cinder { animation: haunt-kollivai-drift 1.2s steps(6) infinite; }
+@keyframes haunt-kollivai-drift {
+  0% { opacity: 1; transform: translate(0, 0); }
+  100% { opacity: 0; transform: translate(12px, -48px); }
+}
+
+/* 44 Kutti Chaathan: stories blame him for thrown stones. Pebbles arc in
+   from off-card while he sways, looking innocent. */
+.haunt--kutti-chaathan.is-haunting .card-media img { animation: haunt-sway 0.8s steps(1) infinite; }
+.haunt--kutti-chaathan .haunt-stone {
+  width: 9px; height: 9px;
+  background: #9A9488;
+  box-shadow: inset -3px -3px #5A564E, 0 0 0 2px #2B2A26;
+}
+.haunt--kutti-chaathan.is-haunting .haunt-stone { animation: haunt-kutti-throw 0.9s steps(6) infinite; }
+@keyframes haunt-kutti-throw {
+  0% { opacity: 1; transform: translate(0, 0); }
+  50% { opacity: 1; transform: translate(calc(var(--dx) * 0.55), -30px); }
+  100% { opacity: 0; transform: translate(var(--dx), 30px); }
+}
+
+/* 45 Malandu: a white-horse rider who frightens children out late. Night
+   falls, he gallops, and the clock blinks past curfew. */
+.haunt--malandu .haunt-tint { background: linear-gradient(rgba(30, 36, 100, 0.65), rgba(60, 70, 140, 0.4)); }
+.haunt--malandu.is-haunting .card-media img { animation: haunt-bob 0.5s steps(1) infinite; }
+.haunt--malandu .haunt-clock {
+  left: 4%; top: 5%;
+  padding: 3px 5px;
+  background: #1D1A2E;
+  color: #E04040;
+  font: 700 12px/1 ui-monospace, monospace;
+  box-shadow: inset 0 0 0 2px #5A5470;
+}
+.haunt--malandu .haunt-colon { position: static; }
+.haunt--malandu.is-haunting .haunt-clock { animation: haunt-appear 0s 0.4s forwards; }
+.haunt--malandu.is-haunting .haunt-colon { animation: haunt-blink 1s steps(1) infinite; }
+
+/* 46 Mamdo: few claims beyond "a deceased-human ghost" of Bengal, so a
+   generic haunt: a pale chill, and the figure fades in and out as it floats. */
+.haunt--mamdo .haunt-tint { background: rgba(110, 150, 210, 0.3); }
+.haunt--mamdo.is-haunting .card-media img { animation: haunt-mamdo-linger 1.6s steps(1) infinite; }
+@keyframes haunt-mamdo-linger {
+  0% { opacity: 1; transform: translateY(0); }
+  25% { opacity: 0.7; transform: translateY(-3px); }
+  50% { opacity: 0.45; transform: translateY(-6px); }
+  75% { opacity: 0.7; transform: translateY(-3px); }
+}
+
+/* 47 Marid: its Arabic sense concerns rebellion. An RPG command menu offers
+   OBEY, and the cursor jumps to REFUSE while the lava cracks flare. */
+.haunt--marid.is-haunting .card-media img { animation: haunt-ifrit-burn 0.6s steps(1) infinite; }
+.haunt--marid .haunt-menu {
+  left: 4%; top: 4%;
+  padding: 5px 7px 5px 18px;
+  background: #1D1A2E;
+  color: #F3EFE4;
+  font: 700 10px/1.5 ui-monospace, monospace;
+  box-shadow: inset 0 0 0 2px #F3EFE4;
+}
+.haunt--marid .haunt-pick { position: absolute; left: 6px; top: 5px; color: #F2C230; }
+.haunt--marid.is-haunting .haunt-menu { animation: haunt-appear 0s 0.2s forwards; }
+.haunt--marid.is-haunting .haunt-pick { animation: haunt-marid-refuse 0.3s steps(1) 0.9s forwards; }
+@keyframes haunt-marid-refuse { to { top: 20px; color: #E04040; } }
+
+/* 48 Masan: a cemetery ghost. Night falls and ground mist drifts between the
+   graves. */
+.haunt--masan .haunt-tint { background: linear-gradient(rgba(36, 46, 100, 0.6), rgba(70, 80, 130, 0.4)); }
+.haunt--masan .haunt-mist {
+  top: 72%;
+  width: 48%; height: 8%;
+  background: rgba(230, 236, 248, 0.75);
+  clip-path: var(--pixel-oval);
+}
+.haunt--masan.is-haunting .haunt-mist { animation: haunt-masan-drift 2.4s steps(8) infinite; }
+@keyframes haunt-masan-drift {
+  0% { opacity: 0; transform: translateX(-24px); }
+  25% { opacity: 1; }
+  75% { opacity: 1; }
+  100% { opacity: 0; transform: translateX(24px); }
+}
+
+/* 49 Mechho Bhoot: a fish-loving ghost near ponds. A fish leaps out of the
+   pond at his feet and he scores it. */
+.haunt--mechho-bhoot .haunt-fish {
+  left: 78%; top: 72%;
+  width: 30px; height: 12px;
+  background: #A8BCC8;
+  box-shadow: inset 0 -3px #5A7080;
+  clip-path: polygon(0 34%, 14% 34%, 14% 0, 71% 0, 71% 34%, 86% 34%, 86% 0, 100% 0, 100% 100%, 86% 100%, 86% 67%, 71% 67%, 71% 100%, 14% 100%, 14% 67%, 0 67%);
+}
+.haunt--mechho-bhoot.is-haunting .haunt-fish { animation: haunt-mechho-leap 1.2s steps(6) infinite; }
+.haunt--mechho-bhoot .haunt-plus {
+  left: 84%; top: 44%;
+  font: 700 14px/1 ui-monospace, monospace;
+  color: #F2C230;
+  text-shadow: 2px 2px 0 #3A2A10;
+}
+.haunt--mechho-bhoot.is-haunting .haunt-plus { animation: haunt-float 1.2s steps(4) 0.6s infinite; }
+@keyframes haunt-mechho-leap {
+  0% { opacity: 1; transform: translate(0, 0); }
+  50% { opacity: 1; transform: translate(-12px, -42px) scaleX(-1); }
+  100% { opacity: 0; transform: translate(-24px, 0) scaleX(-1); }
+}
+
+/* 50 Mohini: anklet sounds and fragrant scents accompany some tellings.
+   Bells glint at her feet and scent curls rise. */
+.haunt--mohini.is-haunting .card-media img { animation: haunt-sway 1.2s steps(1) infinite; }
+.haunt--mohini .haunt-chime {
+  font: 700 16px/1 ui-monospace, monospace;
+  color: #F2C230;
+  text-shadow: 1px 1px 0 #5A3A10, -1px -1px 0 #5A3A10;
+}
+.haunt--mohini.is-haunting .haunt-chime { animation: haunt-appear 0s forwards, haunt-blink 0.5s steps(1) infinite; }
+.haunt--mohini .haunt-scent {
+  width: 3px; height: 3px;
+  font-size: 0;
+  --scent: #E06AA0;
+  background: var(--scent);
+  box-shadow: 3px -3px var(--scent), 6px -3px var(--scent), 9px 0 var(--scent), 12px 3px var(--scent), 15px 3px var(--scent), 18px 0 var(--scent),
+    0 9px var(--scent), 3px 6px var(--scent), 6px 6px var(--scent), 9px 9px var(--scent), 12px 12px var(--scent), 15px 12px var(--scent), 18px 9px var(--scent);
+}
+.haunt--mohini.is-haunting .haunt-scent { animation: haunt-float 1.2s steps(4) infinite; }
+
+/* 51 Munchowa: steals faces at night without killing. A face drifts off,
+   frame by frame, into the mask in its hand. */
+.haunt--munchowa .haunt-tint { background: rgba(40, 30, 80, 0.4); }
+.haunt--munchowa .haunt-face {
+  font: 700 32px/1 ui-monospace, monospace;
+  color: #F3E2C0;
+  text-shadow: 2px 2px 0 #1D1A2E, -2px -2px 0 #1D1A2E;
+}
+.haunt--munchowa.is-haunting .haunt-face { animation: haunt-munchowa-steal 1.4s steps(6) 0.3s infinite; }
+@keyframes haunt-munchowa-steal {
+  0% { opacity: 1; left: 6%; top: 46%; }
+  85% { opacity: 1; left: 62%; top: 20%; }
+  100% { opacity: 0; left: 66%; top: 18%; }
+}
+
+/* 52 Muni Pei: a Tamil guardian spirit of trees. Leaves sprout on the trees
+   beside him and a defence buff pops. */
+.haunt--muni-pei .haunt-sprout {
+  width: 12px; height: 9px;
+  background: #8DC04A;
+  box-shadow: inset -3px -3px #4F7A2A, 0 0 0 2px #2E4A16;
+}
+.haunt--muni-pei.is-haunting .haunt-sprout { animation: haunt-muni-sprout 0.3s steps(3) forwards; }
+.haunt--muni-pei .haunt-def {
+  left: 76%; top: 5%;
+  padding: 3px 5px;
+  background: #1D1A2E;
+  color: #8DE070;
+  font: 700 10px/1 ui-monospace, monospace;
+  box-shadow: inset 0 0 0 2px #8DE070;
+}
+.haunt--muni-pei.is-haunting .haunt-def { animation: haunt-appear 0s 1.1s forwards, haunt-blink 0.6s steps(1) 1.1s infinite; }
+@keyframes haunt-muni-sprout {
+  from { opacity: 1; transform: scale(0); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* 53 Munish: a family guardian in white clothes and wooden sandals. He steps
+   in place and the sandals clack, left, right. */
+.haunt--munish.is-haunting .card-media img { animation: haunt-munish-step 0.8s steps(1) infinite; }
+.haunt--munish .haunt-clack {
+  font: 700 10px/1 ui-monospace, monospace;
+  color: #7A4A20;
+  text-shadow: 1px 1px 0 #F3EFE4;
+}
+.haunt--munish.is-haunting .haunt-clack { animation: haunt-munish-clack 0.8s steps(1) infinite; }
+.haunt--munish.is-haunting .haunt-clack + .haunt-clack { animation-delay: -0.4s; }
+@keyframes haunt-munish-step {
+  0% { transform: translateY(0); }
+  25% { transform: translateY(-3px); }
+  50% { transform: translateY(0); }
+  75% { transform: translateY(-3px); }
+}
+@keyframes haunt-munish-clack {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+/* 54 Munjya: may retaliate when its peepal tree is disturbed; stories include
+   stone-throwing. The tree drops leaves and a stone flies at you. */
+.haunt--munjya.is-haunting .card-media img { animation: haunt-shake 0.4s steps(1) 0.2s; }
+.haunt--munjya .haunt-peepal {
+  width: 9px; height: 9px;
+  background: #5AA040;
+  box-shadow: 0 0 0 3px #1F3A16;
+}
+.haunt--munjya.is-haunting .haunt-peepal { animation: haunt-fall 1.4s steps(7) infinite; }
+.haunt--munjya .haunt-stone {
+  left: 52%; top: 32%;
+  width: 9px; height: 9px;
+  background: #9A9488;
+  box-shadow: inset -3px -3px #5A564E, 0 0 0 2px #2B2A26;
+}
+.haunt--munjya.is-haunting .haunt-stone { animation: haunt-munjya-hurl 0.6s steps(5) 0.6s infinite; }
+@keyframes haunt-munjya-hurl {
+  0% { opacity: 1; transform: scale(0.4); }
+  80% { opacity: 1; transform: scale(3); }
+  100% { opacity: 0; transform: scale(3.4); }
+}
+
+/* 55 Nali Ba: imitates a familiar voice at the door; "come tomorrow" written
+   outside postpones it. Night falls and someone knocks, twice. */
+.haunt--nali-ba .haunt-tint { background: rgba(40, 40, 100, 0.45); }
+.haunt--nali-ba .haunt-knock {
+  font: 700 11px/1 ui-monospace, monospace;
+  color: #F3EFE4;
+  text-shadow: 2px 2px 0 #1D1A2E;
+}
+.haunt--nali-ba.is-haunting .haunt-knock { animation: haunt-nali-knock 1.2s steps(1) 0.3s infinite; }
+.haunt--nali-ba.is-haunting .haunt-knock + .haunt-knock { animation-delay: 0.6s; }
+@keyframes haunt-nali-knock {
+  0% { opacity: 1; transform: translate(0, 0); }
+  10% { opacity: 1; transform: translate(-2px, 0); }
+  20%, 100% { opacity: 0; }
+}
+
+/* 56 Nishidaak: calls at night in a familiar voice, but only twice, so people
+   wait for a third call. The counter stops at two. */
+.haunt--nishidaak .haunt-tint { background: rgba(30, 30, 90, 0.4); }
+.haunt--nishidaak .haunt-call {
+  left: 4%; top: 5%;
+  padding: 3px 5px;
+  background: #1D1A2E;
+  color: #F3EFE4;
+  font: 700 10px/1 ui-monospace, monospace;
+  box-shadow: inset 0 0 0 2px #7A8AE0;
+}
+.haunt--nishidaak.is-haunting .haunt-call { animation: haunt-guyasi-count 0.8s steps(1) 0.3s forwards; }
+.haunt--nishidaak.is-haunting .haunt-call + .haunt-call { animation: haunt-appear 0s 1.1s forwards, haunt-blink 0.6s steps(1) 1.1s infinite; }
+
+/* 57 Pandabba: asks for a bidi, grabs the offered hand and drowns the giver.
+   A choice box asks the question; then the ghost pulls downward. */
+.haunt--pandabba.is-haunting .card-media img { animation: haunt-pandabba-pull 0.3s steps(3) 1.4s forwards; }
+.haunt--pandabba .haunt-menu {
+  left: 4%; top: 4%;
+  padding: 5px 7px;
+  background: #1D1A2E;
+  color: #F3EFE4;
+  font: 700 10px/1.5 ui-monospace, monospace;
+  box-shadow: inset 0 0 0 2px #F3EFE4;
+}
+.haunt--pandabba .haunt-pick { display: inline-block; color: #F2C230; }
+.haunt--pandabba.is-haunting .haunt-menu { animation: haunt-appear 0s 0.2s forwards; }
+.haunt--pandabba.is-haunting .haunt-pick { animation: haunt-blink 0.5s steps(1) infinite; }
+@keyframes haunt-pandabba-pull { to { transform: translateY(6px); } }
+
+/* 58 Pari: a beautiful being across Persian and South Asian storytelling.
+   Generic fairy shimmer: twinkles at the wing tips and a slow hover. */
+.haunt--pari.is-haunting .card-media img { animation: haunt-bob 1.6s steps(1) infinite; }
+.haunt--pari .haunt-twinkle {
+  font: 700 20px/1 ui-monospace, monospace;
+  color: #F2C230;
+  text-shadow: 2px 2px 0 #5A3A10, -1px -1px 0 #5A3A10;
+}
+.haunt--pari.is-haunting .haunt-twinkle { animation: haunt-appear 0s forwards, haunt-blink 0.6s steps(1) infinite; }
+
+/* 59 Pishachas: stories give them invisibility, and some descriptions give
+   red eyes. The body fades away until only the eyes are left. */
+.haunt--pishachas.is-haunting .card-media img { animation: haunt-pishachas-vanish 2.4s steps(1) infinite; }
+.haunt--pishachas .haunt-glint {
+  top: 18%;
+  width: 6px; height: 6px;
+  translate: -50% -50%;
+  background: #FF3030;
+  box-shadow: 0 0 0 2px #600808;
+}
+.haunt--pishachas.is-haunting .haunt-glint { animation: haunt-pishachas-eyes 2.4s steps(1) infinite; }
+@keyframes haunt-pishachas-vanish {
+  0%, 20% { opacity: 1; }
+  25% { opacity: 0.6; }
+  30% { opacity: 0.3; }
+  35%, 75% { opacity: 0.08; }
+  80% { opacity: 0.4; }
+  85%, 100% { opacity: 1; }
+}
+@keyframes haunt-pishachas-eyes {
+  0%, 29% { opacity: 0; }
+  30%, 79% { opacity: 1; }
+  80%, 100% { opacity: 0; }
+}
+
+/* 60 Potachunni: a runny nose. A drip falls and she sniffles. */
+.haunt--potachunni.is-haunting .card-media img { animation: haunt-potachunni-sniff 1.2s steps(1) infinite; }
+.haunt--potachunni .haunt-snot {
+  left: 49%; top: 26%;
+  width: 6px; height: 6px;
+  background: #DDEEFF;
+  box-shadow: 0 0 0 2px #5A7A90;
+}
+.haunt--potachunni.is-haunting .haunt-snot { animation: haunt-potachunni-drip 1.2s steps(6) infinite; }
+.haunt--potachunni .haunt-sniff {
+  left: 64%; top: 10%;
+  font: 700 11px/1 ui-monospace, monospace;
+  color: #5C574C;
+  text-shadow: 1px 1px 0 #F3EFE4;
+}
+.haunt--potachunni.is-haunting .haunt-sniff { animation: haunt-munish-clack 1.2s steps(1) 0.6s infinite; }
+@keyframes haunt-potachunni-drip {
+  0% { opacity: 1; top: 26%; }
+  80% { opacity: 1; top: 38%; }
+  100% { opacity: 0; top: 40%; }
+}
+@keyframes haunt-potachunni-sniff {
+  0%, 49% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+  60%, 100% { transform: translateY(0); }
+}
+
+/* 61 Prapti: manipulates former lovers. The light dims and a heart cracks. */
+.haunt--prapti .haunt-tint { background: rgba(90, 30, 70, 0.3); }
+.haunt--prapti .haunt-heart {
+  left: 76%; top: 8%;
+  width: 21px; height: 18px;
+  background: #E04060;
+  clip-path: polygon(14% 0, 43% 0, 43% 17%, 57% 17%, 57% 0, 86% 0, 86% 17%, 100% 17%, 100% 50%, 86% 50%, 86% 67%, 71% 67%, 71% 83%, 57% 83%, 57% 100%, 43% 100%, 43% 83%, 29% 83%, 29% 67%, 14% 67%, 14% 50%, 0 50%, 0 17%, 14% 17%);
+}
+.haunt--prapti.is-haunting .haunt-heart { animation: haunt-appear 0s 0.2s forwards; }
+.haunt--prapti .haunt-crack {
+  left: calc(76% + 9px); top: calc(8% + 3px);
+  width: 3px; height: 3px;
+  background: #1D1A2E;
+  box-shadow: 0 3px #1D1A2E, 3px 6px #1D1A2E, 0 9px #1D1A2E, -3px 12px #1D1A2E;
+}
+.haunt--prapti.is-haunting .haunt-crack { animation: haunt-appear 0s 0.9s forwards; }
+
+/* 62 Preta: hunger and thirst that can't be satisfied. Drops fall into the
+   bowl and vanish, and the food gauge stays empty. */
+.haunt--preta .haunt-drip {
+  left: 69%; top: 8%;
+  width: 6px; height: 9px;
+  background: #8AC8F0;
+  box-shadow: 0 0 0 2px #1D4A70;
+}
+.haunt--preta.is-haunting .haunt-drip { animation: haunt-preta-drip 1.2s steps(6) infinite; }
+.haunt--preta .haunt-hunger {
+  left: 4%; top: 5%;
+  display: flex; align-items: center; gap: 5px;
+  font: 700 10px/1 ui-monospace, monospace;
+  color: #5C574C;
+}
+.haunt--preta .haunt-pips {
+  display: inline-block;
+  width: 45px; height: 6px;
+  background: repeating-linear-gradient(90deg, transparent 0 6px, #F3EFE4 6px 9px);
+  box-shadow: inset 0 0 0 2px #5C574C;
+}
+.haunt--preta.is-haunting .haunt-hunger { animation: haunt-appear 0s 0.2s forwards; }
+.haunt--preta.is-haunting .haunt-pips { animation: haunt-blink 0.6s steps(1) 0.2s infinite; }
+@keyframes haunt-preta-drip {
+  0% { opacity: 1; top: 8%; }
+  80% { opacity: 1; top: 36%; }
+  100% { opacity: 0; top: 38%; }
+}
+
+/* 63 Putana: a beautiful young woman's guise; other depictions show a
+   demoness. The guise drops for a frame or two, and the shadow shows through. */
+.haunt--putana .haunt-tint { background: rgba(70, 40, 90, 0.3); }
+.haunt--putana.is-haunting .card-media img { animation: haunt-putana-reveal 1.6s steps(1) 0.3s infinite; }
+@keyframes haunt-putana-reveal {
+  0%, 59% { filter: none; transform: translateX(0); }
+  60% { filter: brightness(0.3) contrast(1.6); transform: translateX(2px); }
+  66% { filter: none; transform: translateX(0); }
+  72% { filter: brightness(0.3) contrast(1.6); transform: translateX(-2px); }
+  78%, 100% { filter: none; transform: translateX(0); }
+}
+
+/* 64 Puwali: a child ghost who steals sweets. The laddoos on the plate vanish
+   one by one, and he scores each one. */
+.haunt--puwali.is-haunting .card-media img { animation: haunt-sway 0.8s steps(1) infinite; }
+.haunt--puwali .haunt-plate {
+  left: 4%; top: 70%;
+  width: 24%; height: 6%;
+  background: #D8D4CC;
+  box-shadow: inset 0 -3px #8A8474;
+  clip-path: var(--pixel-oval);
+}
+.haunt--puwali.is-haunting .haunt-plate { animation: haunt-appear 0s forwards; }
+.haunt--puwali .haunt-laddoo {
+  width: 12px; height: 12px;
+  background: #F0A030;
+  box-shadow: inset -3px -3px #B06010;
+  clip-path: var(--pixel-oval);
+}
+.haunt--puwali.is-haunting .haunt-laddoo { animation: haunt-puwali-gone 0.05s steps(1) both; }
+.haunt--puwali .haunt-plus {
+  left: 30%; top: 22%;
+  font: 700 14px/1 ui-monospace, monospace;
+  color: #F2C230;
+  text-shadow: 2px 2px 0 #5A3A10;
+}
+.haunt--puwali.is-haunting .haunt-plus { animation: haunt-float 0.4s steps(4) 0.5s 3; }
+@keyframes haunt-puwali-gone {
+  0%, 99% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* 65 Pyachapechi: an owl ghost that misdirects travellers. It flaps while a
+   signpost arrow points every way except the right one. */
+.haunt--pyachapechi.is-haunting .card-media img { animation: haunt-bob 0.8s steps(1) infinite; }
+.haunt--pyachapechi .haunt-arrow {
+  left: 3%; top: 57%;
+  font: 700 26px/1 ui-monospace, monospace;
+  color: #F2C230;
+  text-shadow: 2px 0 0 #3A2A10, -2px 0 0 #3A2A10, 0 2px 0 #3A2A10, 0 -2px 0 #3A2A10;
+}
+.haunt--pyachapechi.is-haunting .haunt-arrow { animation: haunt-pyachapechi-point 1.6s steps(1) infinite; }
+@keyframes haunt-pyachapechi-point {
+  0%, 24% { opacity: 1; }
+  25%, 100% { opacity: 0; }
+}
+
+/* 66 Rakshasa: epic accounts include both helpful and hostile individuals,
+   and he can change form. His alignment tag flips, with a glitch each time. */
+.haunt--rakshasa.is-haunting .card-media img { animation: haunt-rakshasa-shift 2s steps(1) infinite; }
+.haunt--rakshasa .haunt-foe, .haunt--rakshasa .haunt-ally {
+  right: 3%; top: 3%;
+  padding: 2px 4px;
+  font: 700 8px/1 ui-monospace, monospace;
+  letter-spacing: 0.05em;
+  background: #1D1A2E;
+}
+.haunt--rakshasa .haunt-foe { color: #FF6A5A; box-shadow: inset 0 0 0 1px #FF6A5A; }
+.haunt--rakshasa .haunt-ally { color: #7FE08A; box-shadow: inset 0 0 0 1px #7FE08A; }
+.haunt--rakshasa.is-haunting .haunt-foe { animation: haunt-rakshasa-foe 2s steps(1) infinite; }
+.haunt--rakshasa.is-haunting .haunt-ally { animation: haunt-rakshasa-ally 2s steps(1) infinite; }
+@keyframes haunt-rakshasa-foe {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+@keyframes haunt-rakshasa-ally {
+  0%, 49% { opacity: 0; }
+  50%, 100% { opacity: 1; }
+}
+@keyframes haunt-rakshasa-shift {
+  0% { filter: hue-rotate(150deg) brightness(1.3); transform: translateX(3px); }
+  4% { filter: hue-rotate(260deg) brightness(0.7); transform: translateX(-3px); }
+  8%, 49% { filter: none; transform: translateX(0); }
+  50% { filter: hue-rotate(150deg) brightness(1.3); transform: translateX(-3px); }
+  54% { filter: hue-rotate(260deg) brightness(0.7); transform: translateX(3px); }
+  58%, 100% { filter: none; transform: translateX(0); }
+}
+
+/* 67 Reech: a predatory demon. The light drops, its eyes glow and an
+   alert "!" pops up like a stealth-game warning as it creeps closer. */
+.haunt--reech .haunt-tint { background: rgba(60, 50, 90, 0.4); }
+.haunt--reech.is-haunting .card-media img { transform-origin: 50% 100%; animation: haunt-reech-creep 1.2s steps(1) infinite; }
+.haunt--reech .haunt-reech-eye {
+  top: 15%;
+  width: 6px; height: 4px;
+  background: #FFC040;
+  box-shadow: 0 0 0 2px #E06010;
+}
+.haunt--reech.is-haunting .haunt-reech-eye { animation: haunt-appear 0s 0.2s forwards, haunt-blink 0.8s steps(1) 0.2s infinite; }
+.haunt--reech .haunt-alert {
+  left: 78%; top: 4%;
+  font: 900 26px/1 ui-monospace, monospace;
+  color: #F24030;
+  text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff;
+}
+.haunt--reech.is-haunting .haunt-alert { animation: haunt-reech-alert 1.2s steps(1) 0.3s infinite; }
+@keyframes haunt-reech-creep {
+  0% { transform: scale(1); }
+  33% { transform: scale(1.03); }
+  66% { transform: scale(1.06); }
+}
+@keyframes haunt-reech-alert {
+  0% { opacity: 1; transform: translateY(6px); }
+  10% { opacity: 1; transform: translateY(0); }
+  80% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(0); }
+}
+
+/* 68 Runia: causes avalanches. The ground rumbles and rocks tumble down on
+   both sides, clear of his face. */
+.haunt--runia.is-haunting .card-media img { animation: haunt-sway 0.4s steps(1) infinite; }
+.haunt--runia .haunt-boulder {
+  top: 0;
+  width: 10px; height: 9px;
+  background: #6E6A66;
+  box-shadow: inset -3px -3px #3E3B38, 0 0 0 2px #2A2826;
+}
+.haunt--runia.is-haunting .haunt-boulder { animation: haunt-runia-fall 1s steps(7) infinite; }
+@keyframes haunt-runia-fall {
+  0% { opacity: 1; transform: translateY(0); }
+  85% { opacity: 1; transform: translateY(140px); }
+  100% { opacity: 0; transform: translateY(150px); }
+}
+
+/* 69 Sakini: the head is a lion in the Srimatottara-tantra and a cat in the
+   Kularnava-tantra. The tag and a mane flip between the two readings. */
+.haunt--sakini.is-haunting .card-media img { animation: haunt-sway 1s steps(1) infinite; }
+.haunt--sakini .haunt-lion, .haunt--sakini .haunt-cat {
+  left: 2%; top: 3%;
+  padding: 2px 3px;
+  font: 700 7px/1.2 ui-monospace, monospace;
+  background: #1D1A2E;
+}
+.haunt--sakini .haunt-lion { color: #F2B040; box-shadow: inset 0 0 0 1px #F2B040; }
+.haunt--sakini .haunt-cat { color: #A8B8E8; box-shadow: inset 0 0 0 1px #A8B8E8; }
+.haunt--sakini .haunt-mane {
+  left: 30%; top: 0;
+  width: 42%; height: 28%;
+  background: rgba(240, 140, 20, 0.6);
+  mix-blend-mode: multiply;
+  clip-path: var(--pixel-oval);
+}
+.haunt--sakini.is-haunting .haunt-lion, .haunt--sakini.is-haunting .haunt-mane { animation: haunt-sakini-lion 2s steps(1) infinite; }
+.haunt--sakini.is-haunting .haunt-cat { animation: haunt-sakini-cat 2s steps(1) infinite; }
+@keyframes haunt-sakini-lion {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+@keyframes haunt-sakini-cat {
+  0%, 49% { opacity: 0; }
+  50%, 100% { opacity: 1; }
+}
+
+/* 70 Samandha: the spirit of a deceased Brahmin that becomes a goblin or
+   fiend. The serene white figure darkens and its eyes turn red. */
+.haunt--samandha .haunt-tint { background: rgba(120, 20, 30, 0.45); }
+.haunt--samandha.is-haunting .haunt-tint { animation: haunt-appear 0.4s steps(4) 0.7s forwards; }
+.haunt--samandha.is-haunting .card-media img { animation: haunt-samandha-turn 1.6s steps(1) 0.1s forwards; }
+.haunt--samandha .haunt-fiend-eye {
+  top: 17.5%;
+  width: 5px; height: 3px;
+  background: #FF3020;
+  box-shadow: 0 0 0 2px #7A0A10;
+}
+.haunt--samandha.is-haunting .haunt-fiend-eye { animation: haunt-appear 0s 0.8s forwards, haunt-blink 0.7s steps(1) 1.4s infinite; }
+@keyframes haunt-samandha-turn {
+  0%, 29% { filter: none; transform: translateX(0); }
+  30% { filter: brightness(0.35) contrast(1.5); transform: translateX(2px); }
+  37% { filter: none; transform: translateX(-2px); }
+  44%, 100% { filter: brightness(0.5) contrast(1.4) sepia(0.6) hue-rotate(-20deg); transform: translateX(0); }
+}
+
+/* 71 Shankhchunni: a married woman's ghost in a red-and-white sari and conch
+   bangles, sometimes greenish. The bangles clink and glint. */
+.haunt--shankhchunni .haunt-tint { background: rgba(110, 200, 140, 0.3); }
+.haunt--shankhchunni.is-haunting .card-media img { animation: haunt-sway 0.8s steps(1) infinite; }
+.haunt--shankhchunni .haunt-clink {
+  width: 11px; height: 11px;
+  background: #FFFFFF;
+  filter: drop-shadow(0 0 1px #6A3A30);
+  clip-path: polygon(40% 0, 60% 0, 60% 40%, 100% 40%, 100% 60%, 60% 60%, 60% 100%, 40% 100%, 40% 60%, 0 60%, 0 40%, 40% 40%);
+}
+.haunt--shankhchunni.is-haunting .haunt-clink { animation: haunt-shankhchunni-glint 0.8s steps(1) infinite; }
+.haunt--shankhchunni .haunt-clinktext {
+  left: 4%; top: 6%;
+  font: 700 12px/1 ui-monospace, monospace;
+  color: #B03020;
+  text-shadow: 2px 2px 0 #F3EFE4;
+}
+.haunt--shankhchunni.is-haunting .haunt-clinktext { animation: haunt-float 0.8s steps(4) 0.3s infinite; }
+@keyframes haunt-shankhchunni-glint {
+  0% { opacity: 1; transform: scale(0.5); }
+  25% { opacity: 1; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.5); }
+  90%, 100% { opacity: 0; transform: scale(0.5); }
+}
+
+/* 72 Shayeed: a battle-death ghost. A glint sweeps down the blade with a
+   CLANG each time. */
+.haunt--shayeed.is-haunting .card-media img { animation: haunt-sway 1.2s steps(1) infinite; }
+.haunt--shayeed .haunt-glint {
+  left: 35%; top: 60%;
+  width: 7px; height: 7px;
+  background: #FFFFFF;
+  box-shadow: 0 0 0 2px #5A7AB0;
+}
+.haunt--shayeed.is-haunting .haunt-glint { animation: haunt-shayeed-sweep 1s steps(1) 0.2s infinite; }
+@keyframes haunt-shayeed-sweep {
+  0% { opacity: 1; transform: translate(0, 0); }
+  16% { opacity: 1; transform: translate(-6px, 8px); }
+  32% { opacity: 1; transform: translate(-12px, 16px); }
+  48% { opacity: 1; transform: translate(-18px, 24px); }
+  64% { opacity: 1; transform: translate(-24px, 32px); }
+  80% { opacity: 1; transform: translate(-30px, 40px); }
+  96%, 100% { opacity: 0; transform: translate(-30px, 40px); }
+}
+.haunt--shayeed .haunt-clang {
+  left: 4%; top: 46%;
+  font: 900 13px/1 ui-monospace, monospace;
+  color: #F2C230;
+  text-shadow: 2px 2px 0 #3A2A10;
+}
+.haunt--shayeed.is-haunting .haunt-clang { animation: haunt-shayeed-clang 1s steps(1) 0.2s infinite; }
+@keyframes haunt-shayeed-clang {
+  0%, 64% { opacity: 0; transform: scale(1); }
+  70% { opacity: 1; transform: scale(1.3); }
+  80% { opacity: 1; transform: scale(1); }
+  96%, 100% { opacity: 0; transform: scale(1); }
+}
+
+/* 73 Sheekol Buri: a female water spirit with long wet hair. Water drips
+   from the ends of her hair into spreading rings. */
+.haunt--sheekol-buri.is-haunting .card-media img { animation: haunt-sway 1.2s steps(1) infinite; }
+.haunt--sheekol-buri .haunt-hairdrip {
+  top: 50%;
+  width: 5px; height: 8px;
+  background: #A8E8F0;
+  box-shadow: 0 0 0 2px #1D5A70;
+}
+.haunt--sheekol-buri.is-haunting .haunt-hairdrip { animation: haunt-sheekol-drip 1s steps(5) infinite; }
+@keyframes haunt-sheekol-drip {
+  0% { opacity: 1; transform: translateY(0); }
+  85% { opacity: 1; transform: translateY(40px); }
+  100% { opacity: 0; transform: translateY(44px); }
+}
+.haunt--sheekol-buri .haunt-ring {
+  left: 50%; top: 79%;
+  width: 40%; height: 10%;
+  translate: -50% -50%;
+  background: rgba(30, 110, 130, 0.4);
+  clip-path: var(--pixel-oval);
+}
+.haunt--sheekol-buri.is-haunting .haunt-ring { animation: haunt-ripple 1.5s steps(5) infinite; }
+
+/* 74 Sila: a shapeshifting jinn, often a woman but sometimes keeping animal
+   traits, who misleads travellers in the desert. Sand blows past and animal
+   ears flicker onto her head. */
+.haunt--sila .haunt-tint { background: rgba(200, 150, 70, 0.4); }
+.haunt--sila .haunt-sand {
+  left: 0;
+  width: 14px; height: 3px;
+  background: #8A5E28;
+  box-shadow: 18px 6px #8A5E28, 40px -4px #8A5E28;
+}
+.haunt--sila.is-haunting .haunt-sand { animation: haunt-sila-blow 1s steps(8) infinite; }
+@keyframes haunt-sila-blow {
+  0% { opacity: 1; transform: translateX(0); }
+  85% { opacity: 1; transform: translateX(190px); }
+  100% { opacity: 0; transform: translateX(200px); }
+}
+.haunt--sila .haunt-ear-l, .haunt--sila .haunt-ear-r {
+  top: 1%;
+  width: 11px; height: 13px;
+  background: #5A3A1C;
+  box-shadow: inset 0 -4px #A07840;
+}
+.haunt--sila .haunt-ear-l { left: 55%; clip-path: polygon(0 100%, 50% 0, 100% 100%); }
+.haunt--sila .haunt-ear-r { left: 64.5%; clip-path: polygon(0 100%, 50% 0, 100% 100%); }
+.haunt--sila.is-haunting .haunt-ear-l, .haunt--sila.is-haunting .haunt-ear-r { animation: haunt-sila-shift 1.6s steps(1) infinite; }
+@keyframes haunt-sila-shift {
+  0%, 24% { opacity: 0; }
+  25%, 49% { opacity: 1; }
+  50%, 59% { opacity: 0; }
+  60%, 84% { opacity: 1; }
+  85%, 100% { opacity: 0; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .haunt .haunt-fx { display: none; }
   .haunt.is-haunting .card-media img { animation: none; }

@@ -11,8 +11,9 @@ label such as `01 AACHERI`. Cards with a "haunt" play a short animation on hover
 It's a nod to that art style: motion is **frame-by-frame**, like a sprite, and an
 **RPG dialog box** slides up over the label and types out one line.
 
-Entries 1–10 are done. Study them before you design new ones: they are the
-reference for tone, density and technique.
+Entries 1–74 are done. Study them before you design new ones: they are the
+reference for tone, density and technique. `batch.py` (step 1) lists which ids
+already have a haunt.
 
 ## Files you will touch
 
@@ -99,6 +100,11 @@ Good, from the existing ten:
 | Ateswar | "Headless water ghost." | Bobbing on ripples, blinking `?` where the head should be |
 | Bagowa Bhoot | "Roars or misleads forest visitors toward danger." | Screen shake, claw rake, and a lying line: "THIS WAY, TRAVELLER… ROAR!" |
 | Brahmadaitya | "Helping the man ends the spirit's ghostly term"; habitat "a vakula tree" | Vakula blossoms fall, the sprite rises and brightens, "QUEST COMPLETE!" |
+| Chedipe | "Enters homes at night, induces sleep and drains blood" | Night tint, floating Zs, and an HP bar that drains: a claim turned into a game UI wink |
+| Chirbatti | Lights "move, pause or follow observers", "changing colour" | The sprite hops and holds while `hue-rotate` steps through colours. No new objects needed |
+| Chordewa | Appearance "Woman"; art note: "cat depiction is not substantiated" | Spotlight on the smoky woman behind the cat. Line: "THE CAT IS A LIE…" |
+| Jilaiya | Prey: "people whose names it hears" | Night tint and an arcade NAME? entry box with a blinking cursor: a game UI that stands in for the claim |
+| Gutiya Deo | "Dwarf ghost." | Mario power-down flicker to 0.8×. Set `.card-media` background to the portrait's own colour so the shrunk sprite leaves no seam |
 
 Rules for the design:
 
@@ -283,12 +289,26 @@ it per ghost, and never shrink it, or the label will show around it.
   keyframe (see `haunt-rake`), or centre the element with the separate `translate`
   property, which composes with `transform` (see `.haunt-ripple`).
 - **Colours that match the art disappear.** Check the screenshot; outline small
-  sprites with a dark 3px `box-shadow`.
+  sprites with a dark 3px `box-shadow`. The same goes for "glow the eyes" on art
+  whose eyes already glow: nothing changes. To animate a feature the art already
+  draws, cover it briefly instead (Chordewa's blink is a dark "eyelid" over each eye).
+- **A `border` on a short, wide `--pixel-oval` falls apart.** The clip keeps only
+  the straight runs of the border, so a thin ring reads as a flat line and two
+  ticks. Use a filled pixel ellipse with a translucent background (Chanda's glow),
+  or make the element tall enough that the ring survives (Ateswar's ripples).
+- **Anything below ~86% is hidden by the dialog panel.** Keep ground effects
+  (roads, rings, shadows) at about 72–83%.
+- **Short effects slip between screenshots.** A blink that shows for 8% of a 2s
+  loop won't be in a capture at 500ms or 1500ms. Work out when it appears
+  (delay + loop position) and pass that time to `--at`.
 - **`steps(var(--chars))` and `calc(var(--chars) * 35ms)` are intentional** in the
   dialog-box CSS. They make the typing speed match the line length. Don't
   "simplify" them.
 - **Don't edit `site/public/`.** It holds generated copies of the data and
   images. Use `python scripts/sync_site.py` if those ever need regenerating.
+- **A dev server started on another branch serves stale errors.** If the page
+  shows no cards and the dev server log says "Failed to parse source", but
+  `npm run build` succeeds, restart the dev server rather than changing code.
 - **Someone else may be editing `site/` at the same time.** If a file changes or
   disappears under you, stop and ask the user before continuing. Don't overwrite
   their work.
@@ -314,4 +334,5 @@ This is already handled globally; just don't break it:
 - [ ] You looked at the light- and dark-mode screenshots of every new card
 - [ ] `npm run build` succeeds
 - [ ] The header comment in `haunts.js` lists the new effects
+- [ ] The "Entries 1–N are done" line and the examples table above are updated if the batch adds a useful new pattern
 - [ ] Nothing is committed unless the user asked for a commit
