@@ -1,5 +1,7 @@
 # Indian Ghost Database
 
+<img width="1196" height="848" alt="image" src="https://github.com/user-attachments/assets/00dfb4f1-0354-4cb7-b77d-6e933383d045" />
+
 An open, growing research resource for developers making games rooted in Indian folklore.
 
 **84 names indexed · 84 entries with initial sourced notes · 0 name-only research stubs · 0 fully reviewed entries.**
@@ -8,11 +10,11 @@ Browse the [website](site/) (Svelte + Vite; see `site/README.md`), start with th
 
 ## What this contains
 
-The seed list transcribes all 84 entries from the supplied contents photographs of Riksundar Banerjee’s *The Book of Indian Ghosts*. Spelling, ordering and chapter start pages are preserved. The collection can grow beyond that seed list.
+The seed list transcribes all 84 famous to niche ghosts across Indian folk lore. This is phase 0-1, the collection will grow beyond that seed list.
 
-Each entry has space for description, habitat, location, nemesis, protective motifs, prey, appearance, age, notable facts, behaviour, origin stories, regional variants and source evidence. Apparent age, lifespan and earliest attestation are separate fields. `null` means unknown, not nonexistent.
+Each entry has space for description, habitat, location, nemesis, protective motifs, prey, appearance, age, notable facts, behaviour, origin stories, regional variants and source evidence. Apparent age, lifespan and earliest attestation are separate fields. `null` means unknown, not nonexistent (for now - until we find, excavate more excerpts)
 
-This is an initial research release. The full chapters were not supplied or read. Web notes are provisional and do not claim to represent the book’s treatment of each being. Most nemeses and lifespans remain unknown. The contents list also includes deities, celestial beings and transregional figures; inclusion does not classify every entry as an evil ghost or claim an exclusively Indian origin.
+This is an initial research release. Web notes are provisional and do not claim to represent the actual cultural treatment of each being. Most nemeses and lifespans remain unknown. The contents list also includes deities, celestial beings and transregional figures; inclusion does not classify every entry as an evil ghost or claim an exclusively Indian origin.
 
 ## For game developers
 
