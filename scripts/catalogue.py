@@ -85,6 +85,20 @@ def validate(data, evidence, references):
     if len(seed_numbers) != len(set(seed_numbers)):
         raise ValueError('Duplicate seed chapter numbers')
 
+DOSSIER_SECTIONS = ['Sources', 'Region', 'Behaviours', 'Abilities', 'Weaknesses', 'Triggers']
+
+def validate_dossier(path, ghost_ids, source_ids):
+    """Check a research/ghosts/<id>.md dossier has every section, non-empty, with known sources."""
+    path = Path(path)
+    if path.stem not in ghost_ids:
+        raise ValueError(f'{path.name}: not a known ghost id')
+    bodies = {name.strip(): body.strip() for name, body in re.findall(r'^## ([^\n]+)\n(.*?)(?=^## |\Z)', path.read_text(encoding='utf-8'), re.M | re.S)}
+    for section in DOSSIER_SECTIONS:
+        if not bodies.get(section):
+            raise ValueError(f'{path.name}: missing or empty section {section}')
+    if not set(re.findall(r'`([^`]+)`', bodies['Sources'])) & set(source_ids):
+        raise ValueError(f'{path.name}: Sources names no known source id')
+
 def cell(text):
     return str(text).replace('|', '\\|').replace('\n', '<br>')
 
@@ -131,6 +145,13 @@ def render(data, sources):
         md += ['- **Creative interpretation:** '+n['text'] for n in g['game_design_notes']] or ['No game mechanics added. Label invented mechanics as `creative_interpretation`.']
         md += ['', '[Back to catalogue](../GHOSTS.md)', '']
         outputs[f'ghosts/{g["id"]}.md'] = '\n'.join(md)
+    outputs['data/index.json'] = json.dumps({
+        'schema_version': data['schema_version'], 'updated': data['updated'],
+        'ghosts': [{'id': g['id'], 'name': g['name'], 'aliases': g['aliases'], 'research_status': g['research_status'],
+                    'classification': g['claims']['classification']['value'], 'location': g['claims']['location']['value'],
+                    'page': f'ghosts/{g["id"]}.md',
+                    'research_file': f'research/ghosts/{g["id"]}.md' if (ROOT/'research/ghosts'/f'{g["id"]}.md').exists() else None}
+                   for g in data['ghosts']]}, indent=2, ensure_ascii=False) + '\n'
     outputs['GHOSTS.md'] = '\n'.join(index)+'\n'
     return outputs
 
@@ -142,6 +163,9 @@ def main():
     evidence = read('research/evidence.json')['sources']
     references = read('data/references.json')['references']
     validate(data, evidence, references)
+    ghost_ids = {g['id'] for g in data['ghosts']}
+    for dossier in sorted((ROOT/'research/ghosts').glob('*.md')):
+        validate_dossier(dossier, ghost_ids, {s['id'] for s in references+evidence})
     outputs = render(data, {s['id']: s for s in references+evidence})
     for path, content in outputs.items():
         target = ROOT/path

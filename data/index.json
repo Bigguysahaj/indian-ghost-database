@@ -1,0 +1,885 @@
+{
+  "schema_version": "0.2.0",
+  "updated": "2026-09-21",
+  "ghosts": [
+    {
+      "id": "aacheri",
+      "name": "Aacheri",
+      "aliases": [
+        "Acheri"
+      ],
+      "research_status": "initial_notes",
+      "classification": "Female hill spirit.",
+      "location": "Kumaon and the southern Himalayas.",
+      "page": "ghosts/aacheri.md",
+      "research_file": null
+    },
+    {
+      "id": "aayeri",
+      "name": "Aayeri",
+      "aliases": [],
+      "research_status": "initial_notes",
+      "classification": "Hunting-death spirit, compared provisionally with Airi.",
+      "location": null,
+      "page": "ghosts/aayeri.md",
+      "research_file": null
+    },
+    {
+      "id": "adam-bhediya",
+      "name": "Adam Bhediya",
+      "aliases": [],
+      "research_status": "initial_notes",
+      "classification": "Werewolf.",
+      "location": null,
+      "page": "ghosts/adam-bhediya.md",
+      "research_file": null
+    },
+    {
+      "id": "ateswar",
+      "name": "Ateswar",
+      "aliases": [],
+      "research_status": "initial_notes",
+      "classification": "Headless water ghost.",
+      "location": "South Bengal.",
+      "page": "ghosts/ateswar.md",
+      "research_file": null
+    },
+    {
+      "id": "bagowa-bhoot",
+      "name": "Bagowa Bhoot",
+      "aliases": [],
+      "research_status": "initial_notes",
+      "classification": "Tiger-associated ghost.",
+      "location": "Sundarbans, Bengal.",
+      "page": "ghosts/bagowa-bhoot.md",
+      "research_file": null
+    },
+    {
+      "id": "barul",
+      "name": "Barul",
+      "aliases": [],
+      "research_status": "initial_notes",
+      "classification": null,
+      "location": "West Bengal.",
+      "page": "ghosts/barul.md",
+      "research_file": null
+    },
+    {
+      "id": "bayangi",
+      "name": "Bayangi",
+      "aliases": [],
+      "research_status": "initial_notes",
+      "classification": "Wealth-bringing captive spirit.",
+      "location": null,
+      "page": "ghosts/bayangi.md",
+      "research_file": null
+    },
+    {
+      "id": "besho-bhoot",
+      "name": "Besho Bhoot",
+      "aliases": [],
+      "research_status": "initial_notes",
+      "classification": "Bamboo-grove ghost.",
+      "location": "Bengali folklore.",
+      "page": "ghosts/besho-bhoot.md",
+      "research_file": null
+    },
+    {
+      "id": "brahmadaitya",
+      "name": "Brahmadaitya",
+      "aliases": [],
+      "research_status": "initial_notes",
+      "classification": "Brahmin ghost in the collected tale.",
+      "location": null,
+      "page": "ghosts/brahmadaitya.md",
+      "research_file": null
+    },
+    {
+      "id": "brahmarakshasa",
+      "name": "Brahmarakshasa",
+      "aliases": [],
+      "research_status": "initial_notes",
+      "classification": "A class of rakshasa in Hindu traditions.",
+      "location": null,
+      "page": "ghosts/brahmarakshasa.md",
+      "research_file": null
+    },
+    {
+      "id": "chanda",
+      "name": "Chanda",
+      "aliases": [],
+      "research_status": "initial_notes",
+      "classification": null,
+      "location": "Eastern India.",
+      "page": "ghosts/chanda.md",
+      "research_file": null
+    },
+    {
+      "id": "chedipe",
+      "name": "Chedipe",
+      "aliases": [],
+      "research_status": "initial_notes",
+      "classification": "Witch-vampire.",
+      "location": "Godavari region.",
+      "page": "ghosts/chedipe.md",
+      "research_file": null
+    },
+    {
+      "id": "chetkin",
+      "name": "Chetkin",
+      "aliases": [],
+      "research_status": "initial_notes",
+      "classification": null,
+      "location": "Maharashtra.",
+      "page": "ghosts/chetkin.md",
+      "research_file": null
+    },
+    {
+      "id": "chirbatti",
+      "name": "Chirbatti",
+      "aliases": [
+        "Chir batti",
+        "Chhir batti",
+        "Cheer batti"
+      ],
+      "research_status": "initial_notes",
+      "classification": "Ghost-light phenomenon in local folklore.",
+      "location": "Banni grasslands and Rann of Kutch, Gujarat.",
+      "page": "ghosts/chirbatti.md",
+      "research_file": null
+    },
+    {
+      "id": "chiroguni",
+      "name": "Chiroguni",
+      "aliases": [],
+      "research_status": "initial_notes",
+      "classification": "Female ghost.",
+      "location": null,
+      "page": "ghosts/chiroguni.md",
+      "research_file": null
+    },
+    {
+      "id": "chordewa",
+      "name": "Chordewa",
+      "aliases": [],
+      "research_status": "initial_notes",
+      "classification": null,
+      "location": "Maharashtra.",
+      "page": "ghosts/chordewa.md",
+      "research_file": null
+    },
+    {
+      "id": "chudail",
+      "name": "Chudail",
+      "aliases": [
+        "Churel"
+      ],
+      "research_status": "initial_notes",
+      "classification": "Female revenant.",
+      "location": "South Asia, with wider regional adaptations.",
+      "page": "ghosts/chudail.md",
+      "research_file": null
+    },
+    {
+      "id": "daag",
+      "name": "Daag",
+      "aliases": [],
+      "research_status": "initial_notes",
+      "classification": "Field demon.",
+      "location": null,
+      "page": "ghosts/daag.md",
+      "research_file": null
+    },
+    {
+      "id": "dakan-sakan",
+      "name": "Dakan Sakan",
+      "aliases": [],
+      "research_status": "initial_notes",
+      "classification": null,
+      "location": "Punjab.",
+      "page": "ghosts/dakan-sakan.md",
+      "research_file": null
+    },
+    {
+      "id": "dakini",
+      "name": "Dakini",
+      "aliases": [],
+      "research_status": "initial_notes",
+      "classification": "Female supernatural or religious figure; meaning depends on tradition.",
+      "location": "Indian religious traditions and their wider Buddhist adaptations.",
+      "page": "ghosts/dakini.md",
+      "research_file": null
+    },
+    {
+      "id": "damori",
+      "name": "Damori",
+      "aliases": [],
+      "research_status": "initial_notes",
+      "classification": null,
+      "location": "Bengal and Assam.",
+      "page": "ghosts/damori.md",
+      "research_file": null
+    },
+    {
+      "id": "dayani",
+      "name": "Dayani",
+      "aliases": [],
+      "research_status": "initial_notes",
+      "classification": null,
+      "location": null,
+      "page": "ghosts/dayani.md",
+      "research_file": null
+    },
+    {
+      "id": "drakshi",
+      "name": "Drakshi",
+      "aliases": [],
+      "research_status": "initial_notes",
+      "classification": "Forest demoness.",
+      "location": null,
+      "page": "ghosts/drakshi.md",
+      "research_file": null
+    },
+    {
+      "id": "dund",
+      "name": "Dund",
+      "aliases": [],
+      "research_status": "initial_notes",
+      "classification": null,
+      "location": null,
+      "page": "ghosts/dund.md",
+      "research_file": null
+    },
+    {
+      "id": "ekanore",
+      "name": "Ekanore",
+      "aliases": [],
+      "research_status": "initial_notes",
+      "classification": null,
+      "location": null,
+      "page": "ghosts/ekanore.md",
+      "research_file": null
+    },
+    {
+      "id": "ekthengo",
+      "name": "Ekthengo",
+      "aliases": [],
+      "research_status": "initial_notes",
+      "classification": null,
+      "location": null,
+      "page": "ghosts/ekthengo.md",
+      "research_file": null
+    },
+    {
+      "id": "galasi",
+      "name": "Galasi",
+      "aliases": [],
+      "research_status": "initial_notes",
+      "classification": null,
+      "location": "Bengal.",
+      "page": "ghosts/galasi.md",
+      "research_file": null
+    },
+    {
+      "id": "gandharva",
+      "name": "Gandharva",
+      "aliases": [],
+      "research_status": "initial_notes",
+      "classification": "Celestial being in Hindu, Buddhist and Jain traditions.",
+      "location": null,
+      "page": "ghosts/gandharva.md",
+      "research_file": null
+    },
+    {
+      "id": "gayal",
+      "name": "Gayal",
+      "aliases": [],
+      "research_status": "initial_notes",
+      "classification": "Spirit deprived of funerary rites.",
+      "location": "Punjab in the cited account.",
+      "page": "ghosts/gayal.md",
+      "research_file": null
+    },
+    {
+      "id": "ghoul",
+      "name": "Ghoul",
+      "aliases": [],
+      "research_status": "initial_notes",
+      "classification": "Man-eating supernatural being of Arabian folklore.",
+      "location": null,
+      "page": "ghosts/ghoul.md",
+      "research_file": null
+    },
+    {
+      "id": "gutiya-deo",
+      "name": "Gutiya Deo",
+      "aliases": [],
+      "research_status": "initial_notes",
+      "classification": "Dwarf ghost.",
+      "location": "Bihar.",
+      "page": "ghosts/gutiya-deo.md",
+      "research_file": null
+    },
+    {
+      "id": "guyasi",
+      "name": "Guyasi",
+      "aliases": [],
+      "research_status": "initial_notes",
+      "classification": null,
+      "location": null,
+      "page": "ghosts/guyasi.md",
+      "research_file": null
+    },
+    {
+      "id": "hara",
+      "name": "Hara",
+      "aliases": [],
+      "research_status": "initial_notes",
+      "classification": null,
+      "location": null,
+      "page": "ghosts/hara.md",
+      "research_file": null
+    },
+    {
+      "id": "ifrit",
+      "name": "Ifrit",
+      "aliases": [],
+      "research_status": "initial_notes",
+      "classification": "Powerful being among the jinn in Quran 27:39.",
+      "location": null,
+      "page": "ghosts/ifrit.md",
+      "research_file": null
+    },
+    {
+      "id": "jhapri",
+      "name": "Jhapri",
+      "aliases": [],
+      "research_status": "initial_notes",
+      "classification": "Nuisance ghost.",
+      "location": "Bengal.",
+      "page": "ghosts/jhapri.md",
+      "research_file": null
+    },
+    {
+      "id": "jilaiya",
+      "name": "Jilaiya",
+      "aliases": [],
+      "research_status": "initial_notes",
+      "classification": "Nocturnal blood-drinking spirit.",
+      "location": "Bihar, northeastern India.",
+      "page": "ghosts/jilaiya.md",
+      "research_file": null
+    },
+    {
+      "id": "jinn",
+      "name": "Jinn",
+      "aliases": [
+        "Djinn"
+      ],
+      "research_status": "initial_notes",
+      "classification": "Supernatural beings in Arabian and Islamic traditions.",
+      "location": "Present in Bengali Muslim folklore as part of wider Islamic traditions.",
+      "page": "ghosts/jinn.md",
+      "research_file": null
+    },
+    {
+      "id": "kalpurush",
+      "name": "Kalpurush",
+      "aliases": [],
+      "research_status": "initial_notes",
+      "classification": "Male sexual spirit.",
+      "location": null,
+      "page": "ghosts/kalpurush.md",
+      "research_file": null
+    },
+    {
+      "id": "kanavulo",
+      "name": "Kanavulo",
+      "aliases": [],
+      "research_status": "initial_notes",
+      "classification": "Misdirecting spirit.",
+      "location": "Purulia, Bengal.",
+      "page": "ghosts/kanavulo.md",
+      "research_file": null
+    },
+    {
+      "id": "kanipishachi",
+      "name": "Kanipishachi",
+      "aliases": [],
+      "research_status": "initial_notes",
+      "classification": "Female ghost.",
+      "location": "Bengal.",
+      "page": "ghosts/kanipishachi.md",
+      "research_file": null
+    },
+    {
+      "id": "khabish",
+      "name": "Khabish",
+      "aliases": [],
+      "research_status": "initial_notes",
+      "classification": "Harmful spirit.",
+      "location": "Himalayas.",
+      "page": "ghosts/khabish.md",
+      "research_file": null
+    },
+    {
+      "id": "kichin",
+      "name": "Kichin",
+      "aliases": [],
+      "research_status": "initial_notes",
+      "classification": "Female ghost.",
+      "location": null,
+      "page": "ghosts/kichin.md",
+      "research_file": null
+    },
+    {
+      "id": "kollivai-pisaasu",
+      "name": "Kollivai Pisaasu",
+      "aliases": [],
+      "research_status": "initial_notes",
+      "classification": "Fire-associated ghost.",
+      "location": "Tamil cultural context; precise locality unverified.",
+      "page": "ghosts/kollivai-pisaasu.md",
+      "research_file": null
+    },
+    {
+      "id": "kutti-chaathan",
+      "name": "Kutti Chaathan",
+      "aliases": [
+        "Kuttichathan"
+      ],
+      "research_status": "initial_notes",
+      "classification": "Guardian deity and mischievous supernatural figure in different traditions.",
+      "location": "Malabar, Kerala.",
+      "page": "ghosts/kutti-chaathan.md",
+      "research_file": null
+    },
+    {
+      "id": "malandu",
+      "name": "Malandu",
+      "aliases": [],
+      "research_status": "initial_notes",
+      "classification": "Child-frightening spirit.",
+      "location": "South India.",
+      "page": "ghosts/malandu.md",
+      "research_file": null
+    },
+    {
+      "id": "mamdo",
+      "name": "Mamdo",
+      "aliases": [
+        "Mamdo Bhoot"
+      ],
+      "research_status": "initial_notes",
+      "classification": "Ghost in Bengali Muslim folklore.",
+      "location": "Bengal.",
+      "page": "ghosts/mamdo.md",
+      "research_file": null
+    },
+    {
+      "id": "marid",
+      "name": "Marid",
+      "aliases": [],
+      "research_status": "initial_notes",
+      "classification": "Rebellious demon or powerful jinn in Islamic and later literary usage.",
+      "location": null,
+      "page": "ghosts/marid.md",
+      "research_file": null
+    },
+    {
+      "id": "masan",
+      "name": "Masan",
+      "aliases": [],
+      "research_status": "initial_notes",
+      "classification": "Cemetery-associated ghost in the cited account.",
+      "location": "Himalayan region.",
+      "page": "ghosts/masan.md",
+      "research_file": null
+    },
+    {
+      "id": "mechho-bhoot",
+      "name": "Mechho Bhoot",
+      "aliases": [],
+      "research_status": "initial_notes",
+      "classification": "Fish-loving ghost.",
+      "location": "Bengal.",
+      "page": "ghosts/mechho-bhoot.md",
+      "research_file": null
+    },
+    {
+      "id": "mohini",
+      "name": "Mohini",
+      "aliases": [],
+      "research_status": "initial_notes",
+      "classification": "Alluring female spirit in the cited ghost tradition.",
+      "location": "South India.",
+      "page": "ghosts/mohini.md",
+      "research_file": null
+    },
+    {
+      "id": "munchowa",
+      "name": "Munchowa",
+      "aliases": [],
+      "research_status": "initial_notes",
+      "classification": "Face-stealing spirit.",
+      "location": null,
+      "page": "ghosts/munchowa.md",
+      "research_file": null
+    },
+    {
+      "id": "muni-pei",
+      "name": "Muni Pei",
+      "aliases": [],
+      "research_status": "initial_notes",
+      "classification": "Tamil guardian spirit.",
+      "location": null,
+      "page": "ghosts/muni-pei.md",
+      "research_file": null
+    },
+    {
+      "id": "munish",
+      "name": "Munish",
+      "aliases": [],
+      "research_status": "initial_notes",
+      "classification": "Family guardian spirit.",
+      "location": "Bengal.",
+      "page": "ghosts/munish.md",
+      "research_file": null
+    },
+    {
+      "id": "munjya",
+      "name": "Munjya",
+      "aliases": [],
+      "research_status": "initial_notes",
+      "classification": "Restless bachelor ghost.",
+      "location": "Maharashtra and the Konkan coast.",
+      "page": "ghosts/munjya.md",
+      "research_file": null
+    },
+    {
+      "id": "nali-ba",
+      "name": "Nali Ba",
+      "aliases": [
+        "Naale Ba",
+        "Naale Baa"
+      ],
+      "research_status": "initial_notes",
+      "classification": "Nocturnal urban-legend spirit.",
+      "location": "Karnataka, especially Bengaluru.",
+      "page": "ghosts/nali-ba.md",
+      "research_file": null
+    },
+    {
+      "id": "nishidaak",
+      "name": "Nishidaak",
+      "aliases": [
+        "Nishi Daak",
+        "Nishir Daak",
+        "Nishi"
+      ],
+      "research_status": "initial_notes",
+      "classification": "Nocturnal luring spirit.",
+      "location": "Bengal, Bihar and Jharkhand in the cited account.",
+      "page": "ghosts/nishidaak.md",
+      "research_file": null
+    },
+    {
+      "id": "pandabba",
+      "name": "Pandabba",
+      "aliases": [],
+      "research_status": "initial_notes",
+      "classification": "Water ghost.",
+      "location": "Bihar.",
+      "page": "ghosts/pandabba.md",
+      "research_file": null
+    },
+    {
+      "id": "pari",
+      "name": "Pari",
+      "aliases": [
+        "Peri",
+        "Parī"
+      ],
+      "research_status": "initial_notes",
+      "classification": "Fairy-like supernatural being of Persian-derived traditions.",
+      "location": "Iran, Afghanistan and South Asia, including India and Pakistan.",
+      "page": "ghosts/pari.md",
+      "research_file": null
+    },
+    {
+      "id": "pishachas",
+      "name": "Pishachas",
+      "aliases": [
+        "Pishacha",
+        "Piśāca"
+      ],
+      "research_status": "initial_notes",
+      "classification": "Flesh-eating supernatural beings in Hindu and Buddhist traditions.",
+      "location": null,
+      "page": "ghosts/pishachas.md",
+      "research_file": null
+    },
+    {
+      "id": "potachunni",
+      "name": "Potachunni",
+      "aliases": [],
+      "research_status": "initial_notes",
+      "classification": "Female ghost.",
+      "location": null,
+      "page": "ghosts/potachunni.md",
+      "research_file": null
+    },
+    {
+      "id": "prapti",
+      "name": "Prapti",
+      "aliases": [],
+      "research_status": "initial_notes",
+      "classification": "Female ghost.",
+      "location": null,
+      "page": "ghosts/prapti.md",
+      "research_file": null
+    },
+    {
+      "id": "preta",
+      "name": "Preta",
+      "aliases": [],
+      "research_status": "initial_notes",
+      "classification": "Departed spirit; hungry ghost in some traditions.",
+      "location": "Indian traditions, with adaptations across Asia.",
+      "page": "ghosts/preta.md",
+      "research_file": null
+    },
+    {
+      "id": "putana",
+      "name": "Putana",
+      "aliases": [],
+      "research_status": "initial_notes",
+      "classification": "Rakshasi in Krishna narratives.",
+      "location": null,
+      "page": "ghosts/putana.md",
+      "research_file": null
+    },
+    {
+      "id": "puwali",
+      "name": "Puwali",
+      "aliases": [],
+      "research_status": "initial_notes",
+      "classification": "Child ghost.",
+      "location": "Assam.",
+      "page": "ghosts/puwali.md",
+      "research_file": null
+    },
+    {
+      "id": "pyachapechi",
+      "name": "Pyachapechi",
+      "aliases": [],
+      "research_status": "initial_notes",
+      "classification": "Owl ghost.",
+      "location": null,
+      "page": "ghosts/pyachapechi.md",
+      "research_file": null
+    },
+    {
+      "id": "rakshasa",
+      "name": "Rakshasa",
+      "aliases": [],
+      "research_status": "initial_notes",
+      "classification": "Supernatural being in Hindu, Buddhist and other South Asian traditions.",
+      "location": null,
+      "page": "ghosts/rakshasa.md",
+      "research_file": null
+    },
+    {
+      "id": "reech",
+      "name": "Reech",
+      "aliases": [],
+      "research_status": "initial_notes",
+      "classification": "Predatory demon.",
+      "location": "Madhya Pradesh.",
+      "page": "ghosts/reech.md",
+      "research_file": null
+    },
+    {
+      "id": "runia",
+      "name": "Runia",
+      "aliases": [],
+      "research_status": "initial_notes",
+      "classification": "Male ghost.",
+      "location": null,
+      "page": "ghosts/runia.md",
+      "research_file": null
+    },
+    {
+      "id": "sakini",
+      "name": "Sakini",
+      "aliases": [
+        "Shakini",
+        "Śākinī"
+      ],
+      "research_status": "initial_notes",
+      "classification": "Female tantric deity or yogini in the cited textual traditions.",
+      "location": null,
+      "page": "ghosts/sakini.md",
+      "research_file": null
+    },
+    {
+      "id": "samandha",
+      "name": "Samandha",
+      "aliases": [],
+      "research_status": "initial_notes",
+      "classification": "Spirit of a deceased person in the historical Marathi lexical account.",
+      "location": "Marathi-language context; precise locality unestablished.",
+      "page": "ghosts/samandha.md",
+      "research_file": null
+    },
+    {
+      "id": "shankhchunni",
+      "name": "Shankhchunni",
+      "aliases": [
+        "Shakchunni",
+        "Shankhachunni"
+      ],
+      "research_status": "initial_notes",
+      "classification": "Female ghost of a married woman.",
+      "location": "West Bengal and Bangladesh.",
+      "page": "ghosts/shankhchunni.md",
+      "research_file": null
+    },
+    {
+      "id": "shayeed",
+      "name": "Shayeed",
+      "aliases": [],
+      "research_status": "initial_notes",
+      "classification": "Battle-death ghost.",
+      "location": "Punjab.",
+      "page": "ghosts/shayeed.md",
+      "research_file": null
+    },
+    {
+      "id": "sheekol-buri",
+      "name": "Sheekol Buri",
+      "aliases": [],
+      "research_status": "initial_notes",
+      "classification": "Female water spirit.",
+      "location": null,
+      "page": "ghosts/sheekol-buri.md",
+      "research_file": null
+    },
+    {
+      "id": "sila",
+      "name": "Sila",
+      "aliases": [
+        "Si’la",
+        "Si’lat"
+      ],
+      "research_status": "initial_notes",
+      "classification": "Shapeshifting jinn in Arabian folklore.",
+      "location": null,
+      "page": "ghosts/sila.md",
+      "research_file": null
+    },
+    {
+      "id": "skondhokata",
+      "name": "Skondhokata",
+      "aliases": [],
+      "research_status": "initial_notes",
+      "classification": null,
+      "location": null,
+      "page": "ghosts/skondhokata.md",
+      "research_file": null
+    },
+    {
+      "id": "succubus",
+      "name": "Succubus",
+      "aliases": [],
+      "research_status": "initial_notes",
+      "classification": "Female dream-visiting demon in European folklore.",
+      "location": "European source tradition; Indian regional attestation not established here.",
+      "page": "ghosts/succubus.md",
+      "research_file": null
+    },
+    {
+      "id": "supurus",
+      "name": "Supurus",
+      "aliases": [],
+      "research_status": "initial_notes",
+      "classification": "Teenage male ghost.",
+      "location": null,
+      "page": "ghosts/supurus.md",
+      "research_file": null
+    },
+    {
+      "id": "tola",
+      "name": "Tola",
+      "aliases": [],
+      "research_status": "initial_notes",
+      "classification": "Helpful boy ghost.",
+      "location": null,
+      "page": "ghosts/tola.md",
+      "research_file": null
+    },
+    {
+      "id": "ulkamukhi",
+      "name": "Ulkamukhi",
+      "aliases": [],
+      "research_status": "initial_notes",
+      "classification": null,
+      "location": null,
+      "page": "ghosts/ulkamukhi.md",
+      "research_file": null
+    },
+    {
+      "id": "vetala",
+      "name": "Vetala",
+      "aliases": [
+        "Betal",
+        "Vetal"
+      ],
+      "research_status": "initial_notes",
+      "classification": "Corpse-inhabiting spirit in Hindu narrative traditions.",
+      "location": null,
+      "page": "ghosts/vetala.md",
+      "research_file": null
+    },
+    {
+      "id": "viran",
+      "name": "Viran",
+      "aliases": [],
+      "research_status": "initial_notes",
+      "classification": "Warrior guardian.",
+      "location": null,
+      "page": "ghosts/viran.md",
+      "research_file": null
+    },
+    {
+      "id": "yaksha",
+      "name": "Yaksha",
+      "aliases": [],
+      "research_status": "initial_notes",
+      "classification": "Nature spirit or guardian in Hindu, Buddhist and Jain traditions.",
+      "location": "South Asia, with wider Asian adaptations.",
+      "page": "ghosts/yaksha.md",
+      "research_file": null
+    },
+    {
+      "id": "yugini",
+      "name": "Yugini",
+      "aliases": [],
+      "research_status": "initial_notes",
+      "classification": null,
+      "location": null,
+      "page": "ghosts/yugini.md",
+      "research_file": null
+    },
+    {
+      "id": "zoting",
+      "name": "Zoting",
+      "aliases": [],
+      "research_status": "initial_notes",
+      "classification": "Harmless ghost.",
+      "location": "Konkan.",
+      "page": "ghosts/zoting.md",
+      "research_file": null
+    }
+  ]
+}
