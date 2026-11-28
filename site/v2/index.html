@@ -5,9 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Indian Ghost Database · v2 mockup</title>
 <link rel="icon" href="data:,">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&display=swap">
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&display=swap');
   /* shortcut: rough layout mockup in one file; rebuild in Svelte once the layout is approved (issue #15). */
   :root { --ink: #1d1d1f; --grey: #6e6e73; --pad: clamp(24px, 4.5vw, 72px); --ease: cubic-bezier(.32, .72, 0, 1); }
   * { box-sizing: border-box; margin: 0; }
@@ -115,6 +114,7 @@
   </svg>
 </button>
 <script type="module">
+import { loadData } from '../src/lib/ghosts.js';
 import { GLIDE_MS, WHEEL_MS, easeInOut, easeOut, glideAt, clickStep, wheelDelta, ticksBetween } from '../src/lib/v2-scroll.js';
 const $ = (id) => document.getElementById(id);
 const el = (tag, props = {}, ...kids) => { const n = Object.assign(document.createElement(tag), props); n.append(...kids); return n; };
@@ -185,8 +185,7 @@ function portrait(g) {
   return canvas;
 }
 
-const { ghosts } = await fetch('../data/ghosts.json').then((r) => r.json());
-ghosts.sort((a, b) => (a.seed_reference?.entry_number ?? 999) - (b.seed_reference?.entry_number ?? 999));
+const { ghosts } = await loadData('../');
 
 let selected = null; // the pressed lineup button
 function close() {

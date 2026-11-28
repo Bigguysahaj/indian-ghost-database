@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Make transparent, label-free portraits for the /v2/ mockup. Dev-only (Pillow, numpy, scipy).
 
-    python scripts/cutout_portraits.py . site/v2/cutouts [ids...]
+    python scripts/cutout_portraits.py . site/public/v2/cutouts [ids...]
 """
 import sys, glob, os
 import numpy as np

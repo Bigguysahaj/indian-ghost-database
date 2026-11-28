@@ -40,8 +40,12 @@ export function matchesSearch(ghost, query) {
   return haystack.includes(query);
 }
 
-export async function loadData() {
-  const data = await fetch('data/ghosts.json').then((r) => r.json());
+export function siteUrl(path, root = '') {
+  return root + path;
+}
+
+export async function loadData(root = '') {
+  const data = await fetch(siteUrl('data/ghosts.json', root)).then((r) => r.json());
   const ghosts = data.ghosts.slice().sort(
     (a, b) => (a.seed_reference?.entry_number ?? 999) - (b.seed_reference?.entry_number ?? 999),
   );
@@ -49,8 +53,8 @@ export async function loadData() {
   let sources = [];
   try {
     const [refs, evidence] = await Promise.all([
-      fetch('data/references.json').then((r) => (r.ok ? r.json() : { references: [] })),
-      fetch('data/evidence.json').then((r) => (r.ok ? r.json() : { sources: [] })),
+      fetch(siteUrl('data/references.json', root)).then((r) => (r.ok ? r.json() : { references: [] })),
+      fetch(siteUrl('data/evidence.json', root)).then((r) => (r.ok ? r.json() : { sources: [] })),
     ]);
     sources = [...(refs.references || []), ...(evidence.sources || [])];
   } catch {

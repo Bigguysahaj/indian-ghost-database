@@ -5,8 +5,8 @@
 Part of: 10. Status: **parked**. Nothing gets built until the open decision below is made and written here.
 
 ## What uses the rejected art today (all untracked, not committed yet)
-- `site/v2/cutouts/<id>.webp`: 84 transparent, label-free cutouts, made by `scripts/cutout_portraits.py`.
-- `site/v2/layers/aacheri-{still,hair,body,head}.webp`: hand-traced Aacheri layers, made by `scripts/layer_aacheri.py`.
+- `site/public/v2/cutouts/<id>.webp`: 84 transparent, label-free cutouts, made by `scripts/cutout_portraits.py`.
+- `site/public/v2/layers/aacheri-{still,hair,body,head}.webp`: hand-traced Aacheri layers, made by `scripts/layer_aacheri.py`.
 - `site/v2/index.html`, `portrait()`: loads `cutouts/${g.id}.webp`, or `layers/aacheri-*.webp` for Aacheri, then warps it on a canvas (sway, breathe, hair ripple).
 - Both scripts are dev-only and need Pillow, numpy and scipy.
 
@@ -18,7 +18,7 @@ Part of: 10. Status: **parked**. Nothing gets built until the open decision belo
 ## Plan once decided
 - [ ] Write the decision here and in issue 10.
 - [ ] Split the work into child issues of about 50 lines each, with tests, in the usual format.
-- [ ] The child issues remove `site/v2/cutouts/`, `site/v2/layers/`, `scripts/cutout_portraits.py` and `scripts/layer_aacheri.py`, unless the decision reuses them.
+- [ ] The child issues remove `site/public/v2/cutouts/`, `site/public/v2/layers/`, `scripts/cutout_portraits.py` and `scripts/layer_aacheri.py`, unless the decision reuses them.
 - [ ] `portrait()` no longer references `cutouts/` or `layers/`.
 
 ## Test

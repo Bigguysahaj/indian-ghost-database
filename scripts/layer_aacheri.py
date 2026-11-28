@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Split the Aacheri cut-out into hair, body and head layers for the /v2/ mockup. Dev-only (Pillow, numpy, scipy).
 
-    python scripts/layer_aacheri.py site/v2/cutouts/aacheri.webp site/v2/layers
+    python scripts/layer_aacheri.py site/public/v2/cutouts/aacheri.webp site/public/v2/layers
 """
 import sys
 
