@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Indian Ghost Database · v2 mockup</title>
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&display=swap">
+<style>
+  /* shortcut: rough layout mockup in one file; rebuild in Svelte once the layout is approved (issue #15). */
+  :root { --ink: #1d1d1f; --grey: #6e6e73; --pad: clamp(24px, 4.5vw, 72px); --ease: cubic-bezier(.32, .72, 0, 1); }
+  * { box-sizing: border-box; margin: 0; }
+  body { background: #fff; color: var(--ink); height: 100svh; overflow: hidden; -webkit-font-smoothing: antialiased;
+         font-family: Manrope, system-ui, sans-serif; }
+  button { font: inherit; color: inherit; border: 0; background: none; cursor: pointer; padding: 0; }
+  button:focus-visible { outline: 3px solid #0071e3; outline-offset: 3px; border-radius: 12px; }
+  [hidden] { display: none !important; }
+
+  /* The stage scrolls sideways and narrows when a ghost is picked so the row glides from centre to left. */
+  #stage { position: absolute; inset: 0 var(--pad); display: flex; align-items: center; overflow-x: auto; overflow-y: hidden; scrollbar-width: none; transition: right .8s var(--ease);
+           --fade-l: clamp(32px, 6vw, 96px); --fade-r: clamp(32px, 6vw, 96px);
+           -webkit-mask-image: linear-gradient(90deg, transparent, #000 var(--fade-l), #000 calc(100% - var(--fade-r)), transparent);
+                   mask-image: linear-gradient(90deg, transparent, #000 var(--fade-l), #000 calc(100% - var(--fade-r)), transparent); }
+  body:has(#prev[hidden]) #stage { --fade-l: 0px; }
+  #stage::-webkit-scrollbar { display: none; }
+  /* One continuous row starting with the first figure at the dead centre of the window. */
+  .lineup { display: grid; grid-auto-flow: column; grid-auto-columns: calc(41vw / 12); align-items: end;
+            padding: 0 calc(50vw - var(--pad)) 0 calc(50vw - var(--pad) + .6vw); transition: padding-left .8s var(--ease); }
+  .open .lineup { padding-left: 2vw; }
+  /* Each figure is 175% of its column so neighbours stand in front of each other. Only the middle column-width takes the pointer. */
+  .fig { position: relative; width: 220%; margin-left: -60%; pointer-events: none; transition: filter .5s; }
+  .fig::before { content: ""; position: absolute; inset: 0 27.3%; z-index: 1; pointer-events: auto; }
+  .fig canvas { display: block; width: 100%; aspect-ratio: 1.12 / 1; }
+  .fig:hover, .fig:focus-visible, .fig[aria-pressed="true"] { z-index: 1; }
+  .open .fig { filter: saturate(.15) brightness(1.12); }
+  .open .fig:hover, .open .fig:focus-visible, .open .fig[aria-pressed="true"] { filter: none; }
+
+  /* Soft ink glow and film grain on each side edge, shown only on hover or keyboard focus. */
+  .edge::before, .edge::after { content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none; opacity: 0; transition: opacity .4s; }
+  .edge::before { inset: -80px; filter: blur(38px); }
+  #prev::before { background:
+      radial-gradient(ellipse 11% 48% at 0% 62%, rgb(142 40 98 / .55), transparent 100%),
+      radial-gradient(ellipse 9% 34% at 0% 92%, rgb(222 64 128 / .6), transparent 100%); }
+  #next::before { background:
+      radial-gradient(ellipse 11% 46% at 100% 52%, rgb(184 34 62 / .5), transparent 100%),
+      radial-gradient(ellipse 9% 32% at 100% 90%, rgb(226 74 136 / .6), transparent 100%); }
+  .edge::after { mix-blend-mode: multiply;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+  #prev::after { -webkit-mask: linear-gradient(90deg, rgb(0 0 0 / .3), transparent 16%); mask: linear-gradient(90deg, rgb(0 0 0 / .3), transparent 16%); }
+  #next::after { -webkit-mask: linear-gradient(270deg, rgb(0 0 0 / .3), transparent 16%); mask: linear-gradient(270deg, rgb(0 0 0 / .3), transparent 16%); }
+  .edge:hover::before, .edge:focus-visible::before, .edge:hover::after, .edge:focus-visible::after { opacity: 1; }
+  .edge, #panel { z-index: 3; }
+
+  #panel { position: fixed; top: 0; bottom: 0; right: var(--pad); width: 34vw; display: flex; flex-direction: column; justify-content: center; align-items: flex-start;
+           opacity: 0; visibility: hidden; translate: 48px 0; transition: opacity .4s, translate .8s var(--ease), visibility 0s .4s; }
+  .open #panel { opacity: 1; visibility: visible; translate: 0 0; transition: opacity .6s .1s, translate .8s var(--ease); }
+  .open #stage { right: calc(34vw + var(--pad) * 1.6); }
+  #art { width: min(100%, 440px, 56vh); align-self: center; margin-bottom: 28px; }
+  #art canvas { display: block; width: 100%; aspect-ratio: 1.12 / 1; }
+  /* Rough ink edge (SVG filter) plus a rose halo that spreads past the letters. */
+  #name { font-size: clamp(34px, 4.2vw, 72px); font-weight: 400; line-height: 1.08; letter-spacing: -.025em; overflow-wrap: anywhere; color: #4a1230; padding: 4px 0;
+          text-shadow: -1.2px 0 rgb(255 60 90 / .5), 1.2px 0 rgb(80 90 255 / .4), 0 0 10px rgb(224 72 134 / .75), 0 0 34px rgb(224 72 134 / .65), 0 0 80px rgb(224 72 134 / .5);
+          filter: url(#ink); }
+  #teaser { margin-top: 12px; max-width: 36ch; font-size: clamp(15px, 1.25vw, 19px); line-height: 1.45; letter-spacing: -.01em; color: var(--grey); text-shadow: 0 0 14px rgb(224 72 134 / .3); }
+  #note { margin-top: 22px; padding: 7px 14px; border-radius: 99px; background: #f5f5f7; font-size: 12px; font-weight: 500; color: var(--grey); }
+
+  .round { width: 44px; height: 44px; border-radius: 50% !important; background: rgb(245 245 247 / .8); backdrop-filter: saturate(180%) blur(20px); font-size: 18px; transition: opacity .3s, scale .4s var(--ease), background .2s; }
+  .round:hover { background: #e8e8ed; scale: 1.06; }
+  #close { position: absolute; top: calc(var(--pad) + 36px); right: 0; font-size: 22px; }
+  #sound { position: fixed; top: var(--pad); left: var(--pad); z-index: 4; display: grid; place-items: center; }
+  #sound svg { width: 18px; height: 18px; }
+  #sound[aria-pressed="false"] .off, #sound[aria-pressed="true"] .on { display: none; }
+  /* Wide invisible hover zones; the round arrow appears only on hover or keyboard focus. */
+  .edge { position: fixed; top: 25%; bottom: 25%; width: max(var(--pad), 72px); display: grid; place-items: center; }
+  .edge .round { display: grid; place-items: center; opacity: 0; scale: .8; }
+  .edge:hover .round, .edge:focus-visible .round { opacity: 1; scale: 1; }
+  #next { right: 0; } #prev { left: 0; }
+  @media (hover: none) { .edge { top: auto; bottom: var(--pad); height: 48px; } .edge .round { opacity: 1; scale: 1; } }
+  @media (max-width: 800px) {
+    .lineup { grid-auto-columns: 16.5vw; }
+    .fig { width: 115%; margin-left: -7.5%; }
+    .fig::before { inset: 0 6.5%; }
+    /* On phones the details are a full-screen sheet over the row. */
+    .open #stage { right: var(--pad); }
+    #panel { inset: 0; width: auto; padding: var(--pad); background: #fff; }
+    #close { top: var(--pad); right: var(--pad); }
+  }
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; } }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <filter id="ink" x="-10%" y="-20%" width="120%" height="140%">
+    <feTurbulence type="fractalNoise" baseFrequency=".55" numOctaves="2" seed="7" result="noise"/>
+    <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.2" xChannelSelector="R" yChannelSelector="G"/>
+    <feGaussianBlur stdDeviation=".25"/>
+  </filter>
+</svg>
+<div id="stage"><main id="lineup" class="lineup"></main></div>
+<aside id="panel" aria-live="polite">
+  <button class="round" id="close" type="button" aria-label="Close details">×</button>
+  <div id="art"></div>
+  <h2 id="name"></h2>
+  <p id="teaser"></p>
+  <p id="note"></p>
+</aside>
+<button class="edge" id="prev" type="button" aria-label="Scroll left"><span class="round">←</span></button>
+<button class="edge" id="next" type="button" aria-label="Scroll right"><span class="round">→</span></button>
+<button id="sound" class="round" type="button" aria-pressed="false" aria-label="Mute tick sound">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M11 5 6 9H2v6h4l5 4z"/>
+    <path class="on" d="M15.5 8.5a5 5 0 0 1 0 7M19 5a10 10 0 0 1 0 14"/>
+    <path class="off" d="m22 9-6 6M16 9l6 6"/>
+  </svg>
+</button>
+<script type="module">
+import { GLIDE_MS, WHEEL_MS, easeInOut, easeOut, glideAt, clickStep, wheelDelta, ticksBetween } from '../src/lib/v2-scroll.js';
+const $ = (id) => document.getElementById(id);
+const el = (tag, props = {}, ...kids) => { const n = Object.assign(document.createElement(tag), props); n.append(...kids); return n; };
+
+const calm = matchMedia('(prefers-reduced-motion: reduce)');
+
+// Moves the character itself: the art is redrawn in thin slices that sway and breathe, with the anchored end held still.
+// shortcut: this is a warp, so limbs do not move on their own; that needs layered art or generated sprite frames.
+function portrait(g) {
+  const canvas = el('canvas', { ariaHidden: 'true' });
+  const hangs = g.id === 'vetala'; // anchored at the branch above, not the ground
+  const img = new Image();
+  let ctx, w, h, pad, frame = 0, strength = 0, target = 0;
+  const layers = g.id === 'aacheri' ? ['hair', 'body', 'head'].map((n) => Object.assign(new Image(), { src: `layers/aacheri-${n}.webp` })) : null;
+  // Turns a layer about a pivot given in the artwork's own pixels.
+  function turned(image, x, y, angle, lift = 0) {
+    ctx.save();
+    ctx.translate(pad + x, pad + y - lift); ctx.rotate(angle); ctx.drawImage(image, -x, -y);
+    ctx.restore();
+  }
+  function drawLayers(t) {
+    const [hair, body, head] = layers;
+    const breath = strength * Math.sin(t * 2.2);
+    // Hair: vertical slices ripple outward, still at the scalp and loosest at the tips.
+    // No rotation here: rotating separate slices leaves hairline seams between them.
+    for (let x = 0; x < w; x += 2) {
+      const right = Math.min(1, Math.max(0, (x - 135) / 170)), left = Math.min(1, Math.max(0, (95 - x) / 45));
+      const dy = strength * (13 * right ** 1.2 * Math.sin(t * 3.1 - x * .038) + 4 * left * Math.sin(t * 2.7 + x * .09));
+      ctx.drawImage(hair, x, 0, 2, h, pad + x, pad + Math.round(dy), 2, h);
+    }
+    // Body breathes from the feet; the head rides on it and tilts at the neck.
+    const stretch = 1 + .016 * breath;
+    ctx.drawImage(body, pad, pad + h - h * stretch - (h - 303) * (1 - stretch), w, h * stretch);
+    turned(head, 118, 112, strength * .045 * Math.sin(t * 1.25 + 1), 3.2 * breath);
+  }
+  function draw(time) {
+    const t = time / 1000;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    if (!strength) return ctx.drawImage(img, pad, pad);
+    if (layers && layers.every((l) => l.complete)) return drawLayers(t);
+    const breath = 1 + .018 * strength * Math.sin(t * 2.4);
+    const place = (y) => (hangs ? y * breath : h - (h - y) * breath) + pad;
+    for (let y = 0; y < h; y += 2) {
+      const free = hangs ? y / h : 1 - y / h; // 0 at the anchor, 1 at the far end
+      const dx = strength * w * (.028 * free ** 1.5 * Math.sin(t * 2.4) + .012 * free * Math.sin(t * 4.2 - y / h * 9));
+      const rows = Math.min(2, h - y);
+      ctx.drawImage(img, 0, y, w, rows, pad + dx, place(y), w, place(y + rows) - place(y) + .6);
+    }
+  }
+  function tick(time) {
+    strength += (target - strength) * .08;
+    if (!target && strength < .01) strength = 0;
+    draw(time);
+    frame = target || strength ? requestAnimationFrame(tick) : 0;
+  }
+  canvas.move = (on) => {
+    target = on && !calm.matches ? 1 : 0;
+    if (!frame && w) frame = requestAnimationFrame(tick);
+  };
+  img.onload = () => {
+    w = img.naturalWidth; h = img.naturalHeight; pad = Math.round(w * .06); // room to sway without clipping
+    Object.assign(canvas, { width: w + pad * 2, height: h + pad });
+    ctx = canvas.getContext('2d');
+    ctx.imageSmoothingEnabled = false;
+    frame = requestAnimationFrame(tick);
+  };
+  img.src = layers ? 'layers/aacheri-still.webp' : `cutouts/${g.id}.webp`;
+  return canvas;
+}
+
+const { ghosts } = await fetch('../data/ghosts.json').then((r) => r.json());
+ghosts.sort((a, b) => (a.seed_reference?.entry_number ?? 999) - (b.seed_reference?.entry_number ?? 999));
+
+let selected = null; // the pressed lineup button
+function close() {
+  if (!selected) return;
+  if ($('panel').contains(document.activeElement)) selected.focus({ preventScroll: true });
+  selected.ariaPressed = 'false';
+  selected.firstChild.move(false);
+  $('art').firstChild.move(false);
+  selected = null;
+  document.body.classList.remove('open');
+}
+function select(g, button) {
+  if (button === selected) return close();
+  if (selected) { selected.ariaPressed = 'false'; selected.firstChild.move(false); $('art').firstChild.move(false); }
+  selected = button;
+  button.firstChild.move(true);
+  button.ariaPressed = 'true';
+  const teaser = ['classification', 'description', 'habitat', 'appearance'].map((f) => g.claims[f]?.value).find(Boolean);
+  const large = portrait(g);
+  $('art').replaceChildren(large);
+  large.move(true);
+  $('name').textContent = g.name;
+  $('teaser').textContent = teaser ?? 'Name only. No sourced description yet.';
+  $('note').textContent = `AI concept art · ${g.research_status.replace('_', ' ')}`;
+  document.body.classList.add('open');
+  if (!calm.matches) for (const id of ['name', 'teaser', 'note']) $(id).animate(
+    [{ opacity: 0, translate: '0 10px' }, { opacity: 1, translate: '0 0' }], { duration: 900, easing: 'ease-out' });
+  if (!calm.matches) $('name').animate([{ letterSpacing: '.03em', filter: 'blur(14px)' }, { letterSpacing: '-.025em', filter: 'blur(0px)' }], { duration: 1100, easing: 'ease-out' });
+}
+
+const stage = $('stage');
+$('lineup').append(...ghosts.map((g) => {
+  const b = el('button', { className: 'fig', type: 'button', ariaLabel: g.name, ariaPressed: 'false' }, portrait(g));
+  const move = (on) => b.firstChild.move(on || b === selected);
+  b.onpointerenter = b.onfocus = () => move(true);
+  b.onpointerleave = b.onblur = () => move(false);
+  b.onclick = () => select(g, b);
+  return b;
+}));
+
+let pitch = 0, halfW = 0, maxScroll = 0;
+function figPitch() {
+  const first = $('lineup').firstElementChild;
+  const second = first?.nextElementSibling;
+  return second ? second.getBoundingClientRect().left - first.getBoundingClientRect().left : 0;
+}
+function syncEdges() {
+  $('prev').hidden = stage.scrollLeft <= 1;
+  $('next').hidden = stage.scrollLeft >= maxScroll - 1;
+}
+function measure() {
+  pitch = figPitch();
+  halfW = stage.clientWidth / 2;
+  maxScroll = Math.max(0, stage.scrollWidth - stage.clientWidth);
+  syncEdges();
+}
+
+let glideFrame = 0, glideTarget = 0;
+function stopGlide() {
+  cancelAnimationFrame(glideFrame);
+  glideFrame = 0;
+}
+function glideTo(x, ms = GLIDE_MS, ease = easeInOut) {
+  stopGlide();
+  maxScroll = Math.max(0, stage.scrollWidth - stage.clientWidth);
+  const from = stage.scrollLeft;
+  const to = Math.max(0, Math.min(maxScroll, x));
+  glideTarget = to;
+  if (calm.matches || ms <= 0 || to === from) {
+    stage.scrollLeft = to;
+    syncEdges();
+    return;
+  }
+  const start = performance.now();
+  const step = (now) => {
+    const elapsed = now - start;
+    stage.scrollLeft = glideAt(from, to, elapsed, ms, ease);
+    if (elapsed >= ms) { glideFrame = 0; syncEdges(); return; }
+    glideFrame = requestAnimationFrame(step);
+  };
+  glideFrame = requestAnimationFrame(step);
+}
+function stepRow(dir) {
+  const step = clickStep(stage.clientWidth, figPitch());
+  if (!step) return;
+  glideTo((glideFrame ? glideTarget : stage.scrollLeft) + dir * step);
+}
+
+for (const [id, dir] of [['prev', -1], ['next', 1]]) {
+  const edge = $(id);
+  edge.onclick = () => stepRow(dir);
+}
+let audio = null, muted = false;
+function unlockAudio() {
+  if (!audio && window.AudioContext) audio = new AudioContext();
+  if (audio?.state === 'suspended') audio.resume().catch(() => {});
+}
+addEventListener('pointerdown', unlockAudio, { once: true });
+addEventListener('keydown', unlockAudio, { once: true });
+
+$('sound').onclick = () => {
+  unlockAudio();
+  muted = !muted;
+  const b = $('sound');
+  b.setAttribute('aria-pressed', String(muted));
+  b.setAttribute('aria-label', muted ? 'Unmute tick sound' : 'Mute tick sound');
+};
+
+function playTick() {
+  if (muted || !audio || audio.state !== 'running') return;
+  const t = audio.currentTime;
+  const osc = audio.createOscillator();
+  const gain = audio.createGain();
+  osc.type = 'triangle';
+  osc.frequency.setValueAtTime(1400, t);
+  osc.frequency.exponentialRampToValueAtTime(420, t + 0.015);
+  gain.gain.setValueAtTime(0.055, t);
+  gain.gain.exponentialRampToValueAtTime(0.0001, t + 0.018);
+  osc.connect(gain).connect(audio.destination);
+  osc.start(t);
+  osc.stop(t + 0.02);
+}
+
+let lastScroll = stage.scrollLeft;
+stage.addEventListener('scroll', () => {
+  const x = stage.scrollLeft;
+  if (ticksBetween(lastScroll, x, pitch || figPitch(), halfW) > 0) playTick();
+  lastScroll = x;
+  syncEdges();
+}, { passive: true });
+stage.addEventListener('transitionend', measure);
+addEventListener('resize', measure);
+$('close').onclick = close;
+stage.onclick = (e) => { if (!e.target.closest('.fig')) close(); };
+stage.addEventListener('wheel', (e) => {
+  e.preventDefault();
+  const d = wheelDelta(e);
+  if (d) glideTo((glideFrame ? glideTarget : stage.scrollLeft) + d, WHEEL_MS, easeOut);
+}, { passive: false });
+addEventListener('keydown', (e) => {
+  const dir = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+  if (dir) {
+    e.preventDefault();
+    if (!e.repeat) stepRow(dir);
+  }
+  if (e.key === 'Escape') close();
+});
+measure();
+</script>
+</body>
+</html>
